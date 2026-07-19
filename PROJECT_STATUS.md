@@ -1,24 +1,35 @@
 # Project Status
 
-**As of:** 2026-07-19
+**As of:** 2026-07-20
 
 ## Where we are
 
-- Repo scaffolded from the KB-factory chassis; genre adapted from gap-analysis
-  to **reference** (20-section template, evidence vs coaching split, question
-  provenance labels enforced by `audit_genre.py`).
-- Governance files generated; taxonomy proposed in `MASTER_INDEX.md`.
-- **Awaiting human approval of scope** (taxonomy, source list, template) before
-  any document is written — the Step-3 gate.
+- **Cluster 1 frozen** (tag `cluster1-v1.0.0`): all six Tier-1 foundation
+  documents written, QA-gated and released at v1.0.0. Orchestrator
+  independently re-verified all 83 unique URLs (0 dead).
+- Standing mandate active (granted 2026-07-19): auto-approve clusters on green
+  QA; pause only on gate failures or unverifiable core claims.
+- **Cluster 2 in progress**: eight Tier-2 competency deep-dives & question
+  banks.
 
 ## Document counts
 
-- Written: 0 · Planned: 32 (6 foundations + 8 competency banks + 10 framework/
-  format guides + 8 technique/best-practice docs).
+- Written & frozen: 6 · In progress: 8 · Remaining backlog: 18.
+
+## Notable flags carried from cluster 1 (human eyeball backlog)
+
+- Civil Service 1–7 scoring scale cited via COPFS (official departmental page);
+  central GOV.UK scoring publication not found — would lift scoring claims to High.
+- ISE 2025 survey figures cited via public summaries/secondary reporting; full
+  report is member-gated.
+- ICO recruitment guidance cited is a draft (final pending).
+- EPSO web estate mid-migration (epso.europa.eu → eu-careers.europa.eu);
+  expect link churn at next review.
+- college.police.uk HTML 403s the checker — CVF cited via its PDF assets;
+  consider allowlisting the host.
 
 ## Next actions
 
-1. Human reviews the proposed taxonomy, source-priority list and template.
-2. On approval: cluster 1 (six Tier-1 foundation documents) via parallel
-   workers, QA gates, merge, human gate, freeze at v1.0.0 + tag.
-3. Optional standing mandate: auto-approve subsequent clusters on green QA.
+1. Cluster 2 workers complete → merge → gates → freeze (`cluster2-v1.0.0`).
+2. Clusters 3–5 per ROADMAP under the standing mandate.
+3. Publishing to GitHub/Pages only on explicit authorization.

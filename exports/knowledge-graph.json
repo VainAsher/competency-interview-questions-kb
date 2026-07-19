@@ -1,4 +1,474 @@
 {
-  "nodes": [],
-  "edges": []
+  "nodes": [
+    {
+      "id": "competencies-foundation",
+      "title": "Competency-Based Interviewing: Competency Families & Question Mapping",
+      "topic": "Competency families & question mapping",
+      "tier": "1",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/competencies-foundation.md",
+      "category": "Competencies",
+      "document_type": "foundation",
+      "review_due": "2027-07-19",
+      "created": "2026-07-19",
+      "related": [
+        "techniques-foundation",
+        "uk-frameworks-foundation",
+        "eu-frameworks-foundation",
+        "formats-foundation",
+        "best-practice-foundation"
+      ]
+    },
+    {
+      "id": "techniques-foundation",
+      "title": "Answer Frameworks & Techniques: STAR and Beyond",
+      "topic": "Answer frameworks",
+      "tier": "1",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/02-techniques/techniques-foundation.md",
+      "category": "Techniques",
+      "document_type": "foundation",
+      "review_due": "2027-07-19",
+      "created": "2026-07-19",
+      "related": [
+        "competencies-foundation",
+        "uk-frameworks-foundation",
+        "eu-frameworks-foundation",
+        "formats-foundation",
+        "best-practice-foundation"
+      ]
+    },
+    {
+      "id": "uk-frameworks-foundation",
+      "title": "UK Competency Frameworks: The Landscape",
+      "topic": "UK competency frameworks landscape",
+      "tier": "1",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/03-uk-frameworks/uk-frameworks-foundation.md",
+      "category": "UK Frameworks",
+      "document_type": "foundation",
+      "review_due": "2027-07-19",
+      "created": "2026-07-19",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "eu-frameworks-foundation",
+        "formats-foundation",
+        "best-practice-foundation"
+      ]
+    },
+    {
+      "id": "eu-frameworks-foundation",
+      "title": "EU Competency Frameworks: EPSO & the EU Institutions",
+      "topic": "EU competency frameworks landscape",
+      "tier": "1",
+      "market": "EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/04-eu-frameworks/eu-frameworks-foundation.md",
+      "category": "EU Frameworks",
+      "document_type": "foundation",
+      "review_due": "2027-07-19",
+      "created": "2026-07-19",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "uk-frameworks-foundation",
+        "formats-foundation",
+        "best-practice-foundation"
+      ]
+    },
+    {
+      "id": "formats-foundation",
+      "title": "Interview Formats & Assessment Methods",
+      "topic": "Interview formats & assessment methods",
+      "tier": "1",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/05-formats/formats-foundation.md",
+      "category": "Formats",
+      "document_type": "foundation",
+      "review_due": "2027-07-19",
+      "created": "2026-07-19",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "uk-frameworks-foundation",
+        "eu-frameworks-foundation",
+        "best-practice-foundation"
+      ]
+    },
+    {
+      "id": "best-practice-foundation",
+      "title": "Interview Best Practice: Preparation, Pitfalls & Scoring Insight",
+      "topic": "Preparation strategy & pitfalls",
+      "tier": "1",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/06-best-practice/best-practice-foundation.md",
+      "category": "Best Practice",
+      "document_type": "foundation",
+      "review_due": "2027-07-19",
+      "created": "2026-07-19",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "uk-frameworks-foundation",
+        "eu-frameworks-foundation",
+        "formats-foundation"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "competencies-foundation",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "uk-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "eu-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "best-practice-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "eu-frameworks-foundation",
+      "rel": "counterpart of",
+      "target": "known"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "formats-foundation",
+      "rel": "complements",
+      "target": "known"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "best-practice-foundation",
+      "rel": "complements",
+      "target": "known"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "best-practice-foundation",
+      "rel": "complements",
+      "target": "known"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "teamwork-collaboration",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "communication-influencing",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "leadership-management",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "problem-solving-decision-making",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "delivering-results-planning",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "resilience-adaptability",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "integrity-values-ethics",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "competencies-foundation",
+      "to": "customer-stakeholder-service",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "star-technique",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "alternative-answer-frameworks",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "building-evidence-bank",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "uk-civil-service-behaviour-questions",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "nhs-values-based-interviews",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "police-competency-values-framework",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "uk-graduate-schemes",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "eu-frameworks-foundation",
+      "to": "epso-competency-framework",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "eu-frameworks-foundation",
+      "to": "eu-institutions-assessment-centres",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "panel-interviews",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "video-asynchronous-interviews",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "assessment-centre-exercises",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "building-evidence-bank",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "scoring-and-marking",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "common-mistakes-recovery",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "interviewer-question-design",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "fairness-bias-legal",
+      "rel": "parent of",
+      "target": "planned"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "uk-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "techniques-foundation",
+      "to": "eu-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-frameworks-foundation",
+      "to": "best-practice-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-frameworks-foundation",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-frameworks-foundation",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-frameworks-foundation",
+      "to": "uk-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-frameworks-foundation",
+      "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-frameworks-foundation",
+      "to": "best-practice-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "uk-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "formats-foundation",
+      "to": "eu-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "uk-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "eu-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "best-practice-foundation",
+      "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    }
+  ]
 }

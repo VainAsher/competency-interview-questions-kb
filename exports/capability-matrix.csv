@@ -1,1 +1,7 @@
 id,title,topic,tier,market,document_type,category,version,status,confidence,review_due,path
+competencies-foundation,Competency-Based Interviewing: Competency Families & Question Mapping,Competency families & question mapping,1,"UK, EU",foundation,Competencies,1.0.0,frozen,Medium,2027-07-19,docs/01-competencies/competencies-foundation.md
+techniques-foundation,Answer Frameworks & Techniques: STAR and Beyond,Answer frameworks,1,"UK, EU",foundation,Techniques,1.0.0,frozen,Medium,2027-07-19,docs/02-techniques/techniques-foundation.md
+uk-frameworks-foundation,UK Competency Frameworks: The Landscape,UK competency frameworks landscape,1,UK,foundation,UK Frameworks,1.0.0,frozen,Medium,2027-07-19,docs/03-uk-frameworks/uk-frameworks-foundation.md
+eu-frameworks-foundation,EU Competency Frameworks: EPSO & the EU Institutions,EU competency frameworks landscape,1,EU,foundation,EU Frameworks,1.0.0,frozen,Medium,2027-07-19,docs/04-eu-frameworks/eu-frameworks-foundation.md
+formats-foundation,Interview Formats & Assessment Methods,Interview formats & assessment methods,1,"UK, EU",foundation,Formats,1.0.0,frozen,Medium,2027-07-19,docs/05-formats/formats-foundation.md
+best-practice-foundation,"Interview Best Practice: Preparation, Pitfalls & Scoring Insight",Preparation strategy & pitfalls,1,"UK, EU",foundation,Best Practice,1.0.0,frozen,Medium,2027-07-19,docs/06-best-practice/best-practice-foundation.md

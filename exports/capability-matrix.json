@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "id": "competencies-foundation",
+    "title": "Competency-Based Interviewing: Competency Families & Question Mapping",
+    "topic": "Competency families & question mapping",
+    "tier": "1",
+    "market": "UK, EU",
+    "document_type": "foundation",
+    "category": "Competencies",
+    "version": "1.0.0",
+    "status": "frozen",
+    "confidence": "Medium",
+    "review_due": "2027-07-19",
+    "path": "docs/01-competencies/competencies-foundation.md"
+  },
+  {
+    "id": "techniques-foundation",
+    "title": "Answer Frameworks & Techniques: STAR and Beyond",
+    "topic": "Answer frameworks",
+    "tier": "1",
+    "market": "UK, EU",
+    "document_type": "foundation",
+    "category": "Techniques",
+    "version": "1.0.0",
+    "status": "frozen",
+    "confidence": "Medium",
+    "review_due": "2027-07-19",
+    "path": "docs/02-techniques/techniques-foundation.md"
+  },
+  {
+    "id": "uk-frameworks-foundation",
+    "title": "UK Competency Frameworks: The Landscape",
+    "topic": "UK competency frameworks landscape",
+    "tier": "1",
+    "market": "UK",
+    "document_type": "foundation",
+    "category": "UK Frameworks",
+    "version": "1.0.0",
+    "status": "frozen",
+    "confidence": "Medium",
+    "review_due": "2027-07-19",
+    "path": "docs/03-uk-frameworks/uk-frameworks-foundation.md"
+  },
+  {
+    "id": "eu-frameworks-foundation",
+    "title": "EU Competency Frameworks: EPSO & the EU Institutions",
+    "topic": "EU competency frameworks landscape",
+    "tier": "1",
+    "market": "EU",
+    "document_type": "foundation",
+    "category": "EU Frameworks",
+    "version": "1.0.0",
+    "status": "frozen",
+    "confidence": "Medium",
+    "review_due": "2027-07-19",
+    "path": "docs/04-eu-frameworks/eu-frameworks-foundation.md"
+  },
+  {
+    "id": "formats-foundation",
+    "title": "Interview Formats & Assessment Methods",
+    "topic": "Interview formats & assessment methods",
+    "tier": "1",
+    "market": "UK, EU",
+    "document_type": "foundation",
+    "category": "Formats",
+    "version": "1.0.0",
+    "status": "frozen",
+    "confidence": "Medium",
+    "review_due": "2027-07-19",
+    "path": "docs/05-formats/formats-foundation.md"
+  },
+  {
+    "id": "best-practice-foundation",
+    "title": "Interview Best Practice: Preparation, Pitfalls & Scoring Insight",
+    "topic": "Preparation strategy & pitfalls",
+    "tier": "1",
+    "market": "UK, EU",
+    "document_type": "foundation",
+    "category": "Best Practice",
+    "version": "1.0.0",
+    "status": "frozen",
+    "confidence": "Medium",
+    "review_due": "2027-07-19",
+    "path": "docs/06-best-practice/best-practice-foundation.md"
+  }
+]

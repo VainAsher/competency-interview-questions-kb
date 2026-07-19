@@ -41,3 +41,10 @@ plugins:
   - search
 nav:
   - Home: index.md
+  - "Tier 1 — Category foundations":
+      - "Competency-Based Interviewing: Competency Families & Question Mapping": 01-competencies/competencies-foundation.md
+      - "Answer Frameworks & Techniques: STAR and Beyond": 02-techniques/techniques-foundation.md
+      - "UK Competency Frameworks: The Landscape": 03-uk-frameworks/uk-frameworks-foundation.md
+      - "EU Competency Frameworks: EPSO & the EU Institutions": 04-eu-frameworks/eu-frameworks-foundation.md
+      - "Interview Formats & Assessment Methods": 05-formats/formats-foundation.md
+      - "Interview Best Practice: Preparation, Pitfalls & Scoring Insight": 06-best-practice/best-practice-foundation.md

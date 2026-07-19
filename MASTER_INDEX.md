@@ -10,6 +10,12 @@ best practice.
 
 | ID | Title | Topic | Tier | Market | Version | Status | Confidence | Path |
 |----|-------|-------|------|--------|---------|--------|------------|------|
+| competencies-foundation | Competency-Based Interviewing: Competency Families & Question Mapping | Competency families & question mapping | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/competencies-foundation.md` |
+| techniques-foundation | Answer Frameworks & Techniques: STAR and Beyond | Answer frameworks | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/02-techniques/techniques-foundation.md` |
+| uk-frameworks-foundation | UK Competency Frameworks: The Landscape | UK competency frameworks landscape | 1 | UK | 1.0.0 | frozen | Medium | `docs/03-uk-frameworks/uk-frameworks-foundation.md` |
+| eu-frameworks-foundation | EU Competency Frameworks: EPSO & the EU Institutions | EU competency frameworks landscape | 1 | EU | 1.0.0 | frozen | Medium | `docs/04-eu-frameworks/eu-frameworks-foundation.md` |
+| formats-foundation | Interview Formats & Assessment Methods | Interview formats & assessment methods | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/05-formats/formats-foundation.md` |
+| best-practice-foundation | Interview Best Practice: Preparation, Pitfalls & Scoring Insight | Preparation strategy & pitfalls | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/06-best-practice/best-practice-foundation.md` |
 
 ## Knowledge graph
 
@@ -20,18 +26,18 @@ Typed cross-reference edges between documents. Each bullet has the shape below
 - `source-id` *relation* `target-id`
 ```
 
-## Proposed taxonomy (backlog — pending human approval)
+- `competencies-foundation` *related* `techniques-foundation` `uk-frameworks-foundation` `eu-frameworks-foundation` `formats-foundation` `best-practice-foundation`
+- `uk-frameworks-foundation` *counterpart of* `eu-frameworks-foundation`
+- `techniques-foundation` *complements* `formats-foundation` `best-practice-foundation`
+- `formats-foundation` *complements* `best-practice-foundation`
+- `competencies-foundation` *parent of* `teamwork-collaboration` `communication-influencing` `leadership-management` `problem-solving-decision-making` `delivering-results-planning` `resilience-adaptability` `integrity-values-ethics` `customer-stakeholder-service` (planned)
+- `techniques-foundation` *parent of* `star-technique` `alternative-answer-frameworks` `building-evidence-bank` (planned)
+- `uk-frameworks-foundation` *parent of* `uk-civil-service-success-profiles` `uk-civil-service-behaviour-questions` `nhs-values-based-interviews` `police-competency-values-framework` `uk-graduate-schemes` (planned)
+- `eu-frameworks-foundation` *parent of* `epso-competency-framework` `eu-institutions-assessment-centres` (planned)
+- `formats-foundation` *parent of* `panel-interviews` `video-asynchronous-interviews` `assessment-centre-exercises` (planned)
+- `best-practice-foundation` *parent of* `building-evidence-bank` `scoring-and-marking` `common-mistakes-recovery` `interviewer-question-design` `fairness-bias-legal` (planned)
 
-### Tier 1 — Category foundations (cluster 1)
-
-| Planned ID | Category | Scope |
-|------------|----------|-------|
-| competencies-foundation | Competencies | What competency-based interviewing is; the major competency families; how question banks map to them |
-| techniques-foundation | Techniques | Answer frameworks overview — STAR, CARL, SOAR; evidence selection and structuring |
-| uk-frameworks-foundation | UK Frameworks | The UK landscape — Civil Service Success Profiles, NHS values-based, police CVF, private sector |
-| eu-frameworks-foundation | EU Frameworks | The EU landscape — EPSO competency framework, EU-institution assessment centres |
-| formats-foundation | Formats | Interview formats — panel, video/asynchronous, assessment centres, strengths- vs competency-based |
-| best-practice-foundation | Best Practice | Preparation strategy, building an evidence bank, pitfalls overview, scoring insight |
+## Backlog (pending clusters — approved 2026-07-19)
 
 ### Tier 2 — Competency deep-dives & question banks (cluster 2)
 
