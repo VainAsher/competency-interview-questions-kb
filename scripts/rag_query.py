@@ -105,6 +105,104 @@ class BM25:
         return s
 
 
+# ── Dense retrieval + reciprocal-rank fusion ─────────────────────────────────
+# Optional layer. If the embeddings index is absent (or its provider is
+# unreachable at query time), everything degrades to BM25 with a printed note.
+
+_EMB_CACHE = {}
+
+
+def load_embeddings() -> dict | None:
+    if "store" in _EMB_CACHE:
+        return _EMB_CACHE["store"]
+    npz, meta_p = RAG / "embeddings.npz", RAG / "embeddings.meta.json"
+    store = None
+    if npz.exists() and meta_p.exists():
+        try:
+            import numpy as np
+            data = np.load(npz, allow_pickle=True)
+            meta = json.loads(meta_p.read_text(encoding="utf-8"))
+            ids = data["chunk_ids"].tolist()
+            store = {"vectors": data["vectors"],
+                     "id2idx": {cid: i for i, cid in enumerate(ids)},
+                     "meta": meta}
+        except Exception as e:  # numpy missing, corrupt file, etc.
+            store = {"error": str(e)}
+    _EMB_CACHE["store"] = store
+    return store
+
+
+def dense_order(pool: list[dict], query: str, store: dict):
+    """Return pool-indices ordered by cosine similarity to the query, or None
+    if the query cannot be embedded (e.g. provider offline)."""
+    try:
+        import numpy as np
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import embeddings as emb
+        provider = emb.provider_from_meta(store["meta"])
+        qv = provider.embed([query])[0]
+        vecs, id2idx = store["vectors"], store["id2idx"]
+        idxs = [id2idx.get(c["chunk_id"]) for c in pool]
+        present = [i for i, gi in enumerate(idxs) if gi is not None]
+        if not present:
+            return None
+        mat = vecs[[idxs[i] for i in present]]            # (m, dim), L2-normalised
+        sims = mat @ qv                                   # cosine (both normalised)
+        order_local = sorted(range(len(present)), key=lambda k: -float(sims[k]))
+        return [present[k] for k in order_local]
+    except Exception:
+        return None
+
+
+def rrf(orders: list[list[int]], k: int) -> dict[int, float]:
+    """Reciprocal-rank fusion: score = Σ 1 / (k + rank), rank 1-based."""
+    fused: dict[int, float] = defaultdict(float)
+    for order in orders:
+        for rank, idx in enumerate(order, 1):
+            fused[idx] += 1.0 / (k + rank)
+    return fused
+
+
+def rank_pool(pool: list[dict], query: str, a) -> tuple[list[int], dict[int, str], str]:
+    """Order pool indices by the chosen retriever. Returns
+    (ordered_indices, per-index annotation, mode_used)."""
+    if not query.strip():
+        return list(range(len(pool))), {}, "unranked"
+
+    bm = BM25([tokenize(c["context_header"] + " " + c["text"]) for c in pool])
+    tq = tokenize(query)
+    bm_scores = [bm.score(tq, i) for i in range(len(pool))]
+    bm_order = sorted(range(len(pool)), key=lambda i: -bm_scores[i])
+
+    want = a.retriever
+    store = load_embeddings() if want in ("dense", "hybrid") else None
+    dn_order = None
+    if want in ("dense", "hybrid"):
+        if not store or "error" in store:
+            reason = (store.get("error") if store else
+                      "no embeddings index — run scripts/build_embeddings.py")
+            print(f"[note] dense retrieval unavailable ({reason}); using BM25.")
+            want = "bm25"
+        else:
+            dn_order = dense_order(pool, query, store)
+            if dn_order is None:
+                print("[note] could not embed query (provider offline?); using BM25.")
+                want = "bm25"
+
+    if want == "bm25":
+        return bm_order, {}, "bm25"
+    if want == "dense":
+        return dn_order, {}, f"dense:{store['meta']['key']}"
+
+    # hybrid: reciprocal-rank fusion of the two orderings
+    fused = rrf([bm_order, dn_order], a.rrf_k)
+    ordered = sorted(fused, key=lambda i: -fused[i])
+    bm_rank = {idx: r for r, idx in enumerate(bm_order, 1)}
+    dn_rank = {idx: r for r, idx in enumerate(dn_order, 1)}
+    ann = {i: f"b#{bm_rank.get(i,'-')} d#{dn_rank.get(i,'-')}" for i in ordered}
+    return ordered, ann, f"hybrid(rrf k={a.rrf_k}):{store['meta']['key']}"
+
+
 # ── Filtering ────────────────────────────────────────────────────────────────
 
 def apply_filters(chunks: list[dict], a) -> list[dict]:
@@ -188,36 +286,34 @@ def passage_search(chunks: list[dict], a) -> None:
     if not pool:
         print("No chunks match those filters.")
         return
-    q = tokenize(a.query or "")
-    if q:
-        bm = BM25([tokenize(c["context_header"] + " " + c["text"]) for c in pool])
-        scored = sorted(((bm.score(q, i), c) for i, c in enumerate(pool)),
-                        key=lambda x: -x[0])
-    else:
-        scored = [(0.0, c) for c in pool]
-    top = scored[:a.k]
+    order, ann, mode = rank_pool(pool, a.query or "", a)
+    top_idx = order[:a.k]
 
     if a.json:
-        out = [{"score": round(s, 3), **{k: c[k] for k in
-                ("chunk_id", "doc_id", "section", "subsection", "layer",
-                 "provenance", "frameworks", "confidence", "citations", "text")}}
-               for s, c in top]
+        out = [{"retriever": mode, "fusion": ann.get(i),
+                **{k: pool[i][k] for k in
+                   ("chunk_id", "doc_id", "section", "subsection", "layer",
+                    "provenance", "frameworks", "confidence", "citations", "text")}}
+               for i in top_idx]
         print(json.dumps(out, ensure_ascii=False, indent=2))
         return
 
-    for rank, (s, c) in enumerate(top, 1):
+    print(f"retriever: {mode}")
+    for rank, i in enumerate(top_idx, 1):
+        c = pool[i]
         sub = f" › {c['subsection']}" if c.get("subsection") else ""
         prov = f" · {c['provenance']}" if c.get("provenance") else ""
         fw = f" · {', '.join(c['frameworks'])}" if c.get("frameworks") else ""
-        print(f"\n[{rank}] {s:5.2f}  {c['doc_id']} › {c['section']}{sub}")
+        tag = f"  [{ann[i]}]" if i in ann and ann[i] else ""
+        print(f"\n[{rank}] {c['doc_id']} › {c['section']}{sub}{tag}")
         print(f"      {c['layer']}{prov}{fw} · {c.get('confidence','?')} · {c['chunk_id']}")
         print(f"      {snippet(c['text'])}")
         cit = fmt_citations(c.get("citations") or [])
         if cit:
             print("     " + cit)
 
-    if a.expand and top:
-        top_docs = {c["doc_id"] for _, c in top[:3]}
+    if a.expand and top_idx:
+        top_docs = {pool[i]["doc_id"] for i in top_idx[:3]}
         nb = neighbours(top_docs)
         if nb:
             print("\n── graph expansion (neighbouring documents) ──")
@@ -237,10 +333,8 @@ def question_picker(chunks: list[dict], a) -> None:
         print("No questions match those facets.")
         return
     if a.query:
-        bm = BM25([tokenize(c["text"]) for c in qs])
-        tq = tokenize(a.query)
-        qs = [c for _, c in sorted(((bm.score(tq, i), c) for i, c in enumerate(qs)),
-                                   key=lambda x: -x[0])]
+        order, _ann, _mode = rank_pool(qs, a.query, a)
+        qs = [qs[i] for i in order]
     picks = qs[:a.k]
 
     if a.json:
@@ -278,6 +372,12 @@ def main() -> int:
     ap.add_argument("--competency", dest="category", help="alias for --category (question mode)")
     ap.add_argument("--level", help="question sub-heading substring, e.g. senior")
     ap.add_argument("--doc", help="restrict to doc_id substring")
+    ap.add_argument("--retriever", default="hybrid",
+                    choices=["bm25", "dense", "hybrid"],
+                    help="hybrid (BM25+dense RRF, default; falls back to bm25 if no "
+                         "embeddings), dense, or bm25")
+    ap.add_argument("--rrf-k", dest="rrf_k", type=int, default=60,
+                    help="reciprocal-rank-fusion constant (default 60)")
     ap.add_argument("--expand", action="store_true", help="add knowledge-graph neighbours")
     ap.add_argument("--json", action="store_true", help="machine-readable output")
     ap.add_argument("--facets", action="store_true", help="print the manifest facet vocabularies and exit")

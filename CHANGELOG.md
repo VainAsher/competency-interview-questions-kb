@@ -2,6 +2,31 @@
 
 All notable changes to this knowledge base.
 
+## rag-v2.1 — 2026-07-20 — dense embeddings + hybrid (RRF) retrieval
+
+Optional layer; the BM25 core stays zero-dependency and unchanged.
+
+### Added
+
+- **`scripts/embeddings.py`** — pluggable embedding providers with graceful
+  precedence `openai → local → hash`: OpenAI `text-embedding-3-small` (1536-d),
+  sentence-transformers `all-MiniLM-L6-v2` (384-d, offline), and a deterministic
+  hashing fallback (256-d, no semantics — for offline plumbing/CI). All return
+  L2-normalised vectors so cosine is a dot product.
+- **`scripts/build_embeddings.py`** — embeds each chunk's `context_header + text`
+  (contextual retrieval) → `exports/rag/embeddings.npz` + `.meta.json`.
+  **Git-ignored**: large, binary, model-version-dependent — deliberately outside
+  the deterministic CI staleness gate.
+- **`scripts/rag_query.py` `--retriever {bm25,dense,hybrid}`** — hybrid fuses the
+  BM25 and dense rankings with reciprocal-rank fusion (`Σ 1/(k+rank)`, `--rrf-k`
+  default 60) *after* the metadata pre-filter, so filtering/graph-expansion/
+  citation-resolution are unchanged. Results annotated `[b#<rank> d#<rank>]`.
+  Degrades to BM25 with a note when no index is present. Verified: on a
+  paraphrase query ("avoid waffling / keep it concise") hybrid lifted the actual
+  concision passage from BM25 rank 29 into the top 3 via the dense ranking.
+- CI smoke-tests the fusion path offline with the hash provider; README
+  documents providers and usage.
+
 ## rag-v2 — 2026-07-20 — structure-aware retrieval
 
 Infrastructure, not content — no document changed.

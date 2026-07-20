@@ -55,9 +55,34 @@ python scripts/rag_query.py --facets      # discover valid filter values
 python scripts/rag_query.py ... --json     # machine-readable output for agents
 ```
 
-Dense embeddings plug in via reciprocal-rank fusion over `context_header + text`
-without changing the filters, graph expansion, or citation resolution — see the
-header of `scripts/rag_query.py`.
+### Dense embeddings + hybrid (RRF) retrieval — optional
+
+BM25 is the zero-dependency default. To add semantic recall, build a dense
+index and the query tool fuses the two rankings with reciprocal-rank fusion
+(`score = Σ 1/(k + rank)`), after the metadata pre-filter:
+
+```bash
+pip install numpy openai            # or: pip install numpy sentence-transformers
+python scripts/build_embeddings.py  # auto-picks a provider; writes exports/rag/embeddings.npz
+
+python scripts/rag_query.py "how do I keep an answer concise" --retriever hybrid -k 5
+python scripts/rag_query.py "..." --retriever dense     # dense only
+python scripts/rag_query.py "..." --retriever bm25      # force lexical
+```
+
+Providers (auto-detected, precedence `openai → local → hash`):
+
+| provider | model | needs | notes |
+|----------|-------|-------|-------|
+| `openai` | text-embedding-3-small (1536-d) | `openai`, `OPENAI_API_KEY` | real semantics, cheap |
+| `local`  | all-MiniLM-L6-v2 (384-d) | `sentence-transformers` | fully offline |
+| `hash`   | hashing bag-of-words (256-d) | numpy only | **no semantics** — plumbing/CI only |
+
+Hybrid results are annotated `[b#<bm25 rank> d#<dense rank>]` so you can see
+what each retriever contributed. The embeddings index is **git-ignored** (large,
+binary, model-version-dependent) and is not part of the deterministic CI gate;
+rebuild it on demand. If no index is present, `--retriever hybrid` degrades to
+BM25 with a printed note — nothing breaks.
 
 ## Quality gates
 

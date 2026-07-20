@@ -1,0 +1,9 @@
+# Dense-embedding artefacts: large, binary, model-version-dependent.
+# Rebuild on demand with scripts/build_embeddings.py; not part of the
+# deterministic CI staleness gate.
+exports/rag/embeddings.npz
+exports/rag/embeddings.meta.json
+
+# Python bytecode
+__pycache__/
+*.pyc

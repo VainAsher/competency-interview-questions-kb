@@ -42,6 +42,12 @@ jobs:
         run: |
           git diff --exit-code exports/ mkdocs.yml docs/index.md \
             || (echo "Generated artefacts are stale — run build_graph.py / build_rag.py / build_site.py and commit" && exit 1)
+      - name: Smoke-test dense + RRF fusion (offline hash provider)
+        run: |
+          pip install numpy
+          python scripts/build_embeddings.py --provider hash
+          python scripts/rag_query.py "how are behaviours scored" --retriever hybrid -k 3
+          python scripts/rag_query.py "teamwork under pressure" --retriever dense -k 3
 
   markdownlint:
     name: Markdown lint
