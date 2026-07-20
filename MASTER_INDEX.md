@@ -23,7 +23,12 @@ best practice.
 | delivering-results-planning | Delivering Results, Planning & Organising: Question Bank & Answer Guidance | Delivering results & planning | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/delivering-results-planning.md` |
 | resilience-adaptability | Resilience, Adaptability & Working Under Pressure: Question Bank & Answer Guidance | Resilience & adaptability | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/resilience-adaptability.md` |
 | integrity-values-ethics | Integrity, Values & Ethical Behaviour: Question Bank & Answer Guidance | Integrity & values | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/integrity-values-ethics.md` |
-| customer-stakeholder-service | Customer Service & Stakeholder Management: Question Bank & Answer Guidance | Customer & stakeholder focus | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/customer-stakeholder-service.md` |
+| customer-stakeholder-service | Customer Service & Stakeholder Management: Question Bank & Answer Guidance | Customer & stakeholder focus | 2 | UK, EU | 1.0.1 | frozen | Medium | `docs/01-competencies/customer-stakeholder-service.md` |
+| uk-civil-service-success-profiles | Civil Service Success Profiles: The Complete Guide | Success Profiles end-to-end | 3 | UK | 1.0.0 | frozen | High | `docs/03-uk-frameworks/uk-civil-service-success-profiles.md` |
+| uk-civil-service-behaviour-questions | Civil Service Behaviours: Question Bank by Behaviour and Grade | Civil Service behaviour questions | 3 | UK | 1.0.0 | frozen | Medium | `docs/03-uk-frameworks/uk-civil-service-behaviour-questions.md` |
+| nhs-values-based-interviews | NHS Values-Based Interviews: Framework, Questions & Band Expectations | NHS values-based recruitment | 3 | UK | 1.0.0 | frozen | Medium | `docs/03-uk-frameworks/nhs-values-based-interviews.md` |
+| police-competency-values-framework | Police Competency and Values Framework (CVF): Guide & Question Bank | College of Policing CVF | 3 | UK | 1.0.0 | frozen | High | `docs/03-uk-frameworks/police-competency-values-framework.md` |
+| uk-graduate-schemes | UK Graduate Schemes: Competency Interviews in Private-Sector Recruitment | Graduate-scheme competency interviews | 3 | UK | 1.0.0 | frozen | Medium | `docs/03-uk-frameworks/uk-graduate-schemes.md` |
 
 ## Knowledge graph
 
@@ -56,7 +61,16 @@ Typed cross-reference edges between documents. Each bullet has the shape below
 - `customer-stakeholder-service` *deepens* `competencies-foundation`
 - `customer-stakeholder-service` *relates to* `techniques-foundation`
 - `techniques-foundation` *parent of* `star-technique` `alternative-answer-frameworks` `building-evidence-bank` (planned)
-- `uk-frameworks-foundation` *parent of* `uk-civil-service-success-profiles` `uk-civil-service-behaviour-questions` `nhs-values-based-interviews` `police-competency-values-framework` `uk-graduate-schemes` (planned)
+- `uk-frameworks-foundation` *parent of* `uk-civil-service-success-profiles` `uk-civil-service-behaviour-questions` `nhs-values-based-interviews` `police-competency-values-framework` `uk-graduate-schemes`
+- `uk-civil-service-success-profiles` *deepens* `uk-frameworks-foundation` `competencies-foundation`
+- `uk-civil-service-behaviour-questions` *deepens* `uk-civil-service-success-profiles`
+- `uk-civil-service-behaviour-questions` *relates to* `techniques-foundation` `competencies-foundation`
+- `nhs-values-based-interviews` *deepens* `uk-frameworks-foundation`
+- `nhs-values-based-interviews` *relates to* `integrity-values-ethics` `customer-stakeholder-service` `resilience-adaptability`
+- `police-competency-values-framework` *deepens* `uk-frameworks-foundation`
+- `police-competency-values-framework` *relates to* `integrity-values-ethics` `resilience-adaptability` `teamwork-collaboration`
+- `uk-graduate-schemes` *deepens* `uk-frameworks-foundation`
+- `uk-graduate-schemes` *relates to* `formats-foundation` `best-practice-foundation` `resilience-adaptability` `teamwork-collaboration`
 - `eu-frameworks-foundation` *parent of* `epso-competency-framework` `eu-institutions-assessment-centres` (planned)
 - `formats-foundation` *parent of* `panel-interviews` `video-asynchronous-interviews` `assessment-centre-exercises` (planned)
 - `best-practice-foundation` *parent of* `building-evidence-bank` `scoring-and-marking` `common-mistakes-recovery` `interviewer-question-design` `fairness-bias-legal` (planned)

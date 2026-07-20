@@ -17,6 +17,13 @@ graph LR
     resilience_adaptability["resilience-adaptability"]
     teamwork_collaboration["teamwork-collaboration"]
   end
+  subgraph Tier3["Tier 3"]
+    nhs_values_based_interviews["nhs-values-based-interviews"]
+    police_competency_values_framework["police-competency-values-framework"]
+    uk_civil_service_behaviour_questions["uk-civil-service-behaviour-questions"]
+    uk_civil_service_success_profiles["uk-civil-service-success-profiles"]
+    uk_graduate_schemes["uk-graduate-schemes"]
+  end
   competencies_foundation -->|related| techniques_foundation
   competencies_foundation -->|related| uk_frameworks_foundation
   competencies_foundation -->|related| eu_frameworks_foundation
@@ -66,16 +73,29 @@ graph LR
   techniques_foundation -.->|parent of| alternative_answer_frameworks
   building_evidence_bank(["building-evidence-bank<br/>(planned)"])
   techniques_foundation -.->|parent of| building_evidence_bank
-  uk_civil_service_success_profiles(["uk-civil-service-success-profiles<br/>(planned)"])
-  uk_frameworks_foundation -.->|parent of| uk_civil_service_success_profiles
-  uk_civil_service_behaviour_questions(["uk-civil-service-behaviour-questions<br/>(planned)"])
-  uk_frameworks_foundation -.->|parent of| uk_civil_service_behaviour_questions
-  nhs_values_based_interviews(["nhs-values-based-interviews<br/>(planned)"])
-  uk_frameworks_foundation -.->|parent of| nhs_values_based_interviews
-  police_competency_values_framework(["police-competency-values-framework<br/>(planned)"])
-  uk_frameworks_foundation -.->|parent of| police_competency_values_framework
-  uk_graduate_schemes(["uk-graduate-schemes<br/>(planned)"])
-  uk_frameworks_foundation -.->|parent of| uk_graduate_schemes
+  uk_frameworks_foundation -->|parent of| uk_civil_service_success_profiles
+  uk_frameworks_foundation -->|parent of| uk_civil_service_behaviour_questions
+  uk_frameworks_foundation -->|parent of| nhs_values_based_interviews
+  uk_frameworks_foundation -->|parent of| police_competency_values_framework
+  uk_frameworks_foundation -->|parent of| uk_graduate_schemes
+  uk_civil_service_success_profiles -->|deepens| uk_frameworks_foundation
+  uk_civil_service_success_profiles -->|deepens| competencies_foundation
+  uk_civil_service_behaviour_questions -->|deepens| uk_civil_service_success_profiles
+  uk_civil_service_behaviour_questions -->|relates to| techniques_foundation
+  uk_civil_service_behaviour_questions -->|relates to| competencies_foundation
+  nhs_values_based_interviews -->|deepens| uk_frameworks_foundation
+  nhs_values_based_interviews -->|relates to| integrity_values_ethics
+  nhs_values_based_interviews -->|relates to| customer_stakeholder_service
+  nhs_values_based_interviews -->|relates to| resilience_adaptability
+  police_competency_values_framework -->|deepens| uk_frameworks_foundation
+  police_competency_values_framework -->|relates to| integrity_values_ethics
+  police_competency_values_framework -->|relates to| resilience_adaptability
+  police_competency_values_framework -->|relates to| teamwork_collaboration
+  uk_graduate_schemes -->|deepens| uk_frameworks_foundation
+  uk_graduate_schemes -->|relates to| formats_foundation
+  uk_graduate_schemes -->|relates to| best_practice_foundation
+  uk_graduate_schemes -->|relates to| resilience_adaptability
+  uk_graduate_schemes -->|relates to| teamwork_collaboration
   epso_competency_framework(["epso-competency-framework<br/>(planned)"])
   eu_frameworks_foundation -.->|parent of| epso_competency_framework
   eu_institutions_assessment_centres(["eu-institutions-assessment-centres<br/>(planned)"])
@@ -144,3 +164,24 @@ graph LR
   customer_stakeholder_service -->|related| teamwork_collaboration
   customer_stakeholder_service -->|related| communication_influencing
   customer_stakeholder_service -->|related| delivering_results_planning
+  uk_civil_service_success_profiles -->|related| uk_civil_service_behaviour_questions
+  uk_civil_service_success_profiles -->|related| techniques_foundation
+  uk_civil_service_behaviour_questions -->|related| uk_frameworks_foundation
+  nhs_values_based_interviews -->|related| uk_civil_service_success_profiles
+  nhs_values_based_interviews -->|related| uk_civil_service_behaviour_questions
+  nhs_values_based_interviews -->|related| police_competency_values_framework
+  nhs_values_based_interviews -->|related| uk_graduate_schemes
+  nhs_values_based_interviews -->|related| competencies_foundation
+  nhs_values_based_interviews -->|related| techniques_foundation
+  police_competency_values_framework -->|related| uk_civil_service_success_profiles
+  police_competency_values_framework -->|related| uk_civil_service_behaviour_questions
+  police_competency_values_framework -->|related| nhs_values_based_interviews
+  police_competency_values_framework -->|related| uk_graduate_schemes
+  police_competency_values_framework -->|related| competencies_foundation
+  police_competency_values_framework -->|related| techniques_foundation
+  uk_graduate_schemes -->|related| uk_civil_service_success_profiles
+  uk_graduate_schemes -->|related| uk_civil_service_behaviour_questions
+  uk_graduate_schemes -->|related| nhs_values_based_interviews
+  uk_graduate_schemes -->|related| police_competency_values_framework
+  uk_graduate_schemes -->|related| competencies_foundation
+  uk_graduate_schemes -->|related| techniques_foundation

@@ -1,7 +1,7 @@
 ---
 id: resilience-adaptability
 title: "Resilience, Adaptability & Working Under Pressure: Question Bank & Answer Guidance"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Competencies
@@ -46,7 +46,7 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | resilience-adaptability |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
@@ -318,7 +318,7 @@ The most explicitly published Success Profiles scoring scale traced for this doc
 | 6 | Strong Demonstration | "Substantial positive evidence; includes some evidence of exceeding expectations" |
 | 7 | Outstanding Demonstration | "The evidence provided wholly exceeds expectation at this level" |
 
-COPFS states the minimum requirement is a score of 4 across behaviours, though a single 3 can be tolerated where other scores are high, and that additional benchmarks may apply — such as a 5 on lead behaviours or a combined score threshold — communicated in the application pack [11]. COPFS notes strengths are not currently used in its process [11]. This scale is departmental, not universal — see Risks & Caveats.
+COPFS states the minimum requirement is a score of 4 across behaviours, though a single 3 can be tolerated where other scores are high, and that additional benchmarks may apply — such as a 5 on lead behaviours or a combined score threshold — communicated in the application pack [11]. COPFS notes strengths are not currently used in its process [11]. The 1–7 scale itself is central Cabinet Office practice, but these benchmarks are COPFS's own — see Risks & Caveats.
 
 The practical reading for both audiences: the scale rewards *evidence density* and penalises negative evidence. A dramatic story with thin personal action scores lower than an undramatic one with dense, specific action.
 
@@ -393,7 +393,7 @@ Council Directive 2000/78/EC establishes a general framework for equal treatment
 
 # Risks & Caveats
 
-- **The COPFS 1–7 scale is departmental, not government-wide.** It is published by one organisation applying Success Profiles [11]; other departments set their own benchmarks, and COPFS itself notes strengths are not currently used in its process [11]. Do not present it to a candidate as *the* Civil Service scale.
+- **The 1–7 scale is government-wide; the COPFS benchmarks are not.** Cabinet Office guidance states that "Experience, technical skills and behaviours should be scored using the 7 point scale. Strengths should be scored using the 4 point scale" [30], so the scale can be presented to a candidate as *the* Civil Service scale. Three qualifications survive: that central pack dates from 2020, and no refreshed central scoring publication was found after the January 2025 behaviour-guide refresh; the seven descriptor labels reproduced above come from COPFS [11], still the only located source publishing them; and the benchmarks are COPFS's own — other departments set their own, and COPFS itself notes strengths are not currently used in its process [11].
 - **The legacy EPSO Resilience definition is second-hand.** That Resilience was an assessed competency is confirmed by EPSO's own published assignment [7]. The *wording* of its definition — heavy workload, organisational frustrations, changing work environment — comes from a named practitioner training source quoting EPSO's competition guidelines [27]; attempts to retrieve the underlying EPSO guidelines or a EUR-Lex competition notice directly were unsuccessful during this document's research window, as EUR-Lex blocked automated retrieval. Treat that definition as indicative and historical.
 - **Frameworks in transition.** The CVF 2024 replaced the 2016 version, with forces given until May 2025 to transition, and policing professional profiles were still being updated on a rolling basis [10]. A force or College assessment may still reference older material; the College advises checking which version you are being assessed against [10]. Similarly, EPSO's 2023 framework superseded the model under which most published EPSO preparation material was written [4] [7].
 - **Careers-site question lists are practitioner evidence.** The sourced questions from targetjobs, Prospects, My World of Work, Oxford and the National Careers Service [21] [23] [24] [25] [26] evidence what is *published as typical*, not what any named employer asks in a given round.
@@ -403,7 +403,7 @@ Council Directive 2000/78/EC establishes a general framework for equal treatment
 
 # Open Questions
 
-- **Is there a government-wide published Success Profiles rating scale?** This document could only verify a departmental one [11]. A Cabinet Office-published scale with a stable URL would upgrade the Assessor Perspective section materially, and is a shared question with **delivering-results-planning** and the UK frameworks documents.
+- **Is there a government-wide published Success Profiles rating scale? — resolved 2026-07-20.** Yes. Cabinet Office guidance directs that behaviours, experience and technical skills be scored on the 7-point scale and strengths on the 4-point scale [30]; the same sentence appears in three independent grade-tier packs, so the scale is central. Two sub-questions remain open: no central publication of the seven descriptor *labels* was located (COPFS [11] is still the only source for those), and no published descriptors for the 4-point strengths scale were found at all. Shared with **delivering-results-planning** and the UK frameworks documents.
 - **Can the pre-2023 EPSO "Resilience" definition be sourced primarily?** The competency's existence is documented [7]; its official definition is not, in anything this pipeline could open. A EUR-Lex Notice of Competition from roughly 2016–2022, retrieved by a method EUR-Lex does not block, would resolve it.
 - **What replaced Resilience in EPSO scoring practice, not just in naming?** The 2023 framework maps the content onto Self-management and Learning as a skill [4], but whether assessors weight it comparably is not publicly documented.
 - **Do any NHS trusts publish values-based question sets touching pressure?** If a named trust publishes its VBR question bank, the NHS coverage here could move from composed to sourced [13].
@@ -431,6 +431,7 @@ Council Directive 2000/78/EC establishes a general framework for equal treatment
 - [16] **legislation.gov.uk** — *Equality Act 2010, s.4 (The protected characteristics)*. https://www.legislation.gov.uk/ukpga/2010/15/section/4. Accessed 2026-07-20.
 - [17] **GOV.UK** — *Recruitment and disabled people: Reasonable adjustments*. https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments. Accessed 2026-07-20.
 - [18] **EUR-Lex** — *Council Directive 2000/78/EC establishing a general framework for equal treatment in employment and occupation*. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078. Accessed 2026-07-20.
+- [30] **Cabinet Office** — *Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment* (May 2020). https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf. Accessed 2026-07-20. The same scoring sentence appears verbatim in the parallel Cabinet Office packs for HR Deputy Director and HR Director recruitment.
 
 **Professional & Advisory Bodies**
 
@@ -481,3 +482,4 @@ Council Directive 2000/78/EC establishes a general framework for equal treatment
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: resilience/adaptability deep-dive — framework mapping across Success Profiles Behaviours and Strengths, EPSO 2023 Self-management and the superseded Resilience competency, College of Policing CVF 2024, NHS VBR; 34-question bank; COPFS 1–7 scoring scale; Equality Act s.60 and adjustments coverage. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected superseded claim that the Success Profiles 1–7 scale is departmental; cited central Cabinet Office scoring guidance. | Standing mandate (user, 2026-07-19) |

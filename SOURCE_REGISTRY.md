@@ -35,13 +35,17 @@ eyeball them periodically: glassdoor.co.uk / glassdoor.com, indeed.com /
 uk.indeed.com, linkedin.com, reed.co.uk, totaljobs.com, cipd.org,
 consilium.europa.eu.
 
-Observed during clusters 1–2 (not allowlisted; workers used alternatives):
+Observed during clusters 1–3 (not allowlisted; workers used alternatives):
 **college.police.uk HTML pages** 403 automated fetchers — but the
 `assets.college.police.uk` **PDFs download fine** with a browser User-Agent and
-pass `check_links.py`, so cite the PDFs. **prospects.ac.uk** 403'd fetchers
-repeatedly during cluster 2 and was therefore left uncited by several workers
-even though it is registered — re-test before relying on it. ise.org.uk
-intermittently 403s but passes the checker; several legacy epso.europa.eu URLs
+pass `check_links.py`, so cite the PDFs. **prospects.ac.uk** — confirmed repeat
+block across clusters 2 and 3; treat as unreachable and use
+`luminate.prospects.ac.uk`, which works fine. **pwc.co.uk** (and `pwc.com/m1`)
+403 automated fetchers — PwC process claims must be attributed to the careers
+service reporting them, never to PwC. **cipd.org** is allowlisted but passed
+live in cluster 3; the block appears intermittent. **ise.org.uk** full-report
+PDF paths return 404 — the survey is genuinely member-gated, so cite ISE's
+public insight pages or Luminate reporting. Several legacy epso.europa.eu URLs
 404 after EPSO's migration to eu-careers.europa.eu.
 
 **Framework currency warnings (verified 2026-07-20):**
@@ -57,6 +61,59 @@ intermittently 403s but passes the checker; several legacy epso.europa.eu URLs
   administrators only)" wording survives only in pre-2023 General Rules and
   competition notices. This is the single most misreported fact in EPSO prep
   material; cite the supersession, never the legacy label as current.
+- **NHS VBR: the anchor framework is dated March 2016 and its publisher (Health
+  Education England) no longer exists** — HEE merged into NHS England, which
+  assumed all its activities. No successor framework has been reissued under
+  NHS England branding. VBR remains operative in practice (NHS Employers
+  guidance updated 23 May 2024), so cite the 2016 framework as *still
+  operative but unreissued*, never as freshly current.
+- **Legacy-domain risk:** several primary NHS citations resolve to
+  `hee.nhs.uk`, a retirement candidate. All passed live as of 2026-07-20;
+  capture Internet Archive snapshots before relying on them long-term.
+- **The Civil Service publishes no official behaviour interview question bank**
+  — only behaviour definitions and level descriptors. Every "Civil Service
+  interview question" in circulation is third-party. Do not imply otherwise.
+- **CORRECTION (2026-07-20): the Success Profiles 1–7 scale IS central.**
+  Clusters 1–2 recorded it as departmental because only the COPFS page had been
+  found. Cabinet Office guidance states verbatim that "Experience, technical
+  skills and behaviours should be scored using the 7 point scale. Strengths
+  should be scored using the 4 point scale", and the identical sentence appears
+  in three independent grade-tier packs (EO–G6, Deputy Director, Director).
+  Cite `co-sp-delegated-grades-2020` as the authority; COPFS is a departmental
+  *publication of* that central scale. Frozen cluster-1/2 documents describing
+  the scale as "departmental, not Civil-Service-wide" carry a superseded claim —
+  see the corrections backlog in `PROJECT_STATUS.md`.
+- **GOV.UK data-quality issue:** the *Success Profiles: Candidate Overview* page
+  repeats the Behaviours definition against **Technical**. The Strengths
+  Dictionary carries the correct wording ("the demonstration of specific
+  professional skills, knowledge or qualifications"). Prefer the Dictionary.
+- **Fetcher notes:** `civil-service-careers.gov.uk` returns a title-only shell to
+  WebFetch (pages are real and link-check fine, but unreadable by fetchers);
+  `assets.publishing.service.gov.uk` PDFs need local text extraction (curl +
+  pdftotext/pypdf) rather than WebFetch, which reports them as unreadable binary.
+- **STALE-DOCUMENT TRAP — College of Policing online-assessments guide.** The PDF
+  at `assets.college.police.uk/s3fs-public/2024-09/Online-assessments-candidate-guide-v3.2.pdf`
+  (internally labelled v3.1) **is still live but out of date** — it lists the
+  *2016* competency and value names (integrity, transparency, impartiality,
+  "deliver, support and inspire") for the sift. Do not cite it. Use
+  `cop-national-sift-guidance-2026` and `cop-oap-candidate-guidance-2024`.
+- **CVF 2016 → 2024 transition dates.** *Verified:* force transition deadline
+  **1 May 2025** (College news article + CVF main page, both via Internet
+  Archive — note this is NOT stated on the "Using the CVF in assessments" page);
+  College national sift exercises switched to CVF 2024 on **10 March 2025**
+  (`cop-using-cvf-assessments-2025`). *Unverified — do not cite:* a claim that
+  the 2016 version was "withdrawn from the College site in May 2025" circulated
+  during cluster 3 but could not be corroborated; every Wayback snapshot of the
+  CVF main page after Feb 2025 captured a 403 block page rather than content.
+  Levels are cumulative in **both** versions ("The levels are cumulative",
+  2024 framework p.9) — never present cumulativeness as a 2016-only trait.
+- **EXTRACTION TRAP — Strengths Dictionary mapping table.** The official
+  strengths-to-behaviours mapping (`cs-strengths-dictionary`, p.7) is laid out in
+  multiple columns. Automated PDF text extraction interleaves the headings and
+  bullet groups, producing a *plausible but wrong* mapping (e.g. "Mediator"
+  appears under Managing a Quality Service, which is a column-order artefact).
+  The 36 strength definitions extract fine; **the mapping table must be verified
+  visually in a browser before any document reproduces it.**
 
 Prefer link-checkable alternatives where possible: gov.uk, epso.europa.eu /
 eu-careers.europa.eu, legislation.gov.uk, acas.org.uk, Internet Archive
@@ -71,11 +128,27 @@ snapshots.
 | govuk-success-profiles | Success Profiles (collection) | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles |
 | govuk-sp-candidate-overview | Success Profiles: Candidate Overview | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-candidate-overview |
 | govuk-sp-behaviours | Success Profiles: Civil Service Behaviours | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-civil-service-behaviours |
+| govuk-cs-behaviours-pdf | Success Profiles — Civil Service Behaviours (**PDF**): complete Level 1–6 descriptors for all nine behaviours in one document. Prefer this over the HTML page, which truncates for automated fetchers. **Do not use** the `media/5b27cf2240f0b634b469fb1a/` path — it returns HTTP 410 Gone. | Civil Service HR / GOV.UK | https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1004397/CS_Behaviours_2018.pdf |
+| cshr-sp-guide-eo | HR Success Profile Guides: Executive Officer (EO) — source for the "no more than four behaviours per role" recommendation | Civil Service HR | https://assets.publishing.service.gov.uk/media/5f746b188fa8f51890c6ba59/Success_Profile-EO_Collection_v0f.pdf |
+| cshr-sp-guide-seo-heo | HR Success Profile Guides: SEO/HEO | Civil Service HR | https://assets.publishing.service.gov.uk/media/5f746b19e90e0740c86c7614/Success_Profile-SEO_HEO_Collection_v0e.pdf |
+| cshr-sp-guide-g6-g7 | HR Success Profile Guides: Grade 6/Grade 7 — four-behaviour recommendation; six-month learnability benchmark | Civil Service HR | https://assets.publishing.service.gov.uk/media/5f746b198fa8f5188883f2e0/Success_Profile-G6_7_Collection_v0e.pdf |
+| dwp-digital-ace-interview | How to ace your job interview (Barry Traish) — four to six questions on advertised essential criteria | DWP Digital Careers | https://careers.dwp.gov.uk/how-to-ace-your-job-interview/ |
+| defra-digital-applications-2023 | How to improve Civil Service job applications and ace your interviews (Polly Whitworth, 14 Apr 2023) | Defra digital, data, technology and security blog | https://defradigital.blog.gov.uk/2023/04/14/how-to-improve-civil-service-job-applications-and-ace-your-interviews/ |
 | govuk-sp-strengths | Success Profiles: Strengths | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-strengths |
 | csc-assessments | Assessments and Interviews | Civil Service Careers | https://www.civil-service-careers.gov.uk/assessments-and-interviews/ |
 | csc-behaviours | Behaviours (candidate guidance) | Civil Service Careers | https://www.civil-service-careers.gov.uk/behaviours/ |
 | cs-blog-four-steps | Four steps to success: tips for candidates (18 Nov 2024) | Civil Service blog | https://civilservice.blog.gov.uk/2024/11/18/four-steps-to-success-tips-for-candidates-applying-to-the-civil-service/ |
-| copfs-assessment | How your application is assessed — Success Profiles (1–7 scale, benchmarks) | Crown Office and Procurator Fiscal Service | https://www.copfs.gov.uk/about-copfs/careers/how-your-application-is-assessed-success-profiles/ |
+| co-sp-delegated-grades-2020 | Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment (May 2020) — **the CENTRAL scoring rule**: 7-point scale for experience/technical/behaviours, 4-point for strengths; 3-point A/B/C sift; four-behaviour cap; panel reconciliation | Cabinet Office | https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf |
+| co-sp-hr-deputy-director-2020 | Guidance: Application of Success Profiles during HR Deputy Director recruitment (Apr 2020) — assessment matrix; unscored ILA and SEE; same scoring scales | Cabinet Office | https://assets.publishing.service.gov.uk/media/5f746b1ad3bf7f286b3d7fcd/Guidance-Application_of_Success_Profiles_during_HR_Deputy_Director_recruitment_v0e.pdf |
+| co-sp-hr-director-2020 | Guidance: Application of Success Profiles during HR Director recruitment (Apr 2020) — assessment matrix; scoring scales; leadership presentation | Cabinet Office | https://assets.publishing.service.gov.uk/media/5f746b188fa8f5189a93d144/Guidance-Application_of_Success_Profiles_during_HR_Director_recruitment_v0e.pdf |
+| cs-strengths-dictionary | Success Profiles: Civil Service Strengths Dictionary — **36 named strengths with official definitions, mapped to the nine Behaviours**; also carries the corrected Technical definition and "Do not rehearse your answers" | National Crime Agency (publishing Cabinet Office material) | https://www.nationalcrimeagency.gov.uk/who-we-are/publications/661-success-profiles-strengths-dictionary/file |
+| govuk-csjt | Preparing for the Civil Service Judgement Test — format, behaviours assessed, rating scale | GOV.UK | https://www.gov.uk/guidance/preparing-for-the-civil-service-judgement-test |
+| govuk-work-strengths-test | Preparing for the Civil Service Work Strengths Test — three parts, five strengths by job level, percentile scoring | GOV.UK | https://www.gov.uk/guidance/preparing-for-the-civil-service-work-strengths-test |
+| govuk-sp-ability | Success Profiles: Ability — verbal/numerical reasoning, automatic scoring, pass benchmark | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-ability |
+| govuk-sp-experience | Success Profiles: Experience — assessment via application and interview, STAR | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-experience |
+| govuk-sp-technical | Success Profiles: Technical — assessment methods, professional qualifications | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-technical |
+| gss-success-profiles-2019 | Guidance for the adoption of Success Profiles across the GSS (Oct 2019) — departmental: behaviour bands by grade, six-criterion cap, single-"3" failure threshold | Government Statistical Service | https://gss.civilservice.gov.uk/wp-content/uploads/2019/10/Success-Profiles-Guidance-GSS.pdf |
+| copfs-assessment | How your application is assessed — Success Profiles. **Note:** a *departmental publication of the central scale* (see `co-sp-delegated-grades-2020`), not a departmental invention. Still the only located source publishing the seven descriptor labels. | Crown Office and Procurator Fiscal Service | https://www.copfs.gov.uk/about-copfs/careers/how-your-application-is-assessed-success-profiles/ |
 | ncs-interview-tips | Interview tips | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/interview-advice |
 | ncs-star-method | The STAR method | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/interview-advice/the-star-method |
 | ncs-common-questions | How to answer common interview questions | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/top-10-interview-questions |
@@ -90,9 +163,24 @@ snapshots.
 | hee-vbr-framework-2016 | Values Based Recruitment Framework (March 2016) | Health Education England | https://www.hee.nhs.uk/sites/default/files/documents/VBR_Framework%20March%202016.pdf |
 | nhse-vbr-article | Values-based recruitment (article) | NHS Employers | https://www.nhsemployers.org/articles/values-based-recruitment |
 | wuth-vbr-questions | Values Based Recruitment: example questions for recruiters to ask during job interviews (published NHS trust question bank) | Wirral University Teaching Hospital NHS Foundation Trust | https://www.wuth.nhs.uk/media/32277/values-based-interview-questions.pdf |
+| compassion-in-practice-2012 | Compassion in Practice: Nursing, Midwifery and Care Staff — Our Vision and Strategy (4 Dec 2012) — origin and verbatim definitions of the 6Cs (p.13) | NHS Commissioning Board / Department of Health | https://www.england.nhs.uk/wp-content/uploads/2012/12/compassion-in-practice.pdf |
+| hee-vbr-structured-interviews | VBR: How to Design and Deliver Structured Interviews for Values Based Recruitment — VBI definition, worked lead-question/probe/indicator templates, FORCE principles, trust case studies | Health Education England (with Work Psychology Group) | https://www.hee.nhs.uk/sites/default/files/documents/3.%20Structured%20interviews.pdf |
+| hee-merges-nhse | HEE merges with NHS England — NHS England has assumed all activities previously undertaken by HEE | NHS England (HEE legacy site) | https://www.hee.nhs.uk/hee-merges-with-nhs-england |
+| barnsley-vbr-candidates | Values Based Recruitment: Guidance and Information for Candidates (April 2015) — STAR 70/30 weighting; "We will / We / We do not" behavioural framework | Barnsley Hospital NHS Foundation Trust | https://www.barnsleyhospital.nhs.uk/sites/default/files/2023-07/values-based-recruitment-guidance-notes-for-candidates.pdf |
+| lypft-vbr-pack | Values Based Recruitment: Candidate Resource Pack (ref. 24/0107, Oct 2024) — interview structure, 40–50 min duration, same values apply at every role level | Leeds and York Partnership NHS Foundation Trust | https://www.leedsandyorkpft.nhs.uk/news/wp-content/uploads/sites/4/2024/10/Values-Based-Recruitment-Resource-Brochure.pdf |
+| ouh-vbi-what-to-expect | What to expect from a Value Based Interview (VBI) — two to four questions; no advance preparation needed | Oxford University Hospitals NHS Foundation Trust | https://www.ouh.nhs.uk/working-for-us/application/vbi/what-to-expect/ |
 | cop-cvf-guidance-2024 | Competency and values framework guidance (2024) | College of Policing | https://assets.college.police.uk/s3fs-public/2024-05/Competency-and-values-framework-guidance.pdf |
 | cop-cvf-2024-framework | Competency and values framework for policing (2024) — full framework incl. competency level descriptors (note: `2025-06/` asset path) | College of Policing | https://assets.college.police.uk/s3fs-public/2025-06/Competency-and-values-framework.pdf |
 | cop-cvf-2016 | Competency and Values Framework for policing: Overview (2016) — superseded by the 2024 framework; retained for provenance | College of Policing | https://assets.college.police.uk/s3fs-public/2020-11/competency-and-values-framework-for-policing_4.11.16.pdf |
+| cop-using-cvf-assessments-2025 | Using the competency and values framework in assessments (6 Feb 2025) — **authoritative per-assessment CVF-version table**; national sift switched to CVF 2024 on 10 Mar 2025. Cited via Internet Archive because college.police.uk HTML 403s. | College of Policing via Internet Archive | https://web.archive.org/web/20250214053348/https://www.college.police.uk/career-learning/competency-and-values-framework/using-competency-and-values-framework-assessments |
+| cop-oap-candidate-guidance-2024 | Online assessment process: Candidate guidance (Sept 2024) — five-question competency interview, written and briefing exercises; CVF assessed per exercise; timings; appeals; resits | College of Policing | https://assets.college.police.uk/s3fs-public/2024-09/Online-assessment-process-candidate-guidance-v3.2.pdf |
+| cop-national-sift-guidance-2026 | National sift: Candidate guidance (May 2026) — SJT and behavioural styles questionnaire formats, rating scales, two published example SJT scenarios | College of Policing | https://assets.college.police.uk/s3fs-public/2025-02/National-sift-candidate-guidance.pdf |
+| cop-vbr-selection-2018 | Values-based recruitment and selection: guidance for using the CVF in recruitment and selection (2018) — A–D rating scale, ORCE model, assessment barriers, four-fifths rule. **Predates the 2024 CVF** — use only its framework-agnostic process content. | College of Policing | https://assets.college.police.uk/s3fs-public/2020-11/Values-Based_Recruitment_Guidance-1.pdf |
+| cop-nppf-step-two-handbook-2025 | NPPF step two legal examinations candidate handbook 2025 — sergeant/inspector exam format and pass marks | College of Policing | https://assets.college.police.uk/s3fs-public/2024-09/NPPF-step-two-legal-examinations-candidate-handbook-2025.pdf |
+| joiningthepolice-oap | What does the online assessment process involve? | Join The Police (national police recruitment site) | https://www.joiningthepolice.co.uk/application-process/what-does-the-online-assessment-process-involve |
+| devon-cornwall-cvf-interview | Force Interviews: Competency Values Framework — candidate guidance, panel format, common mistakes incl. answering at the wrong CVF level | Devon & Cornwall Police | https://recruitment.devon-cornwall.police.uk/media/a40ndu4b/cvf-interview-guidance.pdf |
+| dyfed-powys-cvf-marking-guide | Interview Marking Guide: CVF Specialist, level 2 — what good evidence looks like | Dyfed-Powys Police | https://www.dyfed-powys.police.uk/SysSiteAssets/media/downloads/dyfed-powys/careers/New-CVF/specialist-cvf-document.pdf |
+| hampshire-cvf-guidance | Transferee and Re-joiners CVF Guidance — STAR; "CVF bingo" buzzword warning | Hampshire Constabulary | https://www.hampshire.police.uk/SysSiteAssets/media/downloads/hampshire/careers/recruitment-documents/cvf-presentation-powerpoint.pdf |
 | nhse-lcf-board-members-2024 | NHS leadership competency framework for board members (ref. B0496i, 28 Feb 2024) — six leadership competency domains | NHS England | https://www.england.nhs.uk/long-read/nhs-leadership-competency-framework-for-board-members/ |
 | govuk-recruitment-adjustments | Recruitment and disabled people: Reasonable adjustments | GOV.UK | https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments |
 | equality-act-2010 | Equality Act 2010 (contents; Part 5: Work) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/contents |
@@ -145,6 +233,8 @@ snapshots.
 | Key | Source | Publisher | URL |
 |-----|--------|-----------|-----|
 | oxford-example-questions | Example interview questions (PDF, May 2016) | University of Oxford Careers Service | https://www.careers.ox.ac.uk/files/example-interview-questionspdf |
+| bath-behavioural-questions | Behavioural questions for interviewing — published bank of 19 behavioural interview questions | University of Bath (Human Resources) | https://www.bath.ac.uk/corporate-information/behavioural-questions-for-interviewing/ |
+| cloverhr-cs-behaviour-questions | Competency interview questions for Civil Service behaviours — one example question per behaviour (undated; SME consultancy — never sole support for a claim) | Clover HR | https://www.cloverhr.co.uk/blog/competency-interview-questions-for-civil-service-behaviours/ |
 | oxford-interview-technique | Interview Technique | University of Oxford Careers Service | https://www.careers.ox.ac.uk/interview-technique |
 | oxford-types-interview | Types of Interview | University of Oxford Careers Service | https://www.careers.ox.ac.uk/types-of-interview |
 | cambridge-interviews | Interviews | University of Cambridge Careers Service | https://www.careers.cam.ac.uk/interviews |
@@ -163,11 +253,28 @@ snapshots.
 | targetjobs-fidelity-starr | What is the STARR answer technique, and how do I use it? (S. Vaughan, Fidelity International) | targetjobs | https://targetjobs.co.uk/organisations/fidelity-international/what-starr-answer-technique-and-how-do-i-use-it |
 | targetjobs-teamwork-questions | Tips to answer teamwork interview questions (Alan Palazon, 1 Aug 2024) — 11 published teamwork questions | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/how-tackle-teamwork-interview-questions-and-improve-your-teamworking-skills |
 | targetjobs-ethical-dilemma | "Give us an example of a time when you faced an ethical dilemma" — tricky graduate interview question (upd. 2026-03-31) | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/give-us-example-time-when-you-faced-ethical-dilemma-tricky-graduate-interview-question |
+| targetjobs-strengths-interviews | Strength-based interviews for jobs and grad schemes (Abigail Lewis, upd. 21 Aug 2025) — 15 published strengths questions; named adopters | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/strength-based-interviews-jobs-and-grad-schemes |
+| targetjobs-pwc-process | The PwC graduate application process explained (Alan Palazon, 29 Apr 2025) — **the citable route for PwC claims**, since pwc.co.uk 403s | targetjobs | https://targetjobs.co.uk/careers-advice/cvs-applications-and-tests/pwc-graduate-application-process-explained |
+| targetjobs-pwc-questions | Hints on answering PwC interview questions (Jacky Barrett, upd. 31 Mar 2026) — reported, not official, questions | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/tips-how-answer-pwc-interview-questions |
+| targetjobs-deloitte-questions | How do I prepare for Deloitte interview questions? (23 Apr 2025) | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/how-prepare-deloittes-interview-questions |
+| targetjobs-aldi-process | Application and interview advice for Aldi's area management graduate programme (27 Feb 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/application-and-interview-advice-aldis-area-management-graduate-programme |
+| targetjobs-nhs-gmts | How to be successful in the recruitment process for the NHS graduate management training scheme (31 Oct 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/cvs-applications-and-tests/how-be-successful-recruitment-process-nhs-graduate-management-training-scheme |
+| kent-commercial-awareness | Commercial awareness — published commercial-awareness interview question set | University of Kent Careers and Employability Service | https://student.kent.ac.uk/careers/employability/commercial-awareness-skills |
+| manchester-strengths-recruitment | Strengths recruitment and interviews — named adopters (Civil Service, Mott MacDonald, EY); published calibration question | University of Manchester Careers Service | https://www.careers.manchester.ac.uk/applicationsinterviews/interviews/types/strengthsrecruit/ |
+| manchester-professionalism | Professionalism — evidencing skills through studies, part-time work, volunteering, societies, placements, course-rep roles | University of Manchester Careers Service | https://www.careers.manchester.ac.uk/options/skills/professionalism/ |
 | targetjobs-leadership-management | Leadership and management: prove you're more than an entry-level hire (Abigail Lewis, upd. 21 Jun 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/skills-for-getting-a-job/leadership-and-management-prove-youre-more-entry-level-hire |
 | myworldofwork-competency-guide | A complete guide to competency-based interviews | My World of Work (Skills Development Scotland) | https://www.myworldofwork.co.uk/cvs-applications-and-interviews/a-complete-guide-to-competency-based-interviews |
 | pwc-early-careers | Assessment and selection process — Early Careers | PwC UK | https://www.pwc.co.uk/careers/early-careers/apply/video-interview.html |
 | ey-interview-tips | Interview tips | EY UK | https://www.ey.com/en_uk/careers/how-to-join-us/interview-tips |
-| unilever-uflp-2026 | UK & Ireland Unilever Future Leaders Programme 2026 | Unilever | https://careers.unilever.com/en/uk-and-ireland-unilever-future-leaders-programme-2026 |
+| unilever-uflp-2026 | UK & Ireland Unilever Future Leaders Programme 2026 — four published selection stages; Discovery Centre | Unilever | https://careers.unilever.com/en/uk-and-ireland-unilever-future-leaders-programme-2026 |
+| aldi-graduate-area-manager | Area Manager Graduate Scheme — five published stages incl. one-to-one competency-based interview | Aldi Recruitment UK | https://www.aldirecruitment.co.uk/early-careers/graduate-area-manager-programme |
+| deloitte-early-careers-assessment | Early Careers Assessment Support — four published assessed stages; immersive online assessment; job simulation | Deloitte UK | https://www.deloitte.com/uk/en/careers/early-careers/early-careers-assessment.html |
+| kpmg-application-process | Our application process — four published stages; AI-avatar video interview with human scoring; Launch Pad | KPMG UK | https://www.kpmgcareers.co.uk/graduate/applying-to-kpmg/application-process/ |
+| barclays-grad-application | Internship and Graduate Application Process — three published stages; assessment-centre contents | Barclays | https://search.jobs.barclays/internship-graduate-application |
+| amazon-leadership-principles | Leadership Principles — sixteen named principles (closest thing to a published private-sector competency list; **no** level descriptors) | Amazon Jobs | https://www.amazon.jobs/content/en/our-workplace/leadership-principles |
+| healthcareers-nhs-gmts | NHS Graduate Management Training Scheme — selection stages; skills assessed | NHS Health Careers | https://www.healthcareers.nhs.uk/career-planning/study-and-training/graduate-training-opportunities/nhs-graduate-management-training-scheme |
+| cipd-strengths-based-interviews | How to conduct a strengths-based interview — definition, rationale for graduates, example questions | CIPD | https://www.cipd.org/en/about/news-archive/strengths-based-interviews/ |
+| ise-top-10-stats-2025 | ISE top 10 stats of 2025 (140 applications per vacancy; AI; development gaps) — public insight page | Institute of Student Employers | https://ise.org.uk/knowledge/insights/513/ise_top_10_stats_of_2025_you_need_to_know/ |
 | euronews-epso-2026 | EPSO exam: Record-breaking participation with only 3% success rate (17 Feb 2026) | Euronews | https://www.euronews.com/my-europe/2026/02/17/epso-exam-record-breaking-participation-with-only-3-success-rate |
 | prepari-93-questions | 93 EU Job Interview Questions to Prepare For | Prepari.eu | https://prepari.eu/eu-job-interview-questions/ |
 | euphorum-structured-interview | The structured interview (EPSO assessment-centre guide, pre-2023 model) | Euphorum | http://www.euphorum.org/en/training/ac/interview |

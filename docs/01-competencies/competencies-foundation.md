@@ -1,7 +1,7 @@
 ---
 id: competencies-foundation
 title: "Competency-Based Interviewing: Competency Families & Question Mapping"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Competencies
@@ -9,9 +9,9 @@ topic: "Competency families & question mapping"
 market: "UK, EU"
 document_type: foundation
 created: 2026-07-19
-updated: 2026-07-19
+updated: 2026-07-20
 review_due: 2027-07-19
-sources_verified: 2026-07-19
+sources_verified: 2026-07-20
 supersedes: null
 related:
   - techniques-foundation
@@ -41,14 +41,14 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | competencies-foundation |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
 | Market | UK, EU |
 | Owner | Interview-Research Pipeline |
 | Created | 2026-07-19 |
-| Updated | 2026-07-19 |
+| Updated | 2026-07-20 |
 | Review due | 2027-07-19 |
 | Frameworks reviewed | UK Civil Service Success Profiles (Behaviours); EPSO Competency Framework (2023); NHS values (NHS Constitution); ISE / graduate-scheme practice; CIPD guidance |
 
@@ -288,7 +288,7 @@ A starter bank spanning the eight families. Provenance per entry: *(sourced …)
 - **Private-sector frameworks by name.** This document evidences graduate-scheme competency labels via careers sources [15]; obtaining named, publicly documented corporate frameworks (e.g. published bank or consultancy competency dictionaries) would strengthen the mapping table. Candidate for the per-competency child documents.
 - **NHS values-based recruitment mechanics.** How NHS values [6] translate into interview questions and scoring is only signposted here; the planned NHS/UK-frameworks documents should cover values-based recruitment guidance from NHS Employers.
 - **Strengths vs competency mix in graduate selection.** ISE members-only data likely quantifies the strengths-based shift in graduate recruitment; a public, citable figure has not yet been found.
-- **Civil Service assessor scoring scales.** Published grade-level rating scales for Behaviours (e.g. 1–7 scales in departmental guidance) exist in departmental candidate packs; verifying a stable official URL is left to the uk-frameworks deep-dive.
+- **Civil Service assessor scoring scales — resolved 2026-07-20.** A central scale is published: Cabinet Office guidance states that "Experience, technical skills and behaviours should be scored using the 7 point scale. Strengths should be scored using the 4 point scale" [20]. The scale is therefore central, not merely departmental — though the central pack dates from 2020, benchmarks are still set per campaign, and the seven descriptor labels themselves remain published only departmentally. What is still open: no central publication of the 4-point strengths descriptors was located; the detail is left to the uk-frameworks deep-dive.
 
 # References
 
@@ -304,6 +304,7 @@ A starter bank spanning the eight families. Provenance per entry: *(sourced …)
 - [8] **legislation.gov.uk** — *Equality Act 2010, s.4 (The protected characteristics)*. https://www.legislation.gov.uk/ukpga/2010/15/section/4. Accessed 2026-07-19.
 - [9] **EUR-Lex** — *Council Directive 2000/78/EC establishing a general framework for equal treatment in employment and occupation*. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078. Accessed 2026-07-19.
 - [10] **EUR-Lex** — *Regulation (EU) 2016/679 (General Data Protection Regulation)*. https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng. Accessed 2026-07-19.
+- [20] **Cabinet Office** — *Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment* (May 2020). https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf. Accessed 2026-07-20. The same scoring sentence appears verbatim in the parallel Cabinet Office packs for HR Deputy Director and HR Director recruitment.
 
 **Professional & Advisory Bodies**
 
@@ -348,3 +349,4 @@ A starter bank spanning the eight families. Provenance per entry: *(sourced …)
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-19 | Research Pipeline (virtual agent) | Initial draft: competency families, framework mapping, starter question bank. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 1 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected superseded claim that the Success Profiles 1–7 scale is departmental; cited central Cabinet Office scoring guidance. | Standing mandate (user, 2026-07-19) |

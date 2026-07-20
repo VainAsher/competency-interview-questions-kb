@@ -1,7 +1,7 @@
 ---
 id: leadership-management
 title: "Leadership & Managing Others: Question Bank & Answer Guidance"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Competencies
@@ -45,7 +45,7 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | leadership-management |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
@@ -318,7 +318,7 @@ EPSO publishes different numbers. For the AD 6 competition EPSO/AD/389/21, the p
 - **The three-altitude grouping is editorial.** "Leading without authority / first-line / senior-strategic" is this knowledge base's organising device. Its *contents* are quoted from published descriptors [2] [3] [8] [10], but no framework uses these three labels. Employers score against their own named levels.
 - **EPSO's framework has changed and older material is still circulating.** The Leadership competency and its "(for administrators only)" restriction come from the pre-2023 General Rules [5] and are evidenced in a 2021 competition notice [6]. The 2023 framework has no Leadership competency [3]. Any preparation material listing "Leadership" as a current EPSO general competency is out of date; always check the notice of competition for the specific competition [4].
 - **The CVF's 2016 clusters no longer exist.** Material referring to CVF clusters such as "We are collaborative" describes the 2016 framework; the 2024 CVF removed clusters entirely and the current competency names are *We collaborate* and *We support and inspire* [8] [9]. Forces had until 1 May 2025 to transition, and it is not mandatory for a force to use the CVF at all — some use force-specific frameworks [9]. Verify which framework and version a given force applies.
-- **Scoring scales are departmental, not universal.** The 1–7 scale and the "4 or more in all behaviours" rule are published by COPFS [11]; they illustrate Success Profiles scoring practice but should not be assumed identical across every Civil Service department. EPSO pass marks are competition-specific [6].
+- **The 1–7 scale is central; the benchmarks are not.** Cabinet Office guidance states that "Experience, technical skills and behaviours should be scored using the 7 point scale. Strengths should be scored using the 4 point scale" [25], so the scale is Civil Service-wide rather than a COPFS variant. Three qualifications hold: that central pack dates from 2020, and no refreshed central scoring publication was found after the January 2025 behaviour-guide refresh; the seven descriptor labels are published by COPFS [11], still the only located source for them; and the "4 or more in all behaviours" rule is a benchmark set per campaign, so it should not be assumed identical across departments. EPSO pass marks are competition-specific [6].
 - **The graduate and private-sector strand rests on careers sources.** targetjobs, Prospects, Oxford Careers Service and My World of Work [19] [20] [21] [22] [23] evidence *what is published as typical*, not what any named employer asks. No published private-sector leadership competency dictionary was obtained.
 - **One targetjobs source is dated 2023.** The leadership and management guidance was last updated 21 June 2023 [21]; graduate-market practice moves faster than that.
 - **Source recency generally.** Framework pages are periodically revised on GOV.UK [1]; review is due 2027-07-20.
@@ -350,6 +350,7 @@ EPSO publishes different numbers. For the AD 6 competition EPSO/AD/389/21, the p
 - [13] **legislation.gov.uk** — *Equality Act 2010, s.20 (Duty to make adjustments)*. <https://www.legislation.gov.uk/ukpga/2010/15/section/20>. Accessed 2026-07-20.
 - [14] **EUR-Lex** — *Council Directive 2000/78/EC establishing a general framework for equal treatment in employment and occupation*. <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078>. Accessed 2026-07-20.
 - [15] **EUR-Lex** — *Regulation (EU) 2016/679 (General Data Protection Regulation)*. <https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng>. Accessed 2026-07-20.
+- [25] **Cabinet Office** — *Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment* (May 2020). <https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf>. Accessed 2026-07-20. The same scoring sentence appears verbatim in the parallel Cabinet Office packs for HR Deputy Director and HR Director recruitment.
 
 **Professional & Advisory Bodies**
 
@@ -396,3 +397,4 @@ EPSO publishes different numbers. For the AD 6 competition EPSO/AD/389/21, the p
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: leadership level descriptors across four frameworks, 40-question bank, worked STAR skeleton, published scoring scales. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected superseded claim that the Success Profiles 1–7 scale is departmental; cited central Cabinet Office scoring guidance. | Standing mandate (user, 2026-07-19) |

@@ -5,9 +5,9 @@
 
 Evidence-based, source-cited reference on competency-based interviews in the UK & EU — frameworks, question banks, answer techniques, and assessment best practice for candidates and interviewers.
 
-**14 documents** across **14 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
+**19 documents** across **19 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
 
-*Confidence: 0 High · 14 Medium · 0 Low.*  *Market: EU 1 · UK 1 · UK, EU 12.*
+*Confidence: 2 High · 17 Medium · 0 Low.*  *Market: EU 1 · UK 6 · UK, EU 12.*
 
 ## Tier 1 — Category foundations
 
@@ -28,6 +28,14 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
 - [Problem-Solving, Analysis & Decision-Making: Question Bank & Answer Guidance](01-competencies/problem-solving-decision-making.md) — *Problem-solving & decision-making* (UK, EU)
 - [Resilience, Adaptability & Working Under Pressure: Question Bank & Answer Guidance](01-competencies/resilience-adaptability.md) — *Resilience & adaptability* (UK, EU)
 - [Teamwork & Collaboration: Question Bank & Answer Guidance](01-competencies/teamwork-collaboration.md) — *Teamwork & collaboration* (UK, EU)
+
+## Tier 3 — Framework & format guides (UK & EU)
+
+- [NHS Values-Based Interviews: Framework, Questions & Band Expectations](03-uk-frameworks/nhs-values-based-interviews.md) — *NHS values-based recruitment* (UK)
+- [Police Competency and Values Framework (CVF): Guide & Question Bank](03-uk-frameworks/police-competency-values-framework.md) — *College of Policing CVF* (UK)
+- [Civil Service Behaviours: Question Bank by Behaviour and Grade](03-uk-frameworks/uk-civil-service-behaviour-questions.md) — *Civil Service behaviour questions* (UK)
+- [Civil Service Success Profiles: The Complete Guide](03-uk-frameworks/uk-civil-service-success-profiles.md) — *Success Profiles end-to-end* (UK)
+- [UK Graduate Schemes: Competency Interviews in Private-Sector Recruitment](03-uk-frameworks/uk-graduate-schemes.md) — *Graduate-scheme competency interviews* (UK)
 
 ## Knowledge graph
 
@@ -52,6 +60,13 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
         problem_solving_decision_making["problem-solving-decision-making"]
         resilience_adaptability["resilience-adaptability"]
         teamwork_collaboration["teamwork-collaboration"]
+      end
+      subgraph Tier3["Tier 3"]
+        nhs_values_based_interviews["nhs-values-based-interviews"]
+        police_competency_values_framework["police-competency-values-framework"]
+        uk_civil_service_behaviour_questions["uk-civil-service-behaviour-questions"]
+        uk_civil_service_success_profiles["uk-civil-service-success-profiles"]
+        uk_graduate_schemes["uk-graduate-schemes"]
       end
       competencies_foundation -->|related| techniques_foundation
       competencies_foundation -->|related| uk_frameworks_foundation
@@ -102,16 +117,29 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       techniques_foundation -.->|parent of| alternative_answer_frameworks
       building_evidence_bank(["building-evidence-bank<br/>(planned)"])
       techniques_foundation -.->|parent of| building_evidence_bank
-      uk_civil_service_success_profiles(["uk-civil-service-success-profiles<br/>(planned)"])
-      uk_frameworks_foundation -.->|parent of| uk_civil_service_success_profiles
-      uk_civil_service_behaviour_questions(["uk-civil-service-behaviour-questions<br/>(planned)"])
-      uk_frameworks_foundation -.->|parent of| uk_civil_service_behaviour_questions
-      nhs_values_based_interviews(["nhs-values-based-interviews<br/>(planned)"])
-      uk_frameworks_foundation -.->|parent of| nhs_values_based_interviews
-      police_competency_values_framework(["police-competency-values-framework<br/>(planned)"])
-      uk_frameworks_foundation -.->|parent of| police_competency_values_framework
-      uk_graduate_schemes(["uk-graduate-schemes<br/>(planned)"])
-      uk_frameworks_foundation -.->|parent of| uk_graduate_schemes
+      uk_frameworks_foundation -->|parent of| uk_civil_service_success_profiles
+      uk_frameworks_foundation -->|parent of| uk_civil_service_behaviour_questions
+      uk_frameworks_foundation -->|parent of| nhs_values_based_interviews
+      uk_frameworks_foundation -->|parent of| police_competency_values_framework
+      uk_frameworks_foundation -->|parent of| uk_graduate_schemes
+      uk_civil_service_success_profiles -->|deepens| uk_frameworks_foundation
+      uk_civil_service_success_profiles -->|deepens| competencies_foundation
+      uk_civil_service_behaviour_questions -->|deepens| uk_civil_service_success_profiles
+      uk_civil_service_behaviour_questions -->|relates to| techniques_foundation
+      uk_civil_service_behaviour_questions -->|relates to| competencies_foundation
+      nhs_values_based_interviews -->|deepens| uk_frameworks_foundation
+      nhs_values_based_interviews -->|relates to| integrity_values_ethics
+      nhs_values_based_interviews -->|relates to| customer_stakeholder_service
+      nhs_values_based_interviews -->|relates to| resilience_adaptability
+      police_competency_values_framework -->|deepens| uk_frameworks_foundation
+      police_competency_values_framework -->|relates to| integrity_values_ethics
+      police_competency_values_framework -->|relates to| resilience_adaptability
+      police_competency_values_framework -->|relates to| teamwork_collaboration
+      uk_graduate_schemes -->|deepens| uk_frameworks_foundation
+      uk_graduate_schemes -->|relates to| formats_foundation
+      uk_graduate_schemes -->|relates to| best_practice_foundation
+      uk_graduate_schemes -->|relates to| resilience_adaptability
+      uk_graduate_schemes -->|relates to| teamwork_collaboration
       epso_competency_framework(["epso-competency-framework<br/>(planned)"])
       eu_frameworks_foundation -.->|parent of| epso_competency_framework
       eu_institutions_assessment_centres(["eu-institutions-assessment-centres<br/>(planned)"])
@@ -180,6 +208,27 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       customer_stakeholder_service -->|related| teamwork_collaboration
       customer_stakeholder_service -->|related| communication_influencing
       customer_stakeholder_service -->|related| delivering_results_planning
+      uk_civil_service_success_profiles -->|related| uk_civil_service_behaviour_questions
+      uk_civil_service_success_profiles -->|related| techniques_foundation
+      uk_civil_service_behaviour_questions -->|related| uk_frameworks_foundation
+      nhs_values_based_interviews -->|related| uk_civil_service_success_profiles
+      nhs_values_based_interviews -->|related| uk_civil_service_behaviour_questions
+      nhs_values_based_interviews -->|related| police_competency_values_framework
+      nhs_values_based_interviews -->|related| uk_graduate_schemes
+      nhs_values_based_interviews -->|related| competencies_foundation
+      nhs_values_based_interviews -->|related| techniques_foundation
+      police_competency_values_framework -->|related| uk_civil_service_success_profiles
+      police_competency_values_framework -->|related| uk_civil_service_behaviour_questions
+      police_competency_values_framework -->|related| nhs_values_based_interviews
+      police_competency_values_framework -->|related| uk_graduate_schemes
+      police_competency_values_framework -->|related| competencies_foundation
+      police_competency_values_framework -->|related| techniques_foundation
+      uk_graduate_schemes -->|related| uk_civil_service_success_profiles
+      uk_graduate_schemes -->|related| uk_civil_service_behaviour_questions
+      uk_graduate_schemes -->|related| nhs_values_based_interviews
+      uk_graduate_schemes -->|related| police_competency_values_framework
+      uk_graduate_schemes -->|related| competencies_foundation
+      uk_graduate_schemes -->|related| techniques_foundation
     ```
 
 ## Machine-readable exports

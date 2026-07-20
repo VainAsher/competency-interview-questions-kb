@@ -1,7 +1,7 @@
 ---
 id: integrity-values-ethics
 title: "Integrity, Values & Ethical Behaviour: Question Bank & Answer Guidance"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Competencies
@@ -51,7 +51,7 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | integrity-values-ethics |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
@@ -348,7 +348,7 @@ One well-built example usually serves several frameworks with a change of emphas
 
 - **The four-theme grouping is editorial.** Ethical dilemmas, speaking up, impartiality/conflicts and values fit are this knowledge base's organising device for a family that no cited framework subdivides in that way. Employers assess against their own published instrument.
 - **The trust-level question set is one trust, not the NHS.** The sourced questions attributed to Gloucestershire Hospitals NHS Foundation Trust [10] evidence how one NHS employer has published values questions against its own local values — not a national NHS question bank. Other trusts phrase questions differently and map them to different value labels. Treat them as documented examples of the form, not as questions any given NHS employer will ask.
-- **The 1–7 scale is departmental, not universal.** The scoring descriptors and the "4 or above" benchmark are published by COPFS [9]. Success Profiles scoring practice varies between departments, and COPFS itself notes that additional benchmarks may be set for specific roles and detailed in the application pack [9]. Do not assume the same scale elsewhere.
+- **The 1–7 scale is central; the descriptors and benchmark are not.** Cabinet Office guidance states that "Experience, technical skills and behaviours should be scored using the 7 point scale. Strengths should be scored using the 4 point scale" [20], so the scale itself can be assumed across the Civil Service. Three qualifications hold: that central pack dates from 2020, and no refreshed central scoring publication was found after the January 2025 behaviour-guide refresh; the seven descriptor labels quoted above are published by COPFS [9], still the only located source for them; and the "4 or above" benchmark is COPFS's own, with COPFS itself noting that additional benchmarks may be set for specific roles and detailed in the application pack [9].
 - **The evidence base for VBR is thin by its own account.** The HEE framework states that "research into VBR is still in its infancy" with "very little empirical evidence regarding the long term impact of VBR", and referenced a longitudinal study then underway [6]. The framework itself dates from March 2016 and predates NHS England's absorption of Health Education England; its URL sits on the legacy HEE domain and may move.
 - **Frameworks in this document are recent but moving.** The policing CVF and Code of Ethics date from 2024, and the CVF guidance records that the 2016 CVF remained available until May 2025 and that professional profiles were still being updated through April 2025 [7]. Candidates should confirm which CVF version an assessment uses — the guidance explicitly tells candidates to check [7].
 - **The whistleblowing category list changed recently.** The sexual-harassment category in s.43B took effect on 6 April 2026 [11]; older guidance and commentary will not reflect it.
@@ -358,7 +358,7 @@ One well-built example usually serves several frameworks with a change of emphas
 
 # Open Questions
 
-- **Are there published national assessor guides for values scoring?** The COPFS scale [9] is a departmental publication. Whether Civil Service HR publishes a central, citable assessor guide for scoring values-adjacent evidence remains unverified; this was also left open by the parent document.
+- **Are there published national assessor guides for values scoring? — partly resolved 2026-07-20.** Central Cabinet Office guidance does mandate the 7-point scale for behaviours, experience and technical skills, and the 4-point scale for strengths [20]; COPFS [9] is a departmental publication *of* that central scale, and remains the only located source for the seven descriptor labels. What is still open is values-specific: the Civil Service treats values as a separate instrument from the Behaviours, and no central, citable assessor guide for scoring values-adjacent evidence has been found.
 - **Did the HEE VBR longitudinal study report?** The framework describes a three-year study commissioned by the Department of Health that commenced April 2015 and was due to report in October 2019 [6]. Locating the published findings would materially change the confidence rating attachable to VBR's effectiveness claims.
 - **Named corporate codes of conduct used in selection.** Several large employers publish codes of conduct and values statements; whether any publish the *interview questions or scoring criteria* used to assess them has not been established. This would strengthen the private-sector layer considerably.
 - **CVF 2024 behavioural indicators for the three values.** This document cites the CVF guidance [7] and the Code of Ethics overview [8]; the full CVF document containing the value-level behavioural indicators was not separately retrieved, as College of Policing HTML pages return 403 to automated fetchers. Obtaining those indicators would let this document give candidates precise, published anchors for the policing values.
@@ -383,6 +383,7 @@ One well-built example usually serves several frameworks with a change of emphas
 - [12] **legislation.gov.uk** — *Equality Act 2010, s.4 (The protected characteristics)*. https://www.legislation.gov.uk/ukpga/2010/15/section/4. Accessed 2026-07-20.
 - [13] **EUR-Lex** — *Staff Regulations of Officials of the European Union and Conditions of Employment of Other Servants*, consolidated text of 1 January 2024; Title II, Articles 11, 11a, 12, 12a, 12b, 17a, 22a, 22b and 22c. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A01962R0031-20240101. Accessed 2026-07-20.
 - [14] **EPSO / EU Careers** — *Competency Framework Anchors: the new EPSO Competency Framework* (EN, 2023). https://eu-careers.europa.eu/system/files/2023-04/EN.pdf. Accessed 2026-07-20.
+- [20] **Cabinet Office** — *Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment* (May 2020). https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf. Accessed 2026-07-20. The same scoring sentence appears verbatim in the parallel Cabinet Office packs for HR Deputy Director and HR Director recruitment.
 
 **Professional & Advisory Bodies** — CIPD, ACAS, BPS, professional institutes.
 
@@ -430,3 +431,4 @@ See the Further Reading section below for non-cited background.
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: integrity/values/ethics deep-dive — Civil Service Code, Nolan Principles, NHS VBR, policing CVF 2024, EU Staff Regulations Title II; 39-question bank; worked STAR skeleton; published 1–7 scoring scale. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected superseded claim that the Success Profiles 1–7 scale is departmental; cited central Cabinet Office scoring guidance. | Standing mandate (user, 2026-07-19) |

@@ -1,7 +1,7 @@
 ---
 id: uk-frameworks-foundation
 title: "UK Competency Frameworks: The Landscape"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: UK Frameworks
@@ -9,9 +9,9 @@ topic: "UK competency frameworks landscape"
 market: "UK"
 document_type: foundation
 created: 2026-07-19
-updated: 2026-07-19
+updated: 2026-07-20
 review_due: 2027-07-19
-sources_verified: 2026-07-19
+sources_verified: 2026-07-20
 supersedes: null
 related:
   - competencies-foundation
@@ -40,14 +40,14 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | uk-frameworks-foundation |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | UK Frameworks |
 | Market | UK |
 | Owner | Interview-Research Pipeline |
 | Created | 2026-07-19 |
-| Updated | 2026-07-19 |
+| Updated | 2026-07-20 |
 | Review due | 2027-07-19 |
 | Frameworks reviewed | Civil Service Success Profiles & Behaviours; NHS values-based recruitment; College of Policing CVF (2016 & 2024); ISE survey data (as publicly reported); Unilever UFLP public documentation |
 
@@ -294,11 +294,21 @@ The 2016 original differed in two structural ways: its six competencies were
 grouped into three clusters (resolute, compassionate and committed; inclusive,
 enabling and visionary leadership; intelligent, creative and informed
 policing), and it was underpinned by four values — integrity, impartiality,
-public service and transparency; its levels were explicitly cumulative, higher
-levels building on the behaviours of preceding ones [9]. The 2024 guidance
-removed the clusters for simplicity and notes that forces in transition may
-still use the 2016 version, so candidates attending College assessment
-processes should check which version they are being assessed against [8].
+public service and transparency [9]. The 2024 guidance removed the clusters
+for simplicity, and the four values were replaced by the three above [8].
+
+**Cumulative levels are common to both versions**, and were not part of that
+change: the 2016 overview describes higher levels as building on the
+behaviours of preceding ones [9], and the 2024 framework states that "the
+levels are cumulative", meaning "those working at higher levels should have
+built on their behaviours from the preceding levels" (p.9) [20].
+
+The transition is now complete. Forces had until **1 May 2025** to adopt the
+2024 version [21], and the College switched its national sift exercises for
+PC/PCSO/Special Constable recruitment to CVF 2024 on **10 March 2025** —
+assessments beginning before that date used CVF 2016 [22]. Candidates
+attending a College assessment process should still confirm which version
+they are being assessed against [8].
 
 **Where the interview sits.** The CVF is the basis of national HR processes
 including national assessments for recruitment and promotion, professional
@@ -608,6 +618,23 @@ statute.
   about disability and health)*.
   <https://www.legislation.gov.uk/ukpga/2010/15/section/60>. Accessed
   2026-07-19.
+- [20] **College of Policing** — *Competency and values framework for
+  policing* (the 2024 framework itself; six competencies, three values,
+  "The levels are cumulative", p.9).
+  <https://assets.college.police.uk/s3fs-public/2025-06/Competency-and-values-framework.pdf>.
+  Accessed 2026-07-20.
+- [21] **College of Policing** — *Updated competency and values framework
+  (CVF) introduced* (news; "Forces will adopt the updated CVF gradually and
+  have until 1 May 2025 to transition to the updated version"). Cited via
+  Internet Archive because college.police.uk HTML 403s automated fetchers.
+  <https://web.archive.org/web/20240516145322/https://www.college.police.uk/article/updated-competency-and-values-framework-cvf-introduced>.
+  Accessed 2026-07-20.
+- [22] **College of Policing** — *Using the competency and values framework
+  in assessments* (6 February 2025; national sift exercises updated to CVF
+  2024 on 10 March 2025). Cited via Internet Archive because
+  college.police.uk HTML 403s automated fetchers.
+  <https://web.archive.org/web/20250214053348/https://www.college.police.uk/career-learning/competency-and-values-framework/using-competency-and-values-framework-assessments>.
+  Accessed 2026-07-20.
 
 **Professional & Advisory Bodies**
 
@@ -685,3 +712,4 @@ statute.
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-19 | Research Pipeline (virtual agent) | Initial draft. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 1 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected implication that cumulative CVF levels were 2016-only (both versions are cumulative); dated the 2016→2024 transition. | Standing mandate (user, 2026-07-19) |

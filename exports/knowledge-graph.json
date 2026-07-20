@@ -305,7 +305,7 @@
       "topic": "Customer & stakeholder focus",
       "tier": "2",
       "market": "UK, EU",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "status": "frozen",
       "confidence": "Medium",
       "path": "docs/01-competencies/customer-stakeholder-service.md",
@@ -319,6 +319,130 @@
         "teamwork-collaboration",
         "communication-influencing",
         "delivering-results-planning"
+      ]
+    },
+    {
+      "id": "uk-civil-service-success-profiles",
+      "title": "Civil Service Success Profiles: The Complete Guide",
+      "topic": "Success Profiles end-to-end",
+      "tier": "3",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/03-uk-frameworks/uk-civil-service-success-profiles.md",
+      "category": "UK Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "uk-frameworks-foundation",
+        "uk-civil-service-behaviour-questions",
+        "competencies-foundation",
+        "techniques-foundation"
+      ]
+    },
+    {
+      "id": "uk-civil-service-behaviour-questions",
+      "title": "Civil Service Behaviours: Question Bank by Behaviour and Grade",
+      "topic": "Civil Service behaviour questions",
+      "tier": "3",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/03-uk-frameworks/uk-civil-service-behaviour-questions.md",
+      "category": "UK Frameworks",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "uk-frameworks-foundation",
+        "uk-civil-service-success-profiles",
+        "competencies-foundation",
+        "techniques-foundation"
+      ]
+    },
+    {
+      "id": "nhs-values-based-interviews",
+      "title": "NHS Values-Based Interviews: Framework, Questions & Band Expectations",
+      "topic": "NHS values-based recruitment",
+      "tier": "3",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/03-uk-frameworks/nhs-values-based-interviews.md",
+      "category": "UK Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "uk-frameworks-foundation",
+        "uk-civil-service-success-profiles",
+        "uk-civil-service-behaviour-questions",
+        "police-competency-values-framework",
+        "uk-graduate-schemes",
+        "competencies-foundation",
+        "techniques-foundation",
+        "integrity-values-ethics",
+        "customer-stakeholder-service",
+        "resilience-adaptability"
+      ]
+    },
+    {
+      "id": "police-competency-values-framework",
+      "title": "Police Competency and Values Framework (CVF): Guide & Question Bank",
+      "topic": "College of Policing CVF",
+      "tier": "3",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/03-uk-frameworks/police-competency-values-framework.md",
+      "category": "UK Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "uk-frameworks-foundation",
+        "uk-civil-service-success-profiles",
+        "uk-civil-service-behaviour-questions",
+        "nhs-values-based-interviews",
+        "uk-graduate-schemes",
+        "competencies-foundation",
+        "techniques-foundation",
+        "integrity-values-ethics",
+        "resilience-adaptability",
+        "teamwork-collaboration"
+      ]
+    },
+    {
+      "id": "uk-graduate-schemes",
+      "title": "UK Graduate Schemes: Competency Interviews in Private-Sector Recruitment",
+      "topic": "Graduate-scheme competency interviews",
+      "tier": "3",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/03-uk-frameworks/uk-graduate-schemes.md",
+      "category": "UK Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "uk-frameworks-foundation",
+        "uk-civil-service-success-profiles",
+        "uk-civil-service-behaviour-questions",
+        "nhs-values-based-interviews",
+        "police-competency-values-framework",
+        "competencies-foundation",
+        "techniques-foundation",
+        "formats-foundation",
+        "best-practice-foundation",
+        "resilience-adaptability",
+        "teamwork-collaboration"
       ]
     }
   ],
@@ -603,31 +727,139 @@
       "from": "uk-frameworks-foundation",
       "to": "uk-civil-service-success-profiles",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "uk-frameworks-foundation",
       "to": "uk-civil-service-behaviour-questions",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "uk-frameworks-foundation",
       "to": "nhs-values-based-interviews",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "uk-frameworks-foundation",
       "to": "police-competency-values-framework",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "uk-frameworks-foundation",
       "to": "uk-graduate-schemes",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-success-profiles",
+      "to": "uk-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-success-profiles",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-behaviour-questions",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-behaviour-questions",
+      "to": "techniques-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-behaviour-questions",
+      "to": "competencies-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "uk-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "integrity-values-ethics",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "customer-stakeholder-service",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "resilience-adaptability",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "uk-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "integrity-values-ethics",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "resilience-adaptability",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "teamwork-collaboration",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "uk-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "formats-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "best-practice-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "resilience-adaptability",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "teamwork-collaboration",
+      "rel": "relates to",
+      "target": "known"
     },
     {
       "from": "eu-frameworks-foundation",
@@ -980,6 +1212,132 @@
     {
       "from": "customer-stakeholder-service",
       "to": "delivering-results-planning",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-success-profiles",
+      "to": "uk-civil-service-behaviour-questions",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-success-profiles",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-civil-service-behaviour-questions",
+      "to": "uk-frameworks-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "uk-civil-service-behaviour-questions",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "police-competency-values-framework",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "uk-graduate-schemes",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "nhs-values-based-interviews",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "uk-civil-service-behaviour-questions",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "nhs-values-based-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "uk-graduate-schemes",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "police-competency-values-framework",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "uk-civil-service-behaviour-questions",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "nhs-values-based-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "police-competency-values-framework",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "uk-graduate-schemes",
+      "to": "techniques-foundation",
       "rel": "related",
       "target": "known"
     }

@@ -1,7 +1,7 @@
 ---
 id: customer-stakeholder-service
 title: "Customer Service & Stakeholder Management: Question Bank & Answer Guidance"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Competencies
@@ -42,7 +42,7 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | customer-stakeholder-service |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
@@ -326,7 +326,7 @@ Both scales are **evidence-balance** scales, not impression scales. The practica
 - **UK-weighted evidence.** The strongest published criteria for this competency are British. EPSO has no named customer or stakeholder competency [3], so the EU material in this document is necessarily inferential in its *organisation*, even though every anchor quoted is verbatim.
 - **A single trust's question bank.** The NHS question corpus here is drawn from one trust's published bank [7], chosen because it is publicly available and unusually complete. Other trusts phrase questions against their own values; treat these as representative of published NHS practice, not as a national standard. A second trust bank (NHS Blood and Transplant) was identified in search results but its host did not resolve at the time of verification and it is therefore not cited.
 - **Careers-site questions evidence what is published, not what is asked.** The targetjobs, My World of Work and Indeed questions [16] [17] [18] show what is published as typical; none is attributable to a named employer's actual process.
-- **Scoring scales are departmental, not universal.** The 1–7 scale is published by COPFS for its own recruitment [8], and the 1–5 scheme is reproduced by a university careers service from Civil Service Resourcing guidance [15]. Other departments and employers use other scales. Use them to understand the *logic* of evidence-balance scoring, not to predict a specific employer's mark scheme.
+- **The 1–7 scale is central; the benchmarks and the 1–5 scheme are not.** Cabinet Office guidance states that "Experience, technical skills and behaviours should be scored using the 7 point scale. Strengths should be scored using the 4 point scale" [21], so the 7-point scale is Civil Service-wide; COPFS [8] is a departmental publication of it and remains the only located source for the seven descriptor labels. Note that the central pack dates from 2020, with no refreshed central scoring publication found after the January 2025 behaviour-guide refresh. Benchmarks are still set per campaign, and the 1–5 scheme is a separate scale reproduced by a university careers service from Civil Service Resourcing guidance [15]. Use these to understand the *logic* of evidence-balance scoring, not to predict a specific employer's mark scheme.
 - **Level descriptors are periodically revised.** The Success Profiles behaviours are maintained on GOV.UK [2] and the descriptors quoted here were verified on 2026-07-20; the HEE Values Based Recruitment Framework dates from March 2016 [6] and HEE has since been absorbed into NHS England, so its status should be re-checked before high-stakes use. Review is due 2027-07-20.
 - **Private-sector depth is thin.** Consulting, financial-services and technology employers demonstrably ask client and stakeholder questions, but the specific published sources located for this document were general careers sites rather than named corporate frameworks. See Open Questions.
 
@@ -354,6 +354,7 @@ Both scales are **evidence-balance** scales, not impression scales. The practica
 - [10] **legislation.gov.uk** — *Equality Act 2010, s.20 (Duty to make adjustments)*. <https://www.legislation.gov.uk/ukpga/2010/15/section/20>. Accessed 2026-07-20.
 - [11] **EUR-Lex** — *Council Directive 2000/78/EC establishing a general framework for equal treatment in employment and occupation*. <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078>. Accessed 2026-07-20.
 - [12] **EUR-Lex** — *Regulation (EU) 2016/679 (General Data Protection Regulation)*. <https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng>. Accessed 2026-07-20.
+- [21] **Cabinet Office** — *Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment* (May 2020). <https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf>. Accessed 2026-07-20. The same scoring sentence appears verbatim in the parallel Cabinet Office packs for HR Deputy Director and HR Director recruitment.
 
 **Professional & Advisory Bodies**
 
@@ -396,3 +397,4 @@ Both scales are **evidence-balance** scales, not impression scales. The practica
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: Managing a Quality Service level descriptors, EPSO anchor mapping, NHS values-based question bank, 38-question bank, published scoring scales. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected superseded claim that the Success Profiles 1–7 scale is departmental; cited central Cabinet Office scoring guidance. | Standing mandate (user, 2026-07-19) |

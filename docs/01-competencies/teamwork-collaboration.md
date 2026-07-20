@@ -1,7 +1,7 @@
 ---
 id: teamwork-collaboration
 title: "Teamwork & Collaboration: Question Bank & Answer Guidance"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Competencies
@@ -43,7 +43,7 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | teamwork-collaboration |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
@@ -387,7 +387,7 @@ For interviewers designing a teamwork assessment, the documented guidance is con
 # Risks & Caveats
 
 - **Descriptors change.** The GOV.UK Behaviours guidance carries an "Updated 29 January 2025" stamp [1] and the police CVF was revised in 2024, with forces given until 1 May 2025 to transition [12]. Verify the live descriptor before high-stakes use; review is due 2027-07-20.
-- **The 7-point scale is departmental, not universal.** The scoring scale and the "4 or more in all behaviours" threshold quoted here are published by COPFS [4], one organisation applying Success Profiles. Other departments publish variants and some publish none. Do not present the 7-point scale as a Civil Service-wide standard; check the application pack, which COPFS itself says is where benchmarks are detailed [4].
+- **The 7-point scale is central, but the benchmarks are not.** Cabinet Office guidance states that "Experience, technical skills and behaviours should be scored using the 7 point scale. Strengths should be scored using the 4 point scale" [29], so the scale itself is a Civil Service-wide instrument rather than a COPFS invention. Three qualifications survive: the central pack dates from 2020 while the behaviour guides were refreshed in January 2025, and no refreshed central scoring publication was located; the seven descriptor labels quoted here are published by COPFS [4], still the only located source for them; and the "4 or more in all behaviours" threshold is a benchmark, which varies by campaign — check the application pack, which COPFS itself says is where benchmarks are detailed [4].
 - **The five-strand structure is synthesis.** The strand table in Core Reference is this knowledge base's organising device. Every cell is cited, but the framework publishers do not describe their competencies as having five strands.
 - **Composed questions are illustrative.** Thirty-one of the 51 question-bank entries were written for this knowledge base in the style of the cited descriptors. They are not employer questions and must never be represented as such.
 - **Sourced questions evidence what is published, not what a given employer asks.** The targetjobs and Oxford question sets [23] [25] show what careers services publish as typical teamwork questions; no inference about any named employer's actual question set is supported.
@@ -425,6 +425,7 @@ For interviewers designing a teamwork assessment, the documented guidance is con
 - [16] **EUR-Lex** — *Council Directive 2000/78/EC establishing a general framework for equal treatment in employment and occupation*. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078. Accessed 2026-07-20.
 - [17] **EUR-Lex** — *Regulation (EU) 2016/679 (General Data Protection Regulation)*. https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng. Accessed 2026-07-20.
 - [18] **GOV.UK** — *Recruitment and disabled people: Reasonable adjustments*. https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments. Accessed 2026-07-20.
+- [29] **Cabinet Office** — *Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment* (May 2020). https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf. Accessed 2026-07-20. The same scoring sentence appears verbatim in the parallel Cabinet Office packs for HR Deputy Director and HR Director recruitment.
 
 **Professional & Advisory Bodies** — CIPD, ACAS, BPS, professional institutes.
 
@@ -474,3 +475,4 @@ Non-cited background is listed in the Further Reading section below.
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: framework level descriptors for Working Together / Working together / We collaborate / NHS values; 51-entry question bank; coaching, assessor and fairness layers. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected superseded claim that the Success Profiles 1–7 scale is departmental; cited central Cabinet Office scoring guidance. | Standing mandate (user, 2026-07-19) |

@@ -1,7 +1,7 @@
 ---
 id: communication-influencing
 title: "Communication & Influencing: Question Bank & Answer Guidance"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Competencies
@@ -43,7 +43,7 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | communication-influencing |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
@@ -351,7 +351,7 @@ Communication competencies carry a fairness risk that most other competencies do
 - **The four-stage escalation reading is synthesis.** The level descriptors are documented verbatim [2]; the "clear → adapt → trust → influence" summary is this knowledge base's reading and could be drawn differently. Always work from the descriptor for the grade in the advert, not from the summary.
 - **Only eight of 42 entries are sourced.** Published question sets specific to communication and influencing are thin: this document could source four questions and two probes to a single university careers service [19] and two questions to a practitioner publisher [20]. The remaining 34 are composed in the style of the cited frameworks. They are realistic, but they are not evidence of what any employer asks.
 - **The Oxford question set is dated.** The University of Oxford Careers Service example questions PDF is dated May 2016 [19]. Its communication questions remain consistent with the current framework descriptors, but it is a decade old at the time of writing.
-- **The 1–7 scale is departmental, not universal.** The scale and benchmark quoted are published by COPFS [4]. Success Profiles scoring practice varies between departments and campaigns; the central GOV.UK guidance does not publish a single mandatory scale [1] [2]. Do not assume the same numbers apply to another department's campaign.
+- **The 1–7 scale is central; the benchmark is not.** Cabinet Office guidance states that "Experience, technical skills and behaviours should be scored using the 7 point scale. Strengths should be scored using the 4 point scale" [24], so the scale is a Civil Service-wide instrument, not a COPFS one. Three qualifications remain: that central pack dates from 2020, while the behaviour guides were refreshed in January 2025 and no refreshed central scoring publication was found; the seven descriptor labels quoted above come from COPFS [4], still the only located source publishing them; and benchmarks — the "4 or more in all behaviours" rule — are set per campaign, so do not assume the same numbers apply to another department's campaign.
 - **EPSO competition detail lives in the Notice of Competition.** Which competencies are assessed and by which test is set per competition [7] [8]; the competency framework itself [5] [6] does not settle it.
 - **The CVF is distributed, and the 2016 indicators are the detailed source.** The 2024 CVF guidance sets out the structure — six competencies, three levels, and the caution against checklist use [11] — while the detailed first-person indicators quoted here come from the 2016 framework document [10]. Readers working in policing should check whether their force uses refreshed indicator wording.
 - **NHS coverage is deliberately shallow.** Communication reaches NHS recruitment through the 6Cs [12] and values-based interviewing methods [18] rather than through a named competency; this document signposts rather than treats it. The planned NHS framework documents should go further.
@@ -384,6 +384,7 @@ Communication competencies carry a fairness risk that most other competencies do
 - [13] **legislation.gov.uk** — *Equality Act 2010, s.20 (Duty to make adjustments)*. https://www.legislation.gov.uk/ukpga/2010/15/section/20. Accessed 2026-07-20.
 - [14] **EUR-Lex** — *Council Directive 2000/78/EC establishing a general framework for equal treatment in employment and occupation* (Article 3(1)(a)). https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078. Accessed 2026-07-20.
 - [15] **EUR-Lex** — *Regulation (EU) 2016/679 (General Data Protection Regulation)*. https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng. Accessed 2026-07-20.
+- [24] **Cabinet Office** — *Guidance: Application of Success Profile Guides during delegated grade (EO–Grade 6) recruitment* (May 2020). https://assets.publishing.service.gov.uk/media/5f746b1ae90e0740caae75a7/Guidance-Application_of_Success_Profile_Guides_during_delegated_grade__EO-Grade_6__recruitment_v0b.pdf. Accessed 2026-07-20. The same scoring sentence appears verbatim in the parallel Cabinet Office packs for HR Deputy Director and HR Director recruitment.
 
 **Professional & Advisory Bodies**
 
@@ -430,3 +431,4 @@ None cited in this document. See **competencies-foundation** for the selection-v
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: Civil Service level descriptors, EPSO anchors, CVF and NHS treatment, 42-entry question bank, worked STAR skeleton, published scoring scale. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Corrected superseded claim that the Success Profiles 1–7 scale is departmental; cited central Cabinet Office scoring guidance. | Standing mandate (user, 2026-07-19) |
