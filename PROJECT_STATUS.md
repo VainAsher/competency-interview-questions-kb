@@ -4,8 +4,8 @@
 
 ## Where we are
 
-**The approved 32-document scope is complete.** All five clusters are frozen and
-tagged.
+**The approved 32-document scope plus a depth pass are complete.** All six
+clusters are frozen and tagged.
 
 | Cluster | Contents | Docs | Tag |
 |---------|----------|------|-----|
@@ -14,13 +14,16 @@ tagged.
 | 3 | Tier-3 UK framework guides | 5 | `cluster3-v1.0.0` |
 | 4 | EU frameworks + interview formats | 5 | `cluster4-v1.0.0` |
 | 5 | Tier-4 techniques & cross-cutting | 8 | `cluster5-v1.0.0` |
+| 6 | Depth pass: Ireland, devolved UK, neurodiversity, evidence base | 5 + sweep | `cluster6-v1.0.0` |
 
-- **32 documents · 1,234 practice questions · 593 sourced with citations.**
-- **9 High-confidence · 23 Medium.** No document is rated High on synthesis.
-- 84 glossary terms; ~180 registered sources.
+- **37 documents · 1,418 practice questions · 647 sourced with citations.**
+- **11 High-confidence · 26 Medium.** No document is rated High on synthesis.
+- 104 glossary terms; ~230 registered sources.
 - Final gate run: validate 0 issues, genre audit clean, markdownlint 0,
-  **200/200 links live, 0 dead** (independently re-verified by the orchestrator).
-- Knowledge graph: 32 nodes, 242 edges, **all resolving to real documents**.
+  **265/267 links live, 2 allowlisted warn, 0 dead** (independently re-verified).
+- Knowledge graph: 37 nodes, 277 edges, **all resolving to real documents**.
+- **Coverage now genuinely UK & EU:** Ireland/PAS, Scotland, Wales, NI added;
+  the currency sweep confirmed no anchor source has been superseded.
 
 ## Verified negatives (do not re-research)
 
