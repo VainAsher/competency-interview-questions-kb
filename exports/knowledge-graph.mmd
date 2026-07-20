@@ -21,21 +21,26 @@ graph LR
     assessment_centre_exercises["assessment-centre-exercises"]
     epso_competency_framework["epso-competency-framework"]
     eu_institutions_assessment_centres["eu-institutions-assessment-centres"]
+    ireland_public_appointments["ireland-public-appointments"]
     nhs_values_based_interviews["nhs-values-based-interviews"]
     panel_interviews["panel-interviews"]
     police_competency_values_framework["police-competency-values-framework"]
+    scotland_public_sector_frameworks["scotland-public-sector-frameworks"]
     uk_civil_service_behaviour_questions["uk-civil-service-behaviour-questions"]
     uk_civil_service_success_profiles["uk-civil-service-success-profiles"]
     uk_graduate_schemes["uk-graduate-schemes"]
     video_asynchronous_interviews["video-asynchronous-interviews"]
+    wales_ni_public_sector_frameworks["wales-ni-public-sector-frameworks"]
   end
   subgraph Tier4["Tier 4"]
     alternative_answer_frameworks["alternative-answer-frameworks"]
     building_evidence_bank["building-evidence-bank"]
     common_mistakes_recovery["common-mistakes-recovery"]
+    evidence_base_validity["evidence-base-validity"]
     fairness_bias_legal["fairness-bias-legal"]
     follow_up_probing_questions["follow-up-probing-questions"]
     interviewer_question_design["interviewer-question-design"]
+    neurodiversity_adjustments["neurodiversity-adjustments"]
     scoring_and_marking["scoring-and-marking"]
     star_technique["star-technique"]
   end
@@ -126,6 +131,30 @@ graph LR
   eu_institutions_assessment_centres -->|deepens| eu_frameworks_foundation
   eu_institutions_assessment_centres -->|relates to| assessment_centre_exercises
   eu_institutions_assessment_centres -->|relates to| formats_foundation
+  ireland_public_appointments -->|deepens| eu_frameworks_foundation
+  ireland_public_appointments -->|relates to| epso_competency_framework
+  ireland_public_appointments -->|relates to| uk_civil_service_success_profiles
+  ireland_public_appointments -->|relates to| scoring_and_marking
+  scotland_public_sector_frameworks -->|deepens| uk_frameworks_foundation
+  scotland_public_sector_frameworks -->|relates to| uk_civil_service_success_profiles
+  scotland_public_sector_frameworks -->|relates to| police_competency_values_framework
+  scotland_public_sector_frameworks -->|relates to| nhs_values_based_interviews
+  scotland_public_sector_frameworks -->|relates to| wales_ni_public_sector_frameworks
+  wales_ni_public_sector_frameworks -->|deepens| uk_frameworks_foundation
+  wales_ni_public_sector_frameworks -->|relates to| uk_civil_service_success_profiles
+  wales_ni_public_sector_frameworks -->|relates to| police_competency_values_framework
+  wales_ni_public_sector_frameworks -->|relates to| nhs_values_based_interviews
+  wales_ni_public_sector_frameworks -->|relates to| fairness_bias_legal
+  neurodiversity_adjustments -->|deepens| best_practice_foundation
+  neurodiversity_adjustments -->|relates to| fairness_bias_legal
+  neurodiversity_adjustments -->|relates to| interviewer_question_design
+  neurodiversity_adjustments -->|relates to| video_asynchronous_interviews
+  neurodiversity_adjustments -->|relates to| assessment_centre_exercises
+  evidence_base_validity -->|deepens| best_practice_foundation
+  evidence_base_validity -->|relates to| scoring_and_marking
+  evidence_base_validity -->|relates to| interviewer_question_design
+  evidence_base_validity -->|relates to| fairness_bias_legal
+  evidence_base_validity -->|relates to| star_technique
   formats_foundation -->|parent of| panel_interviews
   formats_foundation -->|parent of| video_asynchronous_interviews
   formats_foundation -->|parent of| assessment_centre_exercises
@@ -281,3 +310,14 @@ graph LR
   fairness_bias_legal -->|related| interviewer_question_design
   fairness_bias_legal -->|related| scoring_and_marking
   fairness_bias_legal -->|related| formats_foundation
+  ireland_public_appointments -->|related| eu_institutions_assessment_centres
+  ireland_public_appointments -->|related| competencies_foundation
+  ireland_public_appointments -->|related| techniques_foundation
+  scotland_public_sector_frameworks -->|related| scoring_and_marking
+  scotland_public_sector_frameworks -->|related| competencies_foundation
+  wales_ni_public_sector_frameworks -->|related| scotland_public_sector_frameworks
+  wales_ni_public_sector_frameworks -->|related| competencies_foundation
+  neurodiversity_adjustments -->|related| panel_interviews
+  neurodiversity_adjustments -->|related| formats_foundation
+  neurodiversity_adjustments -->|related| resilience_adaptability
+  evidence_base_validity -->|related| alternative_answer_frameworks

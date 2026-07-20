@@ -5,9 +5,9 @@
 
 Evidence-based, source-cited reference on competency-based interviews in the UK & EU — frameworks, question banks, answer techniques, and assessment best practice for candidates and interviewers.
 
-**32 documents** across **32 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
+**37 documents** across **37 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
 
-*Confidence: 9 High · 23 Medium · 0 Low.*  *Market: EU 3 · UK 6 · UK, EU 23.*
+*Confidence: 11 High · 26 Medium · 0 Low.*  *Market: EU 4 · UK 8 · UK, EU 25.*
 
 ## Tier 1 — Category foundations
 
@@ -33,11 +33,14 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
 
 - [NHS Values-Based Interviews: Framework, Questions & Band Expectations](03-uk-frameworks/nhs-values-based-interviews.md) — *NHS values-based recruitment* (UK)
 - [Police Competency and Values Framework (CVF): Guide & Question Bank](03-uk-frameworks/police-competency-values-framework.md) — *College of Policing CVF* (UK)
+- [Scotland: Public-Sector Competency and Values Frameworks](03-uk-frameworks/scotland-public-sector-frameworks.md) — *Scottish public-sector frameworks* (UK)
 - [Civil Service Behaviours: Question Bank by Behaviour and Grade](03-uk-frameworks/uk-civil-service-behaviour-questions.md) — *Civil Service behaviour questions* (UK)
 - [Civil Service Success Profiles: The Complete Guide](03-uk-frameworks/uk-civil-service-success-profiles.md) — *Success Profiles end-to-end* (UK)
 - [UK Graduate Schemes: Competency Interviews in Private-Sector Recruitment](03-uk-frameworks/uk-graduate-schemes.md) — *Graduate-scheme competency interviews* (UK)
+- [Wales and Northern Ireland: Public-Sector Competency Frameworks](03-uk-frameworks/wales-ni-public-sector-frameworks.md) — *Welsh and NI public-sector frameworks* (UK)
 - [The EPSO Competency Framework: Competencies, Assessment & Question Bank](04-eu-frameworks/epso-competency-framework.md) — *EPSO general competencies* (EU)
 - [EU Institutions Assessment Centres: Exercises, Structure & Preparation](04-eu-frameworks/eu-institutions-assessment-centres.md) — *EU assessment centres* (EU)
+- [Ireland: Public Appointments Service Competency Frameworks](04-eu-frameworks/ireland-public-appointments.md) — *Ireland public-sector frameworks* (EU)
 - [Assessment Centre Exercises: Group Tasks, In-Trays & Presentations](05-formats/assessment-centre-exercises.md) — *Assessment centre exercises* (UK, EU)
 - [Panel Interviews: Structure, Dynamics & Scoring](05-formats/panel-interviews.md) — *Panel interviews* (UK, EU)
 - [Video & Asynchronous Interviews: Formats, Platforms & Technique](05-formats/video-asynchronous-interviews.md) — *Video and asynchronous interviews* (UK, EU)
@@ -48,9 +51,11 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
 - [Building a Personal Evidence Bank](02-techniques/building-evidence-bank.md) — *Evidence bank* (UK, EU)
 - [The STAR Method in Depth: Structure, Evidence & Timing](02-techniques/star-technique.md) — *STAR in depth* (UK, EU)
 - [Common Mistakes and In-Interview Recovery](06-best-practice/common-mistakes-recovery.md) — *Mistakes and recovery* (UK, EU)
+- [The Evidence Base: Does Competency Interviewing Actually Work?](06-best-practice/evidence-base-validity.md) — *Validity and research evidence* (UK, EU)
 - [Fairness, Bias and the Law in Competency Interviews](06-best-practice/fairness-bias-legal.md) — *Fairness, bias and legal duties* (UK, EU)
 - [Follow-Up and Probing Questions: What They Test and How to Handle Them](06-best-practice/follow-up-probing-questions.md) — *Follow-up and probing questions* (UK, EU)
 - [Designing Competency Questions and Scoring Rubrics](06-best-practice/interviewer-question-design.md) — *Question and rubric design* (UK, EU)
+- [Neurodivergent and Disabled Candidates: Adjustments in Competency Interviews](06-best-practice/neurodiversity-adjustments.md) — *Neurodiversity and adjustments* (UK, EU)
 - [How Competency Answers Are Scored: Scales, Benchmarks & Reconciliation](06-best-practice/scoring-and-marking.md) — *Scoring and marking* (UK, EU)
 
 ## Knowledge graph
@@ -81,21 +86,26 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
         assessment_centre_exercises["assessment-centre-exercises"]
         epso_competency_framework["epso-competency-framework"]
         eu_institutions_assessment_centres["eu-institutions-assessment-centres"]
+        ireland_public_appointments["ireland-public-appointments"]
         nhs_values_based_interviews["nhs-values-based-interviews"]
         panel_interviews["panel-interviews"]
         police_competency_values_framework["police-competency-values-framework"]
+        scotland_public_sector_frameworks["scotland-public-sector-frameworks"]
         uk_civil_service_behaviour_questions["uk-civil-service-behaviour-questions"]
         uk_civil_service_success_profiles["uk-civil-service-success-profiles"]
         uk_graduate_schemes["uk-graduate-schemes"]
         video_asynchronous_interviews["video-asynchronous-interviews"]
+        wales_ni_public_sector_frameworks["wales-ni-public-sector-frameworks"]
       end
       subgraph Tier4["Tier 4"]
         alternative_answer_frameworks["alternative-answer-frameworks"]
         building_evidence_bank["building-evidence-bank"]
         common_mistakes_recovery["common-mistakes-recovery"]
+        evidence_base_validity["evidence-base-validity"]
         fairness_bias_legal["fairness-bias-legal"]
         follow_up_probing_questions["follow-up-probing-questions"]
         interviewer_question_design["interviewer-question-design"]
+        neurodiversity_adjustments["neurodiversity-adjustments"]
         scoring_and_marking["scoring-and-marking"]
         star_technique["star-technique"]
       end
@@ -186,6 +196,30 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       eu_institutions_assessment_centres -->|deepens| eu_frameworks_foundation
       eu_institutions_assessment_centres -->|relates to| assessment_centre_exercises
       eu_institutions_assessment_centres -->|relates to| formats_foundation
+      ireland_public_appointments -->|deepens| eu_frameworks_foundation
+      ireland_public_appointments -->|relates to| epso_competency_framework
+      ireland_public_appointments -->|relates to| uk_civil_service_success_profiles
+      ireland_public_appointments -->|relates to| scoring_and_marking
+      scotland_public_sector_frameworks -->|deepens| uk_frameworks_foundation
+      scotland_public_sector_frameworks -->|relates to| uk_civil_service_success_profiles
+      scotland_public_sector_frameworks -->|relates to| police_competency_values_framework
+      scotland_public_sector_frameworks -->|relates to| nhs_values_based_interviews
+      scotland_public_sector_frameworks -->|relates to| wales_ni_public_sector_frameworks
+      wales_ni_public_sector_frameworks -->|deepens| uk_frameworks_foundation
+      wales_ni_public_sector_frameworks -->|relates to| uk_civil_service_success_profiles
+      wales_ni_public_sector_frameworks -->|relates to| police_competency_values_framework
+      wales_ni_public_sector_frameworks -->|relates to| nhs_values_based_interviews
+      wales_ni_public_sector_frameworks -->|relates to| fairness_bias_legal
+      neurodiversity_adjustments -->|deepens| best_practice_foundation
+      neurodiversity_adjustments -->|relates to| fairness_bias_legal
+      neurodiversity_adjustments -->|relates to| interviewer_question_design
+      neurodiversity_adjustments -->|relates to| video_asynchronous_interviews
+      neurodiversity_adjustments -->|relates to| assessment_centre_exercises
+      evidence_base_validity -->|deepens| best_practice_foundation
+      evidence_base_validity -->|relates to| scoring_and_marking
+      evidence_base_validity -->|relates to| interviewer_question_design
+      evidence_base_validity -->|relates to| fairness_bias_legal
+      evidence_base_validity -->|relates to| star_technique
       formats_foundation -->|parent of| panel_interviews
       formats_foundation -->|parent of| video_asynchronous_interviews
       formats_foundation -->|parent of| assessment_centre_exercises
@@ -341,6 +375,17 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       fairness_bias_legal -->|related| interviewer_question_design
       fairness_bias_legal -->|related| scoring_and_marking
       fairness_bias_legal -->|related| formats_foundation
+      ireland_public_appointments -->|related| eu_institutions_assessment_centres
+      ireland_public_appointments -->|related| competencies_foundation
+      ireland_public_appointments -->|related| techniques_foundation
+      scotland_public_sector_frameworks -->|related| scoring_and_marking
+      scotland_public_sector_frameworks -->|related| competencies_foundation
+      wales_ni_public_sector_frameworks -->|related| scotland_public_sector_frameworks
+      wales_ni_public_sector_frameworks -->|related| competencies_foundation
+      neurodiversity_adjustments -->|related| panel_interviews
+      neurodiversity_adjustments -->|related| formats_foundation
+      neurodiversity_adjustments -->|related| resilience_adaptability
+      evidence_base_validity -->|related| alternative_answer_frameworks
     ```
 
 ## Machine-readable exports

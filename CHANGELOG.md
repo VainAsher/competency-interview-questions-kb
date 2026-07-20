@@ -2,6 +2,42 @@
 
 All notable changes to this knowledge base.
 
+## cluster6-v1.0.0 — 2026-07-20 — depth pass
+
+### Added
+
+- Six documents from a backlog-driven depth pass, all frozen at v1.0.0:
+  Ireland / Public Appointments Service; Scotland public-sector frameworks
+  (**High**); Wales & NI public-sector frameworks (**High**); neurodivergent &
+  disabled candidates / adjustments; the evidence base (validity research); plus
+  a report-only currency maintenance sweep.
+- Knowledge base now **37 documents, 1,418 practice questions, 647 sourced**.
+  11 High / 26 Medium. 104 glossary terms; ~230 registered sources.
+- Closes the biggest scope gap: **Ireland** (previously EPSO-only EU coverage)
+  and the **devolved UK nations** (previously one passing mention each).
+
+### Findings
+
+- **Ireland launched a Civil Service Capability Framework (Feb 2024)** — seven
+  dimensions, four Capabilities — coexisting with the legacy competency model.
+- **Police Scotland runs its own CVF** (pre-2024 structure), not the current
+  College of Policing one; **PSNI does** use the CoP CVF (adapted under licence).
+- **NICS is a separate civil service** with its own 2014 framework; **Welsh
+  language** is a statutorily assessed requirement; **Section 75** is a distinct
+  NI equality duty.
+- **The evidence base answered five open questions** — including a rigorous "no
+  research located" on whether answer structure affects scores.
+- **Adequate neurodiversity recruitment guidance exists** (ACAS 2025, CIPD 2024).
+
+### Maintenance & tooling
+
+- Currency sweep (report-only): confirmed **no KB anchor has been superseded**;
+  the sought post-2018 restatement of the 2016 proportioning guidance does not
+  exist. Captured Internet Archive snapshots for the retiring `hee.nhs.uk`
+  citations; fixed three URL redirects; flagged new bot-blocks.
+- `gov.ie` and `healthcareers.nhs.uk` added to the `check_links.py` bot-block
+  allowlist (real pages, 403 to the checker).
+
 ## cluster5-v1.0.0 — 2026-07-20 — **scope complete**
 
 ### Added

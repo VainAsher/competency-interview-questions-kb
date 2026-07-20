@@ -35,6 +35,15 @@ eyeball them periodically: glassdoor.co.uk / glassdoor.com, indeed.com /
 uk.indeed.com, linkedin.com, reed.co.uk, totaljobs.com, cipd.org,
 consilium.europa.eu.
 
+Sweep-confirmed bot-blocks / rate-limits (2026-07-20): **healthcareers.nhs.uk**
+now 403s automated fetchers (URL unchanged). **nationalcareers.service.gov.uk**
+rate-limits rapid sequential requests by 302-ing to `/alerts/405` — standalone
+requests are 200; space out NCS checks and do not mistake this for rot.
+`acas-hiring-interviewing` now redirects to the same page as `acas-interviewing`
+(ACAS consolidated `/hiring-someone/` into `/recruitment/`) — the two entries are
+duplicates. EPSO's legacy `/en/how-to-request-specific-adjustments` now 404s
+(the active `/en/reasonable-accommodations` citation is unaffected).
+
 Observed during clusters 1–3 (not allowlisted; workers used alternatives):
 **college.police.uk HTML pages** 403 automated fetchers — but the
 `assets.college.police.uk` **PDFs download fine** with a browser User-Agent and
@@ -252,7 +261,7 @@ snapshots.
 | ncs-common-questions | How to answer common interview questions | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/top-10-interview-questions |
 | govuk-civil-service-code | The Civil Service Code — the four core values (integrity, honesty, objectivity, impartiality) | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code |
 | govuk-nolan-principles | The 7 principles of public life (Nolan Principles, first published 31 May 1995) | GOV.UK (Committee on Standards in Public Life) | https://www.gov.uk/government/publications/the-7-principles-of-public-life/the-7-principles-of-public-life--2 |
-| csc-recruitment-principles | Recruitment Principles — programme page (selection on merit, fair and open competition) | Civil Service Commission | https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/ |
+| csc-recruitment-principles | Recruitment Principles — programme page (selection on merit, fair and open competition) | Civil Service Commission | https://civilservicecommission.independent.gov.uk/recruitment-principles/ |
 | csc-recruitment-principles-2018 | Recruitment Principles (April 2018) — **the document**, distinct from the page above: "a selection panel of two or more people must be set up"; chair must be a civil servant (or a Commissioner for the most senior competitions); conflict-of-interest declarations; recommended candidate must be first in order of merit; chair's closing record | Civil Service Commission | https://civilservicecommission.independent.gov.uk/document/02a-recruitment-principles-april-2018-final/ |
 | equality-act-s149 | Equality Act 2010, s.149 (Public sector equality duty) — note s.149(7) covers eight characteristics, omitting marriage and civil partnership | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/149 |
 | eqa2010-s39 | Equality Act 2010, s.39 (Employees and applicants) — **the provision that makes discrimination law bite on interview *design***: prohibits discrimination "in the arrangements A makes for deciding to whom to offer employment"; s.39(5) applies the adjustments duty | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/39 |
@@ -261,13 +270,13 @@ snapshots.
 | glos-nhs-vbr-toolkit | Values based recruitment toolkit: a toolkit for recruiting managers (2020 refresh) — published trust question bank | Gloucestershire Hospitals NHS Foundation Trust | https://www.gloshospitals.nhs.uk/media/documents/Recruitment_Toolkit_Managers_2020_Refresh_Digital.pdf |
 | era-1996-s43b | Employment Rights Act 1996, s.43B (Disclosures qualifying for protection) — note: sexual-harassment category effective 6 Apr 2026 | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/1996/18/section/43B |
 | govuk-nhs-constitution | The NHS Constitution for England | GOV.UK (DHSC) | https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england |
-| hee-vbr-page | Values Based Recruitment (programme page) | NHS England (HEE legacy site) | https://www.hee.nhs.uk/our-work/values-based-recruitment |
-| hee-vbr-framework-2016 | Values Based Recruitment Framework (March 2016) | Health Education England | https://www.hee.nhs.uk/sites/default/files/documents/VBR_Framework%20March%202016.pdf |
+| hee-vbr-page | Values Based Recruitment (programme page). **Archive (retiring domain):** http://web.archive.org/web/20251209055542/https://www.hee.nhs.uk/our-work/values-based-recruitment | NHS England (HEE legacy site) | https://www.hee.nhs.uk/our-work/values-based-recruitment |
+| hee-vbr-framework-2016 | Values Based Recruitment Framework (March 2016). **Archive:** http://web.archive.org/web/20260206085623/https://www.hee.nhs.uk/sites/default/files/documents/VBR_Framework%20March%202016.pdf | Health Education England | https://www.hee.nhs.uk/sites/default/files/documents/VBR_Framework%20March%202016.pdf |
 | nhse-vbr-article | Values-based recruitment (article) | NHS Employers | https://www.nhsemployers.org/articles/values-based-recruitment |
 | wuth-vbr-questions | Values Based Recruitment: example questions for recruiters to ask during job interviews (published NHS trust question bank) | Wirral University Teaching Hospital NHS Foundation Trust | https://www.wuth.nhs.uk/media/32277/values-based-interview-questions.pdf |
 | compassion-in-practice-2012 | Compassion in Practice: Nursing, Midwifery and Care Staff — Our Vision and Strategy (4 Dec 2012) — origin and verbatim definitions of the 6Cs (p.13) | NHS Commissioning Board / Department of Health | https://www.england.nhs.uk/wp-content/uploads/2012/12/compassion-in-practice.pdf |
-| hee-vbr-structured-interviews | VBR: How to Design and Deliver Structured Interviews for Values Based Recruitment — VBI definition, worked lead-question/probe/indicator templates, FORCE principles, trust case studies | Health Education England (with Work Psychology Group) | https://www.hee.nhs.uk/sites/default/files/documents/3.%20Structured%20interviews.pdf |
-| hee-merges-nhse | HEE merges with NHS England — NHS England has assumed all activities previously undertaken by HEE | NHS England (HEE legacy site) | https://www.hee.nhs.uk/hee-merges-with-nhs-england |
+| hee-vbr-structured-interviews | VBR: How to Design and Deliver Structured Interviews for Values Based Recruitment — VBI definition, worked lead-question/probe/indicator templates, FORCE principles, trust case studies. **Archive:** http://web.archive.org/web/20250804094404/https://www.hee.nhs.uk/sites/default/files/documents/3.%20Structured%20interviews.pdf | Health Education England (with Work Psychology Group) | https://www.hee.nhs.uk/sites/default/files/documents/3.%20Structured%20interviews.pdf |
+| hee-merges-nhse | HEE merges with NHS England — NHS England has assumed all activities previously undertaken by HEE. **Archive:** http://web.archive.org/web/20260509215757/https://www.hee.nhs.uk/hee-merges-with-nhs-england | NHS England (HEE legacy site) | https://www.hee.nhs.uk/hee-merges-with-nhs-england |
 | barnsley-vbr-candidates | Values Based Recruitment: Guidance and Information for Candidates (April 2015) — **STAR 70/30 weighting: the bracket assigns 70% to Situation+Task+Action COMBINED and 30% to Result alone** (verified visually, p.4). ⚠️ **Extraction trap:** automated text extraction places the "70%"/"30%" markers adjacent to the Task and Action lines and supports the *opposite* reading. Verify visually before quoting. Also carries the "We will / We / We do not" behavioural framework. | Barnsley Hospital NHS Foundation Trust | https://www.barnsleyhospital.nhs.uk/sites/default/files/2023-07/values-based-recruitment-guidance-notes-for-candidates.pdf |
 | lypft-vbr-pack | Values Based Recruitment: Candidate Resource Pack (ref. 24/0107, Oct 2024) — interview structure, 40–50 min duration, same values apply at every role level | Leeds and York Partnership NHS Foundation Trust | https://www.leedsandyorkpft.nhs.uk/news/wp-content/uploads/sites/4/2024/10/Values-Based-Recruitment-Resource-Brochure.pdf |
 | ouh-vbi-what-to-expect | What to expect from a Value Based Interview (VBI) — two to four questions; no advance preparation needed | Oxford University Hospitals NHS Foundation Trust | https://www.ouh.nhs.uk/working-for-us/application/vbi/what-to-expect/ |
@@ -346,10 +355,82 @@ snapshots.
 | acas-interviewing | Interviewing job applicants | ACAS | https://www.acas.org.uk/recruitment/interviewing-job-applicants |
 | acas-hiring-interviewing | Hiring someone: Interviewing job applicants | ACAS | https://www.acas.org.uk/hiring-someone/interviewing-job-applicants |
 | acas-discrimination-law | Following discrimination law (Recruitment) | ACAS | https://www.acas.org.uk/recruitment/follow-discrimination-law |
+| acas-neuroinclusive | Making your organisation neuroinclusive — recruitment review points; questions-in-advance worked example for autistic applicants | ACAS | https://www.acas.org.uk/neurodiversity-at-work/making-your-organisation-neuroinclusive |
+| acas-adjustments-neurodiversity | Adjustments for neurodiversity — no diagnosis required; concentration/written-communication adjustment examples | ACAS | https://www.acas.org.uk/reasonable-adjustments/adjustments-for-neurodiversity |
+| cipd-neuroinclusion | Neuroinclusion at work (guide, Feb 2024) — interview adjustments; "test of social competence" framing; avoid penalising body language. Bot-block host, intermittent. | CIPD | https://www.cipd.org/en/knowledge/guides/neuroinclusion-work/ |
+| govuk-disability-confident-signup | Disability Confident: how to sign up to the employer scheme — three levels; Level 1 interview commitment | GOV.UK (DWP) | https://www.gov.uk/guidance/disability-confident-how-to-sign-up-to-the-employer-scheme |
+| epso-ra-flyer | Step-by-step guide to requesting reasonable accommodations in EPSO selection tests (PDF, May 2025) — "no certificates no adjustments"; "compete on an equal basis" | EPSO / EU Careers | https://eu-careers.europa.eu/system/files/2025-05/EN_SpecialAdjustment.pdf |
 | cipd-selection-methods | Selection methods (factsheet) | CIPD | https://www.cipd.org/en/knowledge/factsheets/selection-factsheet/ |
 | cipd-selection-methods-uk | Selection methods (factsheet, UK path) | CIPD | https://www.cipd.org/uk/knowledge/factsheets/selection-factsheet/ |
 | ise-recruitment-survey-2025-trends | 5 trends you need to know from ISE's Recruitment Survey 2025 | Institute of Student Employers | https://ise.org.uk/knowledge/insights/498/5_trends_you_need_to_know_from_ises_recruitment_survey_2025/ |
 | ise-srs-2025 | ISE Student Recruitment Survey 2025 (landing page; report member-only) | Institute of Student Employers | https://ise.org.uk/knowledge/research/491/ise_student_recruitment_survey_2025/ |
+
+### Primary — Ireland (Public Appointments Service)
+
+| Key | Source | Publisher | URL |
+|-----|--------|-----------|-----|
+| pj-capability-overview | The Capability Framework Overview — **the 2024 framework** (four Capabilities, seven dimensions) | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/en/information-hub/capability-framework |
+| pj-capability-eo-page | Capability Framework: Executive Officer (per-grade page) | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/en/information-hub/capability-framework/executive-officer |
+| pj-capability-eo-pdf | Executive Officer Capability Framework (PDF) | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/documents/CF/EOFramework.pdf |
+| pj-capability-award-2025 | publicjobs wins Workforce of the Future Division, Civil Service Excellence Awards 2025 (Capability Framework, seven dimensions) | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/en/information-hub/latest-news-and-events/1017-publicjobs-wins-workforce-of-the-future-division-at-civil-service-excellence-and-innovation-awards-2025 |
+| pj-interview-advice | Interview Advice — interview types; competency vs capability; STAR; **published example questions** | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/en/information-hub/our-recruitment-process/interview-advice |
+| pj-eo-competency-legacy | Irish Civil Service Competency Models: Executive Officer Level (**legacy** model, still live per role) | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/documents/Executive_Officer_Competencies.pdf |
+| pj-heo-competency-legacy | Civil Service Competency Framework Model: Higher Executive Officer Level (legacy) | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/images/pdfs/Higher_Executive_Officer_Level.pdf |
+| pj-eo-booklet-2022 | Executive Officer 2022: Information Booklet — competition structure, selection stages, order-of-merit panel | Public Appointments Service (publicjobs) | https://www.publicjobs.ie/documents/EO_InformationBooklet_English.pdf |
+| cpsa-code-2022 | Code of Practice for Appointment to Positions in the Civil and Public Service (2022) — six recruitment principles | Commission for Public Service Appointments | https://www.publicjobs.ie/documents/CPSA-Code-of-Practice-2022.pdf |
+| cpsa-code-page | Code of Practice (regulator programme page) | Commission for Public Service Appointments | https://www.cpsa.ie/en/collection/8c53f-code-of-practice/ |
+| garda-trainee-booklet-2025 | Garda Trainee 2025: Information Booklet — publicjobs-run competency interview + role-play. *Verified negative: the specific competencies are NOT published; the "five competencies" list circulating is third-party.* | An Garda Síochána | https://www.garda.ie/en/careers/garda-trainee-recruitment-it-s-a-job-worth-doing-campaign/information-booklet-garda-trainee-2025.pdf |
+| hse-competency-guide | Guide to completing competency questions — competency-based application and interview | Health Service Executive (HSE) | https://about.hse.ie/jobs/hse-recruitment-process/guide-to-completing-competency-questions/ |
+| leitrim-co-booklet-2026 | Candidate Information Booklet: Clerical Officer, Mar 2026 — local-authority competency set | Leitrim County Council | https://www.leitrim.ie/council/jobs/current-job-vacancies/candidate-information-booklet-clerical-officer-march-2026.pdf |
+| psmra-2004 | Public Service Management (Recruitment and Appointments) Act 2004 — establishes PAS and the CPSA | Irish Statute Book | https://www.irishstatutebook.ie/eli/2004/act/33/enacted/en/html |
+| eea-1998 | Employment Equality Act 1998 — nine grounds; discrimination in recruitment arrangements | Irish Statute Book | https://www.irishstatutebook.ie/eli/1998/act/21/enacted/en/html |
+| gov-ie-capability-framework | The Civil Service Capability Framework (launched Feb 2024) — **gov.ie is bot-block allowlisted** (200 to browser, 403 to checker) | Department of Public Expenditure, Infrastructure, PSR&D | https://www.gov.ie/en/department-of-public-expenditure-infrastructure-public-service-reform-and-digitalisation/publications/the-civil-service-capability-framework/ |
+
+### Primary — Devolved UK (Scotland)
+
+| Key | Source | Publisher | URL |
+|-----|--------|-----------|-----|
+| gov-scot-sp-intro | Success profiles: candidate guide — Introduction (**Scottish Government uses Success Profiles**, "also used across the wider Civil Service"; updated 23 Jun 2026) | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/introduction/ |
+| gov-scot-sp-about | Success profiles: candidate guide — Our recruitment framework | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/about-success-profiles/ |
+| gov-scot-sp-behaviour-defs | Success profiles: candidate guide — Behaviour definitions (nine Civil Service Behaviours, verbatim) | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/behaviour-definitions/ |
+| gov-scot-sp-behaviours | Success profiles: candidate guide — Behaviours (assessment methods; sift) | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/behaviours/ |
+| gov-scot-sp-apply | Success profiles: candidate guide — Our application process | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/our-application-process/ |
+| gov-scot-sp-assess | Success profiles: candidate guide — Our assessment process (45–60 min panel of 2–3; **questions shared in advance**; merit order; Reserve list) | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/our-assessment-process/ |
+| gov-scot-sp-experience | Success profiles: candidate guide — Experience (**published example interview questions**) | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/experience/ |
+| gov-scot-sp-technical | Success profiles: candidate guide — Technical skills (published example questions) | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/technical-skills/ |
+| gov-scot-sp-supporting | Success profiles: candidate guide — Supporting Statement (STARR recommended; first person) | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/your-supporting-statement/ |
+| gov-scot-sp-further-info | Success profiles: candidate guide — Recruitment adjustments and guaranteed interview schemes | Scottish Government | https://www.gov.scot/publications/success-profiles-candidate-guide/pages/further-information/ |
+| ps-cvf | **Competency & Values Framework for Police Scotland** — "Modified with permission from © College of Policing Ltd"; retains the **pre-2024 three-cluster structure** and its own four values (Integrity, Fairness, Respect, Human Rights) from the Code of Ethics for Policing in Scotland. *Police Scotland runs its OWN CVF, not the current CoP CVF.* | Police Scotland | https://www.scotland.police.uk/spa-media/lkdivnf4/competency-and-values-framework.pdf |
+| ps-recruitment-process | Our recruitment process — PSET; assessment day (group task, SJT exercise, 20-min CBI of four questions assessed against the CVF) | Police Scotland | https://www.scotland.police.uk/jobs/police-officer/our-recruitment-process/ |
+| nhs-scot-everyone-matters | Everyone matters: 2020 workforce vision — the four NHSScotland values (care and compassion; dignity and respect; openness, honesty and responsibility; quality and teamwork) | Scottish Government | https://www.gov.scot/publications/everyone-matters-2020-workforce-vision/pages/3/ |
+| nhs-scot-principles-values | Principles and values (NHSScotland workforce policies) | NHS Scotland | https://workforce.nhs.scot/about/principles-and-values/ |
+| nhs-scot-careers-values | Your guide to our core values (1 Jul 2022; four values in recruitment; example prompts; STAR) | NHSScotland Careers | https://www.careers.nhs.scot/blog/your-guide-to-our-core-values/ |
+| nhs24-values-behaviours | Values and Behaviours Framework (four values, four behavioural indicators each) | NHS 24 | https://www.nhs24.scot/careers/values-and-behaviours-framework/ |
+| scts-interview-guidance | Interview guidance — competency-based interview vs person specification; **0–4 scoring per value** | Scottish Courts and Tribunals Service | https://www.scotcourts.gov.uk/about-us/careers/interview-guidance/ |
+| eqa-ssi-2012-162 | The Equality Act 2010 (Specific Duties) (Scotland) Regulations 2012 (SSI 2012/162) — **Scotland-specific PSED duties** | legislation.gov.uk | https://www.legislation.gov.uk/ssi/2012/162/contents/made |
+| myjobscotland-help-interviews | Help with interviews (shared Scottish local-government jobs portal) | myjobscotland | https://myjobscotland.gov.uk/help-interviews |
+
+### Primary — Devolved UK (Wales & Northern Ireland)
+
+| Key | Source | Publisher | URL |
+|-----|--------|-----------|-----|
+| gov-wales-assessment-process | Welsh Government jobs: assessment process — uses standard Success Profiles; shares opening questions ≥5 days in advance; name-free recruitment | Welsh Government (GOV.WALES) | https://www.gov.wales/welsh-government-jobs-assessment-process-html |
+| gov-wales-external-candidate-guidance | Welsh Government jobs: external candidate recruitment guidance | Welsh Government (GOV.WALES) | https://www.gov.wales/welsh-government-jobs-external-candidate-recruitment-guidance-html |
+| nhs-wales-values-nwssp | Values and Standards of Behaviour Framework — NHS Wales core values | NHS Wales Shared Services Partnership | https://nwssp.nhs.wales/a-wp/governance-e-manual/living-public-service-values/values-and-standards-of-behaviour-framework/ |
+| heiw-vbr-policy-2022 | Values Based Recruitment & Selection Policy & Procedure (Dec 2022) — actively consider Welsh-language skills | Health Education and Improvement Wales (HEIW) | https://heiw.nhs.wales/files/values-based-recruitment-selection-policy/ |
+| wlc-job-categorisation | Job categorisation and advertising — essential/desirable/need-to-learn Welsh categories; CEFR levels; assessed at interview | Welsh Language Commissioner | https://www.welshlanguagecommissioner.wales/support-resources/the-workforce/job-categorisation-and-advertising |
+| senedd-official-languages-recruitment | Official Languages and Recruitment — courtesy-level Welsh minimum; levels 1–5 across four skills | Senedd Commission | https://senedd.wales/commission/work-for-the-senedd-commission/official-languages-and-recruitment/ |
+| welsh-language-measure-2011 | Welsh Language (Wales) Measure 2011 — statutory basis for the Welsh Language Standards | legislation.gov.uk | https://www.legislation.gov.uk/mwa/2011/1/contents |
+| nics-cf-2014 | **NICS Competency Framework (April 2014)** — ten competencies, three clusters, six cumulative levels. NICS is a **separate civil service**, NOT Home Civil Service; uses Competence Based Interviews, not Success Profiles. Over a decade old but still the live framework as of 2026-07-20. | NI Civil Service Recruitment (HRConnect) | https://irecruit-ext.hrconnect.nigov.net/resources/documents/n/i/c/nics-cf.pdf |
+| nics-cf-page | NICS Competency Framework (landing page) | NI Civil Service Recruitment (HRConnect) | https://irecruit-ext.hrconnect.nigov.net/pages/content.aspx?Page=NICS-Competency-Framework |
+| nics-selection-process | Selection Process — CIB; sift; Competence Based Interviews | NI Civil Service Recruitment (HRConnect) | https://irecruit-ext.hrconnect.nigov.net/pages/content.aspx?Page=how-do-i-apply%2Fselection-process |
+| nics-cbi-guidance | Interview Guidance — Competence Based Interviews; Situation–Task–Action–Result | NI Civil Service Recruitment (HRConnect) | https://irecruit-ext.hrconnect.nigov.net/resources/documents/g/u/i//guidance-on-competence-based-interviews---accessible.pdf |
+| nics-commissioners | What We Do — Merit Principle; Recruitment Code | Civil Service Commissioners for Northern Ireland | https://www.nicscommissioners.org/what-we-do |
+| psni-cvf-2024 | **PSNI Competency and Values Framework: An Overview** — the CoP CVF **adapted under Licence SF00312** (three values, six competencies; updated June 2025). *Confirms PSNI DOES use the CoP CVF — corrects an earlier assumption that it did not.* | Police Service of Northern Ireland (adapting College of Policing) | https://www.joinpsni.co.uk/uploads/1749992122-PSNI-CVF-2024-updated-June-2025---PDF.pdf |
+| psni-assessment-centre-prep | How to prepare for the assessment centre — CVF Level 1; professional + lay assessors mark independently then agree; Deloitte design | Join PSNI | https://www.joinpsni.co.uk/police-officer/information-on-how-to-prepare-for-the-assessment-centre-and-assessment-centre-scheduling |
+| hscni-values | Health & Social Care Values — Working Together, Excellence, Openness & Honesty, Compassion | HSC Recruitment (jobs.hscni.net) | https://jobs.hscni.net/Information/23/health-social-care-values |
+| civilservicecareers-gos-tips | GOS: tips and guidance for applying — names **both STAR and CAR**, but CAR defined as "Context, Action, Result" and **no proportioning content**; departmental, does NOT supersede the 2016 brief guide | Civil Service Careers | https://www.civil-service-careers.gov.uk/gos-tips-and-guidance-for-applying/ |
+| ni-act-1998-s75 | Northern Ireland Act 1998, s.75 — statutory equality duty (nine grounds) + good-relations duty. **Distinct from the Equality Act 2010 PSED.** | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/1998/47/section/75 |
 
 ### Practitioner & Careers
 
@@ -395,7 +476,7 @@ snapshots.
 | manchester-professionalism | Professionalism — evidencing skills through studies, part-time work, volunteering, societies, placements, course-rep roles | University of Manchester Careers Service | https://www.careers.manchester.ac.uk/options/skills/professionalism/ |
 | targetjobs-leadership-management | Leadership and management: prove you're more than an entry-level hire (Abigail Lewis, upd. 21 Jun 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/skills-for-getting-a-job/leadership-and-management-prove-youre-more-entry-level-hire |
 | myworldofwork-competency-guide | A complete guide to competency-based interviews | My World of Work (Skills Development Scotland) | https://www.myworldofwork.co.uk/cvs-applications-and-interviews/a-complete-guide-to-competency-based-interviews |
-| pwc-early-careers | Assessment and selection process — Early Careers | PwC UK | https://www.pwc.co.uk/careers/early-careers/apply/video-interview.html |
+| pwc-early-careers | Assessment and selection process — Early Careers | PwC UK | https://www.pwc.co.uk/careers/early-careers/applying/assessment-selection-process.html |
 | ey-interview-tips | Interview tips | EY UK | https://www.ey.com/en_uk/careers/how-to-join-us/interview-tips |
 | unilever-uflp-2026 | UK & Ireland Unilever Future Leaders Programme 2026 — four published selection stages; Discovery Centre | Unilever | https://careers.unilever.com/en/uk-and-ireland-unilever-future-leaders-programme-2026 |
 | aldi-graduate-area-manager | Area Manager Graduate Scheme — five published stages incl. one-to-one competency-based interview | Aldi Recruitment UK | https://www.aldirecruitment.co.uk/early-careers/graduate-area-manager-programme |
@@ -403,7 +484,7 @@ snapshots.
 | kpmg-application-process | Our application process — four published stages; AI-avatar video interview with human scoring; Launch Pad | KPMG UK | https://www.kpmgcareers.co.uk/graduate/applying-to-kpmg/application-process/ |
 | barclays-grad-application | Internship and Graduate Application Process — three published stages; assessment-centre contents | Barclays | https://search.jobs.barclays/internship-graduate-application |
 | amazon-leadership-principles | Leadership Principles — sixteen named principles (closest thing to a published private-sector competency list; **no** level descriptors) | Amazon Jobs | https://www.amazon.jobs/content/en/our-workplace/leadership-principles |
-| healthcareers-nhs-gmts | NHS Graduate Management Training Scheme — selection stages; skills assessed | NHS Health Careers | https://www.healthcareers.nhs.uk/career-planning/study-and-training/graduate-training-opportunities/nhs-graduate-management-training-scheme |
+| healthcareers-nhs-gmts | NHS Graduate Management Training Scheme — selection stages; skills assessed. *Now 403s automated fetchers (sweep 2026-07-20) — eyeball in browser.* | NHS Health Careers | https://www.healthcareers.nhs.uk/career-planning/study-and-training/graduate-training-opportunities/nhs-graduate-management-training-scheme |
 | cipd-strengths-based-interviews | How to conduct a strengths-based interview — definition, rationale for graduates, example questions | CIPD | https://www.cipd.org/en/about/news-archive/strengths-based-interviews/ |
 | ise-top-10-stats-2025 | ISE top 10 stats of 2025 (140 applications per vacancy; AI; development gaps) — public insight page | Institute of Student Employers | https://ise.org.uk/knowledge/insights/513/ise_top_10_stats_of_2025_you_need_to_know/ |
 | euronews-epso-2026 | EPSO exam: Record-breaking participation with only 3% success rate (17 Feb 2026) | Euronews | https://www.euronews.com/my-europe/2026/02/17/epso-exam-record-breaking-participation-with-only-3-success-rate |
@@ -417,6 +498,8 @@ snapshots.
 | Key | Source | Publisher | URL |
 |-----|--------|-----------|-----|
 | sackett-2022-jap | Revisiting meta-analytic estimates of validity in personnel selection (J. Applied Psychology 107(11)) | Sackett, Zhang, Berry & Lievens / APA (PubMed record) | https://pubmed.ncbi.nlm.nih.gov/34968080/ |
+| levashina-2014-peps | The structured employment interview: narrative and quantitative review (Personnel Psychology 67, 241–293; DOI 10.1111/peps.12052) — **15-component structure taxonomy**; group-difference meta-analysis (high- vs low-structure d = .23 vs .32; post-1996 near-zero); situational vs past-behaviour; anchored-scale validity/reliability. Full text read via open-access author copy. | Levashina, Hartwell, Morgeson & Campion / Wiley | http://www.morgeson.com/downloads/levashina_hartwell_morgeson_campion_2014.pdf |
+| spence-2024-pspb | Is your accent right for the job? A meta-analysis on accent bias in hiring (PSPB 50(3), 371–386; DOI 10.1177/01461672221130595) — 139 effect sizes, N=4,576; standard-accented candidates rated more hireable (d=0.47); prejudice over processing-fluency. ⚠️ **Abstract/PubMed record only — full text not read.** | Spence, Hornsey, Stephenson & Imuta / SAGE (PubMed record) | https://pubmed.ncbi.nlm.nih.gov/36326202/ |
 | sackett-2023-iop | Revisiting the design of selection systems in light of new findings regarding the validity of widely used predictors (IOP 16(3), open access) | Sackett, Zhang, Berry & Lievens / Cambridge University Press | https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A20984B138319E3D432E643978BF026D/S175494262300024Xa.pdf/revisiting_the_design_of_selection_systems_in_light_of_new_findings_regarding_the_validity_of_widely_used_predictors.pdf |
 
 ### Further Reading

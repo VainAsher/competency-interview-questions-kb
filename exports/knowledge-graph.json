@@ -757,6 +757,126 @@
         "panel-interviews",
         "formats-foundation"
       ]
+    },
+    {
+      "id": "ireland-public-appointments",
+      "title": "Ireland: Public Appointments Service Competency Frameworks",
+      "topic": "Ireland public-sector frameworks",
+      "tier": "3",
+      "market": "EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/04-eu-frameworks/ireland-public-appointments.md",
+      "category": "EU Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "eu-frameworks-foundation",
+        "epso-competency-framework",
+        "eu-institutions-assessment-centres",
+        "uk-civil-service-success-profiles",
+        "competencies-foundation",
+        "techniques-foundation",
+        "scoring-and-marking"
+      ]
+    },
+    {
+      "id": "scotland-public-sector-frameworks",
+      "title": "Scotland: Public-Sector Competency and Values Frameworks",
+      "topic": "Scottish public-sector frameworks",
+      "tier": "3",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/03-uk-frameworks/scotland-public-sector-frameworks.md",
+      "category": "UK Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "uk-frameworks-foundation",
+        "uk-civil-service-success-profiles",
+        "police-competency-values-framework",
+        "nhs-values-based-interviews",
+        "wales-ni-public-sector-frameworks",
+        "scoring-and-marking",
+        "competencies-foundation"
+      ]
+    },
+    {
+      "id": "wales-ni-public-sector-frameworks",
+      "title": "Wales and Northern Ireland: Public-Sector Competency Frameworks",
+      "topic": "Welsh and NI public-sector frameworks",
+      "tier": "3",
+      "market": "UK",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/03-uk-frameworks/wales-ni-public-sector-frameworks.md",
+      "category": "UK Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "uk-frameworks-foundation",
+        "uk-civil-service-success-profiles",
+        "police-competency-values-framework",
+        "nhs-values-based-interviews",
+        "scotland-public-sector-frameworks",
+        "fairness-bias-legal",
+        "competencies-foundation"
+      ]
+    },
+    {
+      "id": "neurodiversity-adjustments",
+      "title": "Neurodivergent and Disabled Candidates: Adjustments in Competency Interviews",
+      "topic": "Neurodiversity and adjustments",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/06-best-practice/neurodiversity-adjustments.md",
+      "category": "Best Practice",
+      "document_type": "how-to",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "best-practice-foundation",
+        "fairness-bias-legal",
+        "interviewer-question-design",
+        "video-asynchronous-interviews",
+        "assessment-centre-exercises",
+        "panel-interviews",
+        "formats-foundation",
+        "resilience-adaptability"
+      ]
+    },
+    {
+      "id": "evidence-base-validity",
+      "title": "The Evidence Base: Does Competency Interviewing Actually Work?",
+      "topic": "Validity and research evidence",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/06-best-practice/evidence-base-validity.md",
+      "category": "Best Practice",
+      "document_type": "reference",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "best-practice-foundation",
+        "scoring-and-marking",
+        "interviewer-question-design",
+        "fairness-bias-legal",
+        "star-technique",
+        "alternative-answer-frameworks"
+      ]
     }
   ],
   "edges": [
@@ -1279,6 +1399,150 @@
     {
       "from": "eu-institutions-assessment-centres",
       "to": "formats-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "ireland-public-appointments",
+      "to": "eu-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "ireland-public-appointments",
+      "to": "epso-competency-framework",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "ireland-public-appointments",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "ireland-public-appointments",
+      "to": "scoring-and-marking",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "scotland-public-sector-frameworks",
+      "to": "uk-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "scotland-public-sector-frameworks",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "scotland-public-sector-frameworks",
+      "to": "police-competency-values-framework",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "scotland-public-sector-frameworks",
+      "to": "nhs-values-based-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "scotland-public-sector-frameworks",
+      "to": "wales-ni-public-sector-frameworks",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "wales-ni-public-sector-frameworks",
+      "to": "uk-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "wales-ni-public-sector-frameworks",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "wales-ni-public-sector-frameworks",
+      "to": "police-competency-values-framework",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "wales-ni-public-sector-frameworks",
+      "to": "nhs-values-based-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "wales-ni-public-sector-frameworks",
+      "to": "fairness-bias-legal",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "best-practice-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "fairness-bias-legal",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "interviewer-question-design",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "video-asynchronous-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "assessment-centre-exercises",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "evidence-base-validity",
+      "to": "best-practice-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "evidence-base-validity",
+      "to": "scoring-and-marking",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "evidence-base-validity",
+      "to": "interviewer-question-design",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "evidence-base-validity",
+      "to": "fairness-bias-legal",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "evidence-base-validity",
+      "to": "star-technique",
       "rel": "relates to",
       "target": "known"
     },
@@ -2209,6 +2473,72 @@
     {
       "from": "fairness-bias-legal",
       "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "ireland-public-appointments",
+      "to": "eu-institutions-assessment-centres",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "ireland-public-appointments",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "ireland-public-appointments",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "scotland-public-sector-frameworks",
+      "to": "scoring-and-marking",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "scotland-public-sector-frameworks",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "wales-ni-public-sector-frameworks",
+      "to": "scotland-public-sector-frameworks",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "wales-ni-public-sector-frameworks",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "panel-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "neurodiversity-adjustments",
+      "to": "resilience-adaptability",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "evidence-base-validity",
+      "to": "alternative-answer-frameworks",
       "rel": "related",
       "target": "known"
     }

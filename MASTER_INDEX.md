@@ -42,6 +42,11 @@ best practice.
 | common-mistakes-recovery | Common Mistakes and In-Interview Recovery | Mistakes and recovery | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/common-mistakes-recovery.md` |
 | interviewer-question-design | Designing Competency Questions and Scoring Rubrics | Question and rubric design | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/interviewer-question-design.md` |
 | fairness-bias-legal | Fairness, Bias and the Law in Competency Interviews | Fairness, bias and legal duties | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/fairness-bias-legal.md` |
+| ireland-public-appointments | Ireland: Public Appointments Service Competency Frameworks | Ireland public-sector frameworks | 3 | EU | 1.0.0 | frozen | Medium | `docs/04-eu-frameworks/ireland-public-appointments.md` |
+| scotland-public-sector-frameworks | Scotland: Public-Sector Competency and Values Frameworks | Scottish public-sector frameworks | 3 | UK | 1.0.0 | frozen | High | `docs/03-uk-frameworks/scotland-public-sector-frameworks.md` |
+| wales-ni-public-sector-frameworks | Wales and Northern Ireland: Public-Sector Competency Frameworks | Welsh and NI public-sector frameworks | 3 | UK | 1.0.0 | frozen | High | `docs/03-uk-frameworks/wales-ni-public-sector-frameworks.md` |
+| neurodiversity-adjustments | Neurodivergent and Disabled Candidates: Adjustments in Competency Interviews | Neurodiversity and adjustments | 4 | UK, EU | 1.0.0 | frozen | Medium | `docs/06-best-practice/neurodiversity-adjustments.md` |
+| evidence-base-validity | The Evidence Base: Does Competency Interviewing Actually Work? | Validity and research evidence | 4 | UK, EU | 1.0.0 | frozen | Medium | `docs/06-best-practice/evidence-base-validity.md` |
 
 ## Knowledge graph
 
@@ -95,6 +100,16 @@ Typed cross-reference edges between documents. Each bullet has the shape below
 - `epso-competency-framework` *compares with* `uk-civil-service-success-profiles`
 - `eu-institutions-assessment-centres` *deepens* `eu-frameworks-foundation`
 - `eu-institutions-assessment-centres` *relates to* `assessment-centre-exercises` `formats-foundation`
+- `ireland-public-appointments` *deepens* `eu-frameworks-foundation`
+- `ireland-public-appointments` *relates to* `epso-competency-framework` `uk-civil-service-success-profiles` `scoring-and-marking`
+- `scotland-public-sector-frameworks` *deepens* `uk-frameworks-foundation`
+- `scotland-public-sector-frameworks` *relates to* `uk-civil-service-success-profiles` `police-competency-values-framework` `nhs-values-based-interviews` `wales-ni-public-sector-frameworks`
+- `wales-ni-public-sector-frameworks` *deepens* `uk-frameworks-foundation`
+- `wales-ni-public-sector-frameworks` *relates to* `uk-civil-service-success-profiles` `police-competency-values-framework` `nhs-values-based-interviews` `fairness-bias-legal`
+- `neurodiversity-adjustments` *deepens* `best-practice-foundation`
+- `neurodiversity-adjustments` *relates to* `fairness-bias-legal` `interviewer-question-design` `video-asynchronous-interviews` `assessment-centre-exercises`
+- `evidence-base-validity` *deepens* `best-practice-foundation`
+- `evidence-base-validity` *relates to* `scoring-and-marking` `interviewer-question-design` `fairness-bias-legal` `star-technique`
 - `formats-foundation` *parent of* `panel-interviews` `video-asynchronous-interviews` `assessment-centre-exercises`
 - `panel-interviews` *deepens* `formats-foundation`
 - `panel-interviews` *applies framework* `uk-civil-service-success-profiles` `police-competency-values-framework` `nhs-values-based-interviews`

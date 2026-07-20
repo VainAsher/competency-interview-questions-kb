@@ -59,6 +59,10 @@ BOT_BLOCK_HOSTS = {
     "totaljobs.com",
     "www.cipd.org",
     "cipd.org",
+    "www.gov.ie",
+    "gov.ie",
+    "www.healthcareers.nhs.uk",
+    "healthcareers.nhs.uk",
 }
 
 DEFAULT_PATHS = [
