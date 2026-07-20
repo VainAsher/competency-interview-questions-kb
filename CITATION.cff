@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you reference or reuse this knowledge base, please cite it as below."
+title: "Competency Interview Questions Knowledge Base (UK & EU)"
+abstract: >-
+  A structured, citation-backed reference on competency-based interviews across
+  UK and EU frameworks (Civil Service Success Profiles, EPSO, NHS values-based
+  recruitment, Police CVF, graduate schemes and more), covering question banks,
+  answer techniques, scoring, and fairness/best practice.
+authors:
+  - name: "Vain Asher Studios"
+repository-code: "https://github.com/VainAsher/competency-interview-questions-kb"
+url: "https://github.com/VainAsher/competency-interview-questions-kb"
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-07-20

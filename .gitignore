@@ -7,3 +7,9 @@ exports/rag/embeddings.meta.json
 # Python bytecode
 __pycache__/
 *.pyc
+
+# RAG data exports: generated locally from the docs (scripts/build_rag.py) and
+# NOT distributed — they power the Vain's Edge product. The docs are canonical.
+exports/rag/chunks.jsonl
+exports/rag/questions.jsonl
+exports/rag/citations.jsonl

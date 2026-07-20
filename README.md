@@ -108,6 +108,28 @@ python scripts/build_site.py && mkdocs serve
 
 ## Licence & provenance
 
+© 2026 **Vain Asher Studios**.
+
+- **Documentation & content** — [Creative Commons Attribution 4.0
+  International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+  Reuse freely, including commercially, with attribution to "Vain Asher
+  Studios — Competency Interview Questions KB" and a link back to this
+  repository. See [`LICENSE`](./LICENSE).
+- **Code** (`scripts/`) — [MIT](./LICENSE-CODE).
+- **Source material** — individual questions and passages are attributed to
+  their original publishers in each document's citations and in
+  [`SOURCE_REGISTRY.md`](./SOURCE_REGISTRY.md); those sources remain under
+  their own terms (many are UK Open Government Licence or EU reuse terms).
+
 Produced by an automated, human-gated research pipeline. Each document's front
 matter records its version, confidence rating, source-verification date and
 revision history.
+
+### RAG exports
+
+The pre-chunked retrieval exports (`exports/rag/chunks.jsonl`,
+`questions.jsonl`, `citations.jsonl`) are **generated locally** from the docs
+via `scripts/build_rag.py` and are **not distributed** in this repository —
+they power the [Vain's Edge](https://vains-edge.vainasherstudios.com) interview
+practice product. Regenerate them yourself from the source documents, which are
+the canonical, human-readable form of everything here.
