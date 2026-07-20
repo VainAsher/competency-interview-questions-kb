@@ -2,6 +2,42 @@
 
 All notable changes to this knowledge base.
 
+## cluster4-v1.0.0 — 2026-07-20
+
+### Added
+
+- Five Tier-3 documents, all frozen at v1.0.0: EPSO competency framework, EU
+  institutions assessment centres, panel interviews (**High**), video &
+  asynchronous interviews, assessment centre exercises.
+- **218 practice questions** in the new documents; knowledge base total now
+  **891 questions, 412 sourced**. 26 new glossary terms (84 total).
+- **Major new regulator source:** the ICO's *Recruitment rewired* (March 2026)
+  on automated decision-making in recruitment, based on 30+ employers.
+
+### Fixed
+
+- `formats-foundation` v1.0.0 → v1.0.1: Open Question on regulator guidance for
+  algorithmic/AI scoring resolved and cited; a narrower remainder kept open.
+- **`scripts/audit_genre.py` bug fixed** — the provenance regex used `[^)]*`,
+  which stopped at the first `)` and *silently* reported correctly-labelled
+  questions containing nested parentheses (e.g. `*(sourced: GOV.UK (Cabinet
+  Office))*`) as unlabelled. Now `[^*]*`; verified against nested-parenthesis
+  labels and an unlabelled control.
+
+### Corrected in `SOURCE_REGISTRY.md`
+
+- **The EPSO supersession mapping was overstated.** The *absence* of Leadership
+  and Resilience from the current framework is verified; the mapping to
+  Intrapreneurship / Self-management is **inferred** — no EPSO concordance
+  exists. Registry now separates verified absence from labelled analysis.
+- **EPSO framework dating is ambiguous** (2022 vs 2023) — neutral phrasing
+  ("the current framework") is now mandated.
+- **EPSO's current competition has no competency interview or assessment
+  centre** at all (Notice EPSO/AD/427/26, Feb 2026).
+- New traps recorded: EPSO's legacy test pages return 200 but are unlinked
+  archive; two near-identical College of Policing filenames (one stale, one
+  current); EUR-Lex serves a JS challenge that `check_links.py` cannot detect.
+
 ## cluster3-v1.0.0 — 2026-07-20
 
 ### Added

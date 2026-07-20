@@ -56,11 +56,37 @@ public insight pages or Luminate reporting. Several legacy epso.europa.eu URLs
   inspire"). The 2024 **framework** PDF (with competency level descriptors) sits
   at the `2025-06/` asset path; the `2024-05/` path is the *guidance* document
   and contains no descriptors.
-- **EPSO's 2023 Competency Framework has no "Leadership" competency** — that
-  content now sits under **Intrapreneurship**. The legacy "Leadership (for
-  administrators only)" wording survives only in pre-2023 General Rules and
-  competition notices. This is the single most misreported fact in EPSO prep
-  material; cite the supersession, never the legacy label as current.
+- **EPSO's current competency framework has no "Leadership" and no standalone
+  "Resilience" competency.** Their *absence* is **verified** from the anchors
+  leaflet and competition notices. **But the mapping is INFERRED, not published:**
+  no EPSO concordance saying Leadership→Intrapreneurship or
+  Resilience→Self-management could be located (checked 2026-07-20). Treat the
+  absence as fact and the mapping as labelled analysis — earlier registry
+  wording overstated this and has been corrected. The cleanest published
+  evidence for the old "for administrators only" restriction is the pair of 2021
+  SCBI mock exercises: the AD mock assesses six competencies *including*
+  Leadership, the AST mock the same five *without* it.
+- **Framework dating is genuinely ambiguous — use neutral phrasing.** EPSO's own
+  2023 note says "The general competency framework (April 2022) remains valid",
+  while the anchors leaflet sits at a `2023-04` asset path and calls the
+  framework "new". Say **"the current framework"**; do not assert 2022 or 2023.
+- **EPSO's CURRENT competition model has NO competency interview.** Notice
+  EPSO/AD/427/26 (OJ C/2026/711, 5 Feb 2026) documents reasoning tests, EU
+  knowledge, digital skills and a free-text essay, with **no assessment centre,
+  no case study, no oral presentation, no group exercise and no interview**. Anchor-based
+  marking survives only in the **written** test. Any document describing an EPSO
+  competency *interview* or assessment centre as current is out of date. Note
+  this also corrects the common claim that the post-2023 written test is
+  "usually a case study" — that wording comes from the 2023 Information Note and
+  no longer matches the generalist notice.
+- **STALE-PAGE TRAP — EPSO legacy test pages are still live and return 200.**
+  `eu-careers.europa.eu/en/epso-tests/{case-study, oral-presentation,
+  competency-based-interview-cbi, situational-competency-based-interview-scbi}`
+  all resolve, are **not linked from any current staff-category test page**, and
+  the oral-presentation page still lists **pre-2023 competency names**. By
+  contrast `/en/epso-tests/{group-exercise, e-tray, situational-judgement-test}`
+  are 404. Treat the four survivors as archive, cite them as legacy, and never
+  present them as current practice. `check_links.py` cannot detect this.
 - **NHS VBR: the anchor framework is dated March 2016 and its publisher (Health
   Education England) no longer exists** — HEE merged into NHS England, which
   assumed all its activities. No successor framework has been reissued under
@@ -88,15 +114,34 @@ public insight pages or Luminate reporting. Several legacy epso.europa.eu URLs
   Dictionary carries the correct wording ("the demonstration of specific
   professional skills, knowledge or qualifications"). Prefer the Dictionary.
 - **Fetcher notes:** `civil-service-careers.gov.uk` returns a title-only shell to
-  WebFetch (pages are real and link-check fine, but unreadable by fetchers);
+  WebFetch — **workaround: `curl` with a browser User-Agent returns full content**.
+  `ico.org.uk` 403s **WebFetch** but serves `curl` with a browser UA — note
+  `check_links.py` passes ICO URLs cleanly, so this is a *reading* obstacle
+  only, not a link-gate failure; don't annotate ICO citations as blocked.
+  EPSO's remotely-proctored-testing page 403s even with a browser UA — do not cite.
+- **EUR-Lex — worse than a normal block, and INVISIBLE TO THE LINK GATE.**
+  EUR-Lex now serves an AWS WAF JavaScript challenge (HTTP 202 + challenge page)
+  to both `curl` and WebFetch, on HTML *and* PDF endpoints; the
+  `publications.europa.eu` mirror returned 400. **Only a real browser
+  (claude-in-chrome) worked.** Critically, `check_links.py` still reports these
+  URLs as live, so the gate gives no warning — a worker will believe the URL is
+  fine and then be unable to read it. Budget for browser retrieval when citing
+  EUR-Lex, and never cite an OJ notice you have not actually opened.
   `assets.publishing.service.gov.uk` PDFs need local text extraction (curl +
   pdftotext/pypdf) rather than WebFetch, which reports them as unreadable binary.
-- **STALE-DOCUMENT TRAP — College of Policing online-assessments guide.** The PDF
-  at `assets.college.police.uk/s3fs-public/2024-09/Online-assessments-candidate-guide-v3.2.pdf`
-  (internally labelled v3.1) **is still live but out of date** — it lists the
-  *2016* competency and value names (integrity, transparency, impartiality,
-  "deliver, support and inspire") for the sift. Do not cite it. Use
-  `cop-national-sift-guidance-2026` and `cop-oap-candidate-guidance-2024`.
+- **STALE-DOCUMENT TRAP — College of Policing, two near-identical filenames.**
+  Both live, both at the `2024-09/` path, both "v3.2" — **read the filename
+  character by character**:
+  - ❌ **STALE, do not cite:** `Online-assessments-candidate-guide-v3.2.pdf`
+    (*assessment**s**… guide*; internally labelled v3.1). Still lists the
+    abolished *2016* competency and value names (integrity, transparency,
+    impartiality, "deliver, support and inspire") for the sift.
+  - ✅ **CURRENT, cite this:** `Online-assessment-process-candidate-guidance-v3.2.pdf`
+    (*assessment **process**… guidance*) = `cop-oap-candidate-guidance-2024`.
+    Verified by local text extraction to use the 2024 CVF names throughout.
+  Also use `cop-national-sift-guidance-2026` — note its PDF is internally dated
+  May 2026 but sits at the `2025-02/` asset path with a 2025 copyright line;
+  the key name is correct, the path is not a typo.
 - **CVF 2016 → 2024 transition dates.** *Verified:* force transition deadline
   **1 May 2025** (College news article + CVF main page, both via Internet
   Archive — note this is NOT stated on the "Using the CVF in assessments" page);
@@ -154,7 +199,9 @@ snapshots.
 | ncs-common-questions | How to answer common interview questions | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/top-10-interview-questions |
 | govuk-civil-service-code | The Civil Service Code — the four core values (integrity, honesty, objectivity, impartiality) | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code |
 | govuk-nolan-principles | The 7 principles of public life (Nolan Principles, first published 31 May 1995) | GOV.UK (Committee on Standards in Public Life) | https://www.gov.uk/government/publications/the-7-principles-of-public-life/the-7-principles-of-public-life--2 |
-| csc-recruitment-principles | Recruitment Principles (selection on merit, fair and open competition) | Civil Service Commission | https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/ |
+| csc-recruitment-principles | Recruitment Principles — programme page (selection on merit, fair and open competition) | Civil Service Commission | https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/ |
+| csc-recruitment-principles-2018 | Recruitment Principles (April 2018) — **the document**, distinct from the page above: "a selection panel of two or more people must be set up"; chair must be a civil servant (or a Commissioner for the most senior competitions); conflict-of-interest declarations; recommended candidate must be first in order of merit; chair's closing record | Civil Service Commission | https://civilservicecommission.independent.gov.uk/document/02a-recruitment-principles-april-2018-final/ |
+| equality-act-s149 | Equality Act 2010, s.149 (Public sector equality duty) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/149 |
 | cop-code-of-ethics-poster-2024 | Code of Ethics: ethical policing principles (overview poster, January 2024) | College of Policing | https://assets.college.police.uk/s3fs-public/2024-01/CoE-overview-landscape-A4-poster.pdf |
 | glos-nhs-vbr-toolkit | Values based recruitment toolkit: a toolkit for recruiting managers (2020 refresh) — published trust question bank | Gloucestershire Hospitals NHS Foundation Trust | https://www.gloshospitals.nhs.uk/media/documents/Recruitment_Toolkit_Managers_2020_Refresh_Digital.pdf |
 | era-1996-s43b | Employment Rights Act 1996, s.43B (Disclosures qualifying for protection) — note: sexual-harassment category effective 6 Apr 2026 | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/1996/18/section/43B |
@@ -188,6 +235,14 @@ snapshots.
 | equality-act-s20 | Equality Act 2010, s.20 (Duty to make adjustments) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/20 |
 | eqa2010-s60 | Equality Act 2010, s.60 (Enquiries about disability and health) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/60 |
 | ico-recruitment-selection | Employment practices and data protection: recruitment and selection (draft) | Information Commissioner's Office | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/employment/recruitment-and-selection/ |
+| ico-recruitment-rewired-2026 | **Recruitment rewired** (March 2026) — ICO report on automation in recruitment, based on 30+ employers engaged Mar 2025–Jan 2026; finds many employers likely relying on solely automated decisions | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/ |
+| ico-rewired-key-findings | Recruitment rewired: Key findings — records automated scoring of video-interview transcriptions and evaluation of language/tone/content to predict personality; records **no** observed emotion detection or biometric processing | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/key-findings-how-are-employers-automating-their-recruitment-processes/ |
+| ico-rewired-meaningful-human-involvement | Recruitment rewired: Meaningful human involvement — UK GDPR art. 22A test; "rubber-stamping" red-rated candidates constitutes solely automated decision-making | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/key-findings-how-are-employers-automating-their-recruitment-processes/meaningful-human-involvement/ |
+| ico-rewired-mhi-use-cases | Recruitment rewired: Understanding how meaningful human involvement applies — six-part test for human reviewers; worked fit-score and screening cases | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/understanding-how-meaningful-human-involvement-applies-use-cases/ |
+| ico-rewired-transparency | Recruitment rewired: Transparency and safeguards — the four art. 22C safeguards; three transparency trigger points | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/key-findings-how-are-employers-automating-their-recruitment-processes/transparency-and-safeguards/ |
+| ico-rewired-fairness | Recruitment rewired: Fairness, bias and discrimination — procurement bias-testing questions; adjustments where candidates cannot access automated methods; records vendor "fairer than humans" marketing **without endorsing it** | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/key-findings-how-are-employers-automating-their-recruitment-processes/fairness-bias-and-discrimination/ |
+| ico-jobseekers-adm-2026 | Here's what jobseekers need to know about automated recruitment decisions (news, March 2026) — candidate-facing rights; ICO wrote to 16 organisations likely using ADM | Information Commissioner's Office | https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/03/here-s-what-jobseekers-need-to-know-about-automated-recruitment-decisions/ |
+| epso-specific-adjustments | How to request specific adjustments for the selection tests — EPSO Accessibility Team criteria; case-by-case grant | EPSO / EU Careers | https://eu-careers.europa.eu/en/how-request-specific-adjustments-selection-tests |
 
 ### Primary — EU official
 
@@ -210,7 +265,20 @@ snapshots.
 | epso-ac-faq-archive | What is an Assessment Centre? (FAQ, Internet Archive snapshot 2022-09-24) | EPSO via Internet Archive | https://web.archive.org/web/20220924171745/https://epso.europa.eu/en/help/faq/2026 |
 | eurlex-epso-general-rules-2015 | General rules governing open competitions (2015/C 070 A/01) — pre-2023 general competencies incl. "Leadership (for administrators only)" | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3AC2015%2F070A%2F01 |
 | eurlex-epso-ad-399-22 | Notice of open competition EPSO/AD/399/22 — Administrators (AD 7), audit (OJ C 114A, 2022): eight general competencies, test allocation, marking 10 each, combined pass 40/80 | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:C2022/114A/01 |
-| eurlex-epso-ad-389-21 | Notice of open competition EPSO/AD/389/21 — Administrators (AD 6): eight general competencies incl. Leadership; pass 3/10 per competency, 40/80 total | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELLAR%3Aa114d8dd-668a-11eb-aeb5-01aa75ed71a1 |
+| eurlex-epso-ad-389-21 | Notice of open competition EPSO/AD/389/21 — Administrators (AD 6): eight general competencies incl. Leadership; pass 3/10 per competency, 40/80 total; competency passport | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELLAR%3Aa114d8dd-668a-11eb-aeb5-01aa75ed71a1 |
+| eurlex-epso-ad-427-26 | **Notice EPSO/AD/427/26 — Administrators (AD 5), OJ C/2026/711, 5 Feb 2026. THE CURRENT MODEL**: reasoning + EU knowledge + digital skills + free-text essay (EUFTE); **no competency interview**; 35/25/25/15 % weightings; anchor-based written-test marking; 1,490 reserve-list places | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C_202600711 |
+| epso-written-test-anchors | What is the written test? — the five **published written-test anchors** used to mark WT / FRWT / EUFTE. Proof anchor-based marking survives the abolition of oral tests. (No source states whether these derive from the Communication competency's anchors — **do not assert that.**) | EPSO / EU Careers | https://eu-careers.europa.eu/en/help/what-written-test |
+| epso-scbi-mock-ad | Situational Competency-Based Interview — MOCK exercise, AD profiles (2021): 40 minutes, six competencies **including Leadership** | EPSO / EU Careers | https://eu-careers.europa.eu/sites/default/files/documents/general/sample_tests/scbi_ad/epso_ad_scbi_ex_en_mock_webpage.pdf |
+| epso-scbi-mock-ast | Situational Competency-Based Interview — mock exercise, AST profile (2021): 35 minutes, same five competencies **without Leadership**. Paired with the AD mock, the cleanest published evidence of the "administrators only" restriction. | EPSO / EU Careers | https://eu-careers.europa.eu/sites/default/files/documents/general/sample_tests/scbi_ast/epso_ast_scbi_ex_en_mock_webpage.pdf |
+| epso-case-study-mock-ast | MOCK Case Study, AST profile — three published assignment tasks, 90-minute limit, full document dossier | EPSO | https://eu-careers.europa.eu/sites/default/files/documents/general/sample_tests/cs_ast/ast_cs_ex_en_mock_webpage.pdf |
+| epso-ac-brochure-ad244 | EPSO Assessment Centre Brochure (competition EPSO/AD/244) — **legacy** exercise inventory and indicative durations (case study 1h30, structured interview 40 min, oral presentation 50 min, group exercise 60 min); competency-by-exercise matrix; two-assessor rule. Undated and competition-specific. | EPSO | https://europa.eu/epso/application/CotoFiles/file/AD%20244/AD_244_AC%20Brochure%20EN.pdf |
+| epso-tests-graduates-ad5 | Graduates (Administrators AD5) — current test list; **no oral test listed** | EPSO / EU Careers | https://eu-careers.europa.eu/en/graduates-administrators-ad5 |
+| epso-tests-specialists-ad6-ad9 | Specialists (Administrators AD6–AD9) — current written-test formats (WT / FRWT / EUFTE) and the five published marking anchors. **`/en/help/what-written-test` 301-redirects here — cite this canonical URL.** | EPSO / EU Careers | https://eu-careers.europa.eu/en/specialists-administrators-ad6-ad9 |
+| epso-tests-assistants | Assistants (AST 1–AST 9) — current test list and written-test anchors | EPSO / EU Careers | https://eu-careers.europa.eu/en/assistants-ast-1-ast-9 |
+| epso-tests-secretaries | Secretaries (AST/SC) — Field-Related Short Text Questionnaire (FRSTQ): 10 questions, 60 minutes | EPSO / EU Careers | https://eu-careers.europa.eu/en/secretaries-ast-sc |
+| ema-application-process | Application process for Temporary and Contract Agents — interview/test durations; 3–5 person selection committee; external-provider assessment centres for managerial posts | European Medicines Agency | https://careers.ema.europa.eu/content/Application-process-for-Temporary-Agents-and-Contract-Agents/?locale=en_GB |
+| eurojust-selection-process | Selection and recruitment process — interview plus written test; assessment centres for managerial selections | Eurojust | https://www.eurojust.europa.eu/about-us/jobs/selection-and-recruitment-process |
+| euphorum-scbi | SCBI (EPSO preparation page) — states the SCBI replaced the group exercise; advance-booklet timing. **Practitioner claim, not EPSO-published** | Euphorum | http://www.euphorum.org/en/training/ac/scbi |
 | eurlex-staff-regulations | Staff Regulations of Officials and CEOS (consolidated 2024-01-01) | EUR-Lex | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A01962R0031-20240101 |
 | eurlex-2000-78 | Council Directive 2000/78/EC (equal treatment in employment and occupation) | EUR-Lex | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078 |
 | eurlex-gdpr | Regulation (EU) 2016/679 (GDPR) | EUR-Lex | https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng |
@@ -240,6 +308,8 @@ snapshots.
 | cambridge-interviews | Interviews | University of Cambridge Careers Service | https://www.careers.cam.ac.uk/interviews |
 | edinburgh-before-interview | Before your interview | University of Edinburgh Careers Service | https://careers.ed.ac.uk/interviews-and-assessment-centres/before-your-interview |
 | edinburgh-carl | The CARL framework of reflection (Reflection Toolkit, 15 Oct 2024) | University of Edinburgh | https://reflection.ed.ac.uk/reflectors-toolkit/reflecting-on-experience/carl |
+| edinburgh-academic-interview | Prepare for an academic interview — panel size ("usually between two and six") and composition | University of Edinburgh Careers Service | https://careers.ed.ac.uk/phd-and-mres-students/make-it-happen/prepare-for-an-academic-interview |
+| nottingham-chair-panel-training | Interview Skills for Chair & Panel Members (Recruitment Services training deck) — **rich interviewer-side source**: chair duty list, panel pre-meet, lead-question + probe sets, note-taking standard, chair represents the panel at a Tribunal. Last modified 2019 — illustrative university practice, not statutory guidance. | University of Nottingham | https://training.nottingham.ac.uk/Public/Presentation-Interview%20Skills%20Chair%20and%20Panel%20Members.pdf |
 | reading-star | STAR technique | University of Reading | https://www.reading.ac.uk/essentials/Careers/Applications-and-interviews/STAR-technique |
 | arden-starr | STAR(R) Interview Technique | Arden University Careers Portal | https://careers.arden.ac.uk/pages/star-r |
 | prospects-competency-interviews | Competency-based interviews: How to prepare and example answers (Rachel Swain, June 2025) | Prospects | https://www.prospects.ac.uk/careers-advice/interview-tips/competency-based-interviews/ |
@@ -260,6 +330,12 @@ snapshots.
 | targetjobs-aldi-process | Application and interview advice for Aldi's area management graduate programme (27 Feb 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/application-and-interview-advice-aldis-area-management-graduate-programme |
 | targetjobs-nhs-gmts | How to be successful in the recruitment process for the NHS graduate management training scheme (31 Oct 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/cvs-applications-and-tests/how-be-successful-recruitment-process-nhs-graduate-management-training-scheme |
 | kent-commercial-awareness | Commercial awareness — published commercial-awareness interview question set | University of Kent Careers and Employability Service | https://student.kent.ac.uk/careers/employability/commercial-awareness-skills |
+| kent-assessment-centre-tasks | Assessment centres: Tasks — the clearest located taxonomy of AC exercises (assigned vs unassigned group roles, in-tray competencies, planned vs on-the-spot presentations, case studies, role plays) | University of Kent Careers and Employability Service | https://student.kent.ac.uk/careers/making-applications/assessment-centres/tasks |
+| lse-etray-intray | E-tray and in-tray exercises — same exercise in different media; 90-minute worked example with 15-minute read cap; published prioritisation cues; "there is no one right answer" | LSE Careers | https://info.lse.ac.uk/current-students/careers/information-and-resources/interview-assessment-centre-psychometric/e-tray-and-in-tray-exercises |
+| york-assessment-centres | Assessment centres — group observation criteria ("cooperatively without dominating"); in-tray justification requirement; warning that candidates may be assessed throughout their time with the employer | University of York Careers and Placements | https://www.york.ac.uk/students/work-volunteering-careers/apply-interview/assessment-centres/ |
+| ncs-video-interviews | Video interviews tips — live vs pre-recorded; camera at eye level; check re-record availability | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/how-to-do-well-in-video-interviews |
+| oxford-telephone-video | Telephone and Video Interviews — "no opportunity for the interviewer to ask for clarification"; per-question response time | University of Oxford Careers Service | https://www.careers.ox.ac.uk/telephone-video-interviews |
+| targetjobs-video-interview-tips | Expert video interview tips to impress recruiters (20 Aug 2025) — 1–3 min per question with on-screen timer; ~one-week window; retakes vary; names Sonru, SparkHire, HireVue | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/expert-video-interview-tips-impress-recruiters |
 | manchester-strengths-recruitment | Strengths recruitment and interviews — named adopters (Civil Service, Mott MacDonald, EY); published calibration question | University of Manchester Careers Service | https://www.careers.manchester.ac.uk/applicationsinterviews/interviews/types/strengthsrecruit/ |
 | manchester-professionalism | Professionalism — evidencing skills through studies, part-time work, volunteering, societies, placements, course-rep roles | University of Manchester Careers Service | https://www.careers.manchester.ac.uk/options/skills/professionalism/ |
 | targetjobs-leadership-management | Leadership and management: prove you're more than an entry-level hire (Abigail Lewis, upd. 21 Jun 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/skills-for-getting-a-job/leadership-and-management-prove-youre-more-entry-level-hire |

@@ -38,8 +38,13 @@ EVIDENCE_SECTIONS = [
 
 # A question entry is an ordered-list line inside "Question Bank":  "1. ..."
 QUESTION_LINE_RE = re.compile(r"^\s*\d+\.\s+\S")
-SOURCED_RE = re.compile(r"\*\(sourced[^)]*\)\*", re.IGNORECASE)
-COMPOSED_RE = re.compile(r"\*\(composed[^)]*\)\*", re.IGNORECASE)
+# NB: the label body is matched with [^*]* (not [^)]*) so that a label may
+# contain inner parentheses — e.g. *(sourced: GOV.UK (Cabinet Office))* or a
+# quoted anchor containing "(e.g. ...)". The earlier [^)]* form stopped at the
+# FIRST ")" and silently failed such labels, reporting a correctly-labelled
+# question as unlabelled.
+SOURCED_RE = re.compile(r"\*\(sourced[^*]*\)\*", re.IGNORECASE)
+COMPOSED_RE = re.compile(r"\*\(composed[^*]*\)\*", re.IGNORECASE)
 
 
 def sections(body: str) -> dict[str, str]:

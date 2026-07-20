@@ -1,7 +1,7 @@
 ---
 id: formats-foundation
 title: "Interview Formats & Assessment Methods"
-version: 1.0.0
+version: 1.0.1
 status: frozen
 confidence: Medium
 category: Formats
@@ -9,9 +9,9 @@ topic: "Interview formats & assessment methods"
 market: "UK, EU"
 document_type: foundation
 created: 2026-07-19
-updated: 2026-07-19
+updated: 2026-07-20
 review_due: 2027-07-19
-sources_verified: 2026-07-19
+sources_verified: 2026-07-20
 supersedes: null
 related:
   - competencies-foundation
@@ -40,14 +40,14 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | formats-foundation |
-| Version | 1.0.0 |
+| Version | 1.0.1 |
 | Status | frozen |
 | Confidence | Medium |
 | Category | Formats |
 | Market | UK, EU |
 | Owner | Interview-Research Pipeline |
 | Created | 2026-07-19 |
-| Updated | 2026-07-19 |
+| Updated | 2026-07-20 |
 | Review due | 2027-07-19 |
 | Frameworks reviewed | UK Civil Service Success Profiles (Behaviours & Strengths), EPSO assessment elements (CBI, SCBI, Assessment Centre), CIPD/ACAS selection guidance, ISE survey practice, PwC UK and EY UK early-careers public guidance |
 
@@ -533,6 +533,21 @@ not attributed to any employer.
   *could* (options) do [17]. Recorded and platform-mediated formats
   (asynchronous video, virtual assessment centres) therefore carry documented
   data-protection obligations alongside their logistical advantages [17].
+- **Automated decision-making in recruitment.** In March 2026 the ICO
+  published *Recruitment rewired*, a report and draft guidance on the fair and
+  responsible use of automation in recruitment, based on evidence gathered
+  from over 30 employers that spoke to the ICO voluntarily between March 2025
+  and January 2026 [20]. Among the uses it records are the automated scoring
+  of candidates' competencies and skills from transcriptions of in-person or
+  video interviews, and the evaluation of the language, tone and content of
+  candidates' speech in video interviews to predict their personality types;
+  the ICO states that it did not see examples of employers using AI to process
+  biometric data, such as emotion detection in video interviews [21]. For
+  candidates, the ICO states that where decisions are made without a real
+  person involved, jobseekers have the right to be told that automated
+  decision-making is being used and how the tools work, to a fair outcome for
+  which the ICO expects employers to test regularly for bias, and to contest
+  the decision and request review by a real person [22].
 - **EU selection context.** EPSO's model embeds procedural fairness through
   structure: selection-board-validated exercise content and a minimum of two
   trained assessors per exercise [7].
@@ -576,9 +591,18 @@ not attributed to any employer.
 - The current, post-reform shape of EPSO competitions (which retain an
   Assessment Centre stage, and in what form) — would be resolved by citing a
   current notice of competition in the eu-frameworks deep-dive.
-- Whether any UK regulator guidance specifically addresses algorithmic/AI
-  scoring of recorded video interviews beyond the ICO's general recruitment
-  guidance [17] — candidate for a best-practice child document.
+- **Resolved 2026-07-20** — whether any UK regulator guidance specifically
+  addresses algorithmic/AI scoring of recorded video interviews beyond the
+  ICO's general recruitment guidance [17]. It now does: the ICO's March 2026
+  *Recruitment rewired* report [20] covers automated scoring in recruitment,
+  including scoring from video-interview transcriptions and the evaluation of
+  candidates' speech to predict personality types [21]. Summarised under Legal
+  & Fairness above; the per-format treatment belongs in the planned
+  video-asynchronous-interviews document. **Still open:** whether any regulator
+  addresses the *scoring methodology* itself — model validation or accuracy
+  expectations, as distinct from transparency, human-involvement and
+  bias-testing duties — and whether an EU-level equivalent to the ICO report
+  exists for EU employers.
 
 # References
 
@@ -594,6 +618,9 @@ not attributed to any employer.
 - [17] **ICO** — *Employment practices and data protection: recruitment and selection*. <https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/employment/recruitment-and-selection/>. Accessed 2026-07-19.
 - [18] **legislation.gov.uk** — *Equality Act 2010, s.20 (Duty to make adjustments)*. <https://www.legislation.gov.uk/ukpga/2010/15/section/20>. Accessed 2026-07-19.
 - [19] **GOV.UK** — *Recruitment and disabled people: Reasonable adjustments*. <https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments>. Accessed 2026-07-19.
+- [20] **ICO** — *Recruitment rewired: an update on the ICO's work on the fair and responsible use of automation in recruitment* (report and draft guidance, March 2026). <https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/>. Accessed 2026-07-20 (host rejects some automated fetchers; verified by direct request with a browser user-agent).
+- [21] **ICO** — *Recruitment rewired — Key findings: how are employers automating their recruitment processes?* <https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/key-findings-how-are-employers-automating-their-recruitment-processes/>. Accessed 2026-07-20 (host rejects some automated fetchers; verified by direct request with a browser user-agent).
+- [22] **ICO** — *Here's what jobseekers need to know about automated recruitment decisions* (news, 31 March 2026). <https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/03/here-s-what-jobseekers-need-to-know-about-automated-recruitment-decisions/>. Accessed 2026-07-20 (host rejects some automated fetchers; verified by direct request with a browser user-agent).
 
 **Professional & Advisory Bodies**
 
@@ -640,3 +667,4 @@ not attributed to any employer.
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-19 | Research Pipeline (virtual agent) | Initial draft. | — |
 | 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 1 release. | Standing mandate (user, 2026-07-19) |
+| 1.0.1 | 2026-07-20 | Corrections pass (KB pipeline) | Resolved Open Question on regulator guidance for automated/AI scoring; cited the ICO "Recruitment rewired" report (March 2026). | Standing mandate (user, 2026-07-19) |

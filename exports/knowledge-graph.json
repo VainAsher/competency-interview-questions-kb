@@ -444,6 +444,124 @@
         "resilience-adaptability",
         "teamwork-collaboration"
       ]
+    },
+    {
+      "id": "epso-competency-framework",
+      "title": "The EPSO Competency Framework: Competencies, Assessment & Question Bank",
+      "topic": "EPSO general competencies",
+      "tier": "3",
+      "market": "EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/04-eu-frameworks/epso-competency-framework.md",
+      "category": "EU Frameworks",
+      "document_type": "framework-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "eu-frameworks-foundation",
+        "eu-institutions-assessment-centres",
+        "competencies-foundation",
+        "techniques-foundation",
+        "uk-civil-service-success-profiles",
+        "formats-foundation"
+      ]
+    },
+    {
+      "id": "eu-institutions-assessment-centres",
+      "title": "EU Institutions Assessment Centres: Exercises, Structure & Preparation",
+      "topic": "EU assessment centres",
+      "tier": "3",
+      "market": "EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/04-eu-frameworks/eu-institutions-assessment-centres.md",
+      "category": "EU Frameworks",
+      "document_type": "format-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "eu-frameworks-foundation",
+        "epso-competency-framework",
+        "formats-foundation",
+        "competencies-foundation",
+        "techniques-foundation"
+      ]
+    },
+    {
+      "id": "panel-interviews",
+      "title": "Panel Interviews: Structure, Dynamics & Scoring",
+      "topic": "Panel interviews",
+      "tier": "3",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/05-formats/panel-interviews.md",
+      "category": "Formats",
+      "document_type": "format-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "formats-foundation",
+        "video-asynchronous-interviews",
+        "assessment-centre-exercises",
+        "uk-civil-service-success-profiles",
+        "police-competency-values-framework",
+        "nhs-values-based-interviews",
+        "best-practice-foundation",
+        "techniques-foundation"
+      ]
+    },
+    {
+      "id": "video-asynchronous-interviews",
+      "title": "Video & Asynchronous Interviews: Formats, Platforms & Technique",
+      "topic": "Video and asynchronous interviews",
+      "tier": "3",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/05-formats/video-asynchronous-interviews.md",
+      "category": "Formats",
+      "document_type": "format-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "formats-foundation",
+        "panel-interviews",
+        "assessment-centre-exercises",
+        "uk-graduate-schemes",
+        "best-practice-foundation",
+        "techniques-foundation"
+      ]
+    },
+    {
+      "id": "assessment-centre-exercises",
+      "title": "Assessment Centre Exercises: Group Tasks, In-Trays & Presentations",
+      "topic": "Assessment centre exercises",
+      "tier": "3",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/05-formats/assessment-centre-exercises.md",
+      "category": "Formats",
+      "document_type": "format-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "formats-foundation",
+        "panel-interviews",
+        "video-asynchronous-interviews",
+        "eu-institutions-assessment-centres",
+        "uk-graduate-schemes",
+        "police-competency-values-framework",
+        "best-practice-foundation",
+        "techniques-foundation"
+      ]
     }
   ],
   "edges": [
@@ -865,31 +983,145 @@
       "from": "eu-frameworks-foundation",
       "to": "epso-competency-framework",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "eu-frameworks-foundation",
       "to": "eu-institutions-assessment-centres",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
+    },
+    {
+      "from": "epso-competency-framework",
+      "to": "eu-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "epso-competency-framework",
+      "to": "eu-institutions-assessment-centres",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "epso-competency-framework",
+      "to": "competencies-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "epso-competency-framework",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "compares with",
+      "target": "known"
+    },
+    {
+      "from": "eu-institutions-assessment-centres",
+      "to": "eu-frameworks-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "eu-institutions-assessment-centres",
+      "to": "assessment-centre-exercises",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "eu-institutions-assessment-centres",
+      "to": "formats-foundation",
+      "rel": "relates to",
+      "target": "known"
     },
     {
       "from": "formats-foundation",
       "to": "panel-interviews",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "formats-foundation",
       "to": "video-asynchronous-interviews",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "formats-foundation",
       "to": "assessment-centre-exercises",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "formats-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "applies framework",
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "police-competency-values-framework",
+      "rel": "applies framework",
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "nhs-values-based-interviews",
+      "rel": "applies framework",
+      "target": "known"
+    },
+    {
+      "from": "video-asynchronous-interviews",
+      "to": "formats-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "video-asynchronous-interviews",
+      "to": "uk-graduate-schemes",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "video-asynchronous-interviews",
+      "to": "best-practice-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
+      "to": "formats-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
+      "to": "panel-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
+      "to": "video-asynchronous-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
+      "to": "eu-institutions-assessment-centres",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
+      "to": "uk-graduate-schemes",
+      "rel": "relates to",
+      "target": "known"
     },
     {
       "from": "best-practice-foundation",
@@ -1337,6 +1569,96 @@
     },
     {
       "from": "uk-graduate-schemes",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "epso-competency-framework",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "epso-competency-framework",
+      "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-institutions-assessment-centres",
+      "to": "epso-competency-framework",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-institutions-assessment-centres",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "eu-institutions-assessment-centres",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "video-asynchronous-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "assessment-centre-exercises",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "best-practice-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "panel-interviews",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "video-asynchronous-interviews",
+      "to": "panel-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "video-asynchronous-interviews",
+      "to": "assessment-centre-exercises",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "video-asynchronous-interviews",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
+      "to": "police-competency-values-framework",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
+      "to": "best-practice-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "assessment-centre-exercises",
       "to": "techniques-foundation",
       "rel": "related",
       "target": "known"

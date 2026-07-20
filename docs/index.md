@@ -5,9 +5,9 @@
 
 Evidence-based, source-cited reference on competency-based interviews in the UK & EU — frameworks, question banks, answer techniques, and assessment best practice for candidates and interviewers.
 
-**19 documents** across **19 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
+**24 documents** across **24 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
 
-*Confidence: 2 High · 17 Medium · 0 Low.*  *Market: EU 1 · UK 6 · UK, EU 12.*
+*Confidence: 3 High · 21 Medium · 0 Low.*  *Market: EU 3 · UK 6 · UK, EU 15.*
 
 ## Tier 1 — Category foundations
 
@@ -36,6 +36,11 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
 - [Civil Service Behaviours: Question Bank by Behaviour and Grade](03-uk-frameworks/uk-civil-service-behaviour-questions.md) — *Civil Service behaviour questions* (UK)
 - [Civil Service Success Profiles: The Complete Guide](03-uk-frameworks/uk-civil-service-success-profiles.md) — *Success Profiles end-to-end* (UK)
 - [UK Graduate Schemes: Competency Interviews in Private-Sector Recruitment](03-uk-frameworks/uk-graduate-schemes.md) — *Graduate-scheme competency interviews* (UK)
+- [The EPSO Competency Framework: Competencies, Assessment & Question Bank](04-eu-frameworks/epso-competency-framework.md) — *EPSO general competencies* (EU)
+- [EU Institutions Assessment Centres: Exercises, Structure & Preparation](04-eu-frameworks/eu-institutions-assessment-centres.md) — *EU assessment centres* (EU)
+- [Assessment Centre Exercises: Group Tasks, In-Trays & Presentations](05-formats/assessment-centre-exercises.md) — *Assessment centre exercises* (UK, EU)
+- [Panel Interviews: Structure, Dynamics & Scoring](05-formats/panel-interviews.md) — *Panel interviews* (UK, EU)
+- [Video & Asynchronous Interviews: Formats, Platforms & Technique](05-formats/video-asynchronous-interviews.md) — *Video and asynchronous interviews* (UK, EU)
 
 ## Knowledge graph
 
@@ -62,11 +67,16 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
         teamwork_collaboration["teamwork-collaboration"]
       end
       subgraph Tier3["Tier 3"]
+        assessment_centre_exercises["assessment-centre-exercises"]
+        epso_competency_framework["epso-competency-framework"]
+        eu_institutions_assessment_centres["eu-institutions-assessment-centres"]
         nhs_values_based_interviews["nhs-values-based-interviews"]
+        panel_interviews["panel-interviews"]
         police_competency_values_framework["police-competency-values-framework"]
         uk_civil_service_behaviour_questions["uk-civil-service-behaviour-questions"]
         uk_civil_service_success_profiles["uk-civil-service-success-profiles"]
         uk_graduate_schemes["uk-graduate-schemes"]
+        video_asynchronous_interviews["video-asynchronous-interviews"]
       end
       competencies_foundation -->|related| techniques_foundation
       competencies_foundation -->|related| uk_frameworks_foundation
@@ -140,16 +150,30 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       uk_graduate_schemes -->|relates to| best_practice_foundation
       uk_graduate_schemes -->|relates to| resilience_adaptability
       uk_graduate_schemes -->|relates to| teamwork_collaboration
-      epso_competency_framework(["epso-competency-framework<br/>(planned)"])
-      eu_frameworks_foundation -.->|parent of| epso_competency_framework
-      eu_institutions_assessment_centres(["eu-institutions-assessment-centres<br/>(planned)"])
-      eu_frameworks_foundation -.->|parent of| eu_institutions_assessment_centres
-      panel_interviews(["panel-interviews<br/>(planned)"])
-      formats_foundation -.->|parent of| panel_interviews
-      video_asynchronous_interviews(["video-asynchronous-interviews<br/>(planned)"])
-      formats_foundation -.->|parent of| video_asynchronous_interviews
-      assessment_centre_exercises(["assessment-centre-exercises<br/>(planned)"])
-      formats_foundation -.->|parent of| assessment_centre_exercises
+      eu_frameworks_foundation -->|parent of| epso_competency_framework
+      eu_frameworks_foundation -->|parent of| eu_institutions_assessment_centres
+      epso_competency_framework -->|deepens| eu_frameworks_foundation
+      epso_competency_framework -->|relates to| eu_institutions_assessment_centres
+      epso_competency_framework -->|relates to| competencies_foundation
+      epso_competency_framework -->|compares with| uk_civil_service_success_profiles
+      eu_institutions_assessment_centres -->|deepens| eu_frameworks_foundation
+      eu_institutions_assessment_centres -->|relates to| assessment_centre_exercises
+      eu_institutions_assessment_centres -->|relates to| formats_foundation
+      formats_foundation -->|parent of| panel_interviews
+      formats_foundation -->|parent of| video_asynchronous_interviews
+      formats_foundation -->|parent of| assessment_centre_exercises
+      panel_interviews -->|deepens| formats_foundation
+      panel_interviews -->|applies framework| uk_civil_service_success_profiles
+      panel_interviews -->|applies framework| police_competency_values_framework
+      panel_interviews -->|applies framework| nhs_values_based_interviews
+      video_asynchronous_interviews -->|deepens| formats_foundation
+      video_asynchronous_interviews -->|relates to| uk_graduate_schemes
+      video_asynchronous_interviews -->|relates to| best_practice_foundation
+      assessment_centre_exercises -->|deepens| formats_foundation
+      assessment_centre_exercises -->|relates to| panel_interviews
+      assessment_centre_exercises -->|relates to| video_asynchronous_interviews
+      assessment_centre_exercises -->|relates to| eu_institutions_assessment_centres
+      assessment_centre_exercises -->|relates to| uk_graduate_schemes
       best_practice_foundation -.->|parent of| building_evidence_bank
       scoring_and_marking(["scoring-and-marking<br/>(planned)"])
       best_practice_foundation -.->|parent of| scoring_and_marking
@@ -229,6 +253,21 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       uk_graduate_schemes -->|related| police_competency_values_framework
       uk_graduate_schemes -->|related| competencies_foundation
       uk_graduate_schemes -->|related| techniques_foundation
+      epso_competency_framework -->|related| techniques_foundation
+      epso_competency_framework -->|related| formats_foundation
+      eu_institutions_assessment_centres -->|related| epso_competency_framework
+      eu_institutions_assessment_centres -->|related| competencies_foundation
+      eu_institutions_assessment_centres -->|related| techniques_foundation
+      panel_interviews -->|related| video_asynchronous_interviews
+      panel_interviews -->|related| assessment_centre_exercises
+      panel_interviews -->|related| best_practice_foundation
+      panel_interviews -->|related| techniques_foundation
+      video_asynchronous_interviews -->|related| panel_interviews
+      video_asynchronous_interviews -->|related| assessment_centre_exercises
+      video_asynchronous_interviews -->|related| techniques_foundation
+      assessment_centre_exercises -->|related| police_competency_values_framework
+      assessment_centre_exercises -->|related| best_practice_foundation
+      assessment_centre_exercises -->|related| techniques_foundation
     ```
 
 ## Machine-readable exports

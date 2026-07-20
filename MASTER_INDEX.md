@@ -29,6 +29,11 @@ best practice.
 | nhs-values-based-interviews | NHS Values-Based Interviews: Framework, Questions & Band Expectations | NHS values-based recruitment | 3 | UK | 1.0.0 | frozen | Medium | `docs/03-uk-frameworks/nhs-values-based-interviews.md` |
 | police-competency-values-framework | Police Competency and Values Framework (CVF): Guide & Question Bank | College of Policing CVF | 3 | UK | 1.0.0 | frozen | High | `docs/03-uk-frameworks/police-competency-values-framework.md` |
 | uk-graduate-schemes | UK Graduate Schemes: Competency Interviews in Private-Sector Recruitment | Graduate-scheme competency interviews | 3 | UK | 1.0.0 | frozen | Medium | `docs/03-uk-frameworks/uk-graduate-schemes.md` |
+| epso-competency-framework | The EPSO Competency Framework: Competencies, Assessment & Question Bank | EPSO general competencies | 3 | EU | 1.0.0 | frozen | Medium | `docs/04-eu-frameworks/epso-competency-framework.md` |
+| eu-institutions-assessment-centres | EU Institutions Assessment Centres: Exercises, Structure & Preparation | EU assessment centres | 3 | EU | 1.0.0 | frozen | Medium | `docs/04-eu-frameworks/eu-institutions-assessment-centres.md` |
+| panel-interviews | Panel Interviews: Structure, Dynamics & Scoring | Panel interviews | 3 | UK, EU | 1.0.0 | frozen | High | `docs/05-formats/panel-interviews.md` |
+| video-asynchronous-interviews | Video & Asynchronous Interviews: Formats, Platforms & Technique | Video and asynchronous interviews | 3 | UK, EU | 1.0.0 | frozen | Medium | `docs/05-formats/video-asynchronous-interviews.md` |
+| assessment-centre-exercises | Assessment Centre Exercises: Group Tasks, In-Trays & Presentations | Assessment centre exercises | 3 | UK, EU | 1.0.0 | frozen | Medium | `docs/05-formats/assessment-centre-exercises.md` |
 
 ## Knowledge graph
 
@@ -71,8 +76,19 @@ Typed cross-reference edges between documents. Each bullet has the shape below
 - `police-competency-values-framework` *relates to* `integrity-values-ethics` `resilience-adaptability` `teamwork-collaboration`
 - `uk-graduate-schemes` *deepens* `uk-frameworks-foundation`
 - `uk-graduate-schemes` *relates to* `formats-foundation` `best-practice-foundation` `resilience-adaptability` `teamwork-collaboration`
-- `eu-frameworks-foundation` *parent of* `epso-competency-framework` `eu-institutions-assessment-centres` (planned)
-- `formats-foundation` *parent of* `panel-interviews` `video-asynchronous-interviews` `assessment-centre-exercises` (planned)
+- `eu-frameworks-foundation` *parent of* `epso-competency-framework` `eu-institutions-assessment-centres`
+- `epso-competency-framework` *deepens* `eu-frameworks-foundation`
+- `epso-competency-framework` *relates to* `eu-institutions-assessment-centres` `competencies-foundation`
+- `epso-competency-framework` *compares with* `uk-civil-service-success-profiles`
+- `eu-institutions-assessment-centres` *deepens* `eu-frameworks-foundation`
+- `eu-institutions-assessment-centres` *relates to* `assessment-centre-exercises` `formats-foundation`
+- `formats-foundation` *parent of* `panel-interviews` `video-asynchronous-interviews` `assessment-centre-exercises`
+- `panel-interviews` *deepens* `formats-foundation`
+- `panel-interviews` *applies framework* `uk-civil-service-success-profiles` `police-competency-values-framework` `nhs-values-based-interviews`
+- `video-asynchronous-interviews` *deepens* `formats-foundation`
+- `video-asynchronous-interviews` *relates to* `uk-graduate-schemes` `best-practice-foundation`
+- `assessment-centre-exercises` *deepens* `formats-foundation`
+- `assessment-centre-exercises` *relates to* `panel-interviews` `video-asynchronous-interviews` `eu-institutions-assessment-centres` `uk-graduate-schemes`
 - `best-practice-foundation` *parent of* `building-evidence-bank` `scoring-and-marking` `common-mistakes-recovery` `interviewer-question-design` `fairness-bias-legal` (planned)
 
 ## Backlog (pending clusters — approved 2026-07-19)
