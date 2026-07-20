@@ -2,6 +2,30 @@
 
 All notable changes to this knowledge base.
 
+## rag-v2 — 2026-07-20 — structure-aware retrieval
+
+Infrastructure, not content — no document changed.
+
+### Added
+
+- **`scripts/build_rag.py` v2** — structure-aware RAG export replacing the flat
+  one-chunk-per-section builder. Heterogeneous chunking (one chunk per practice
+  question; prose split on `##` sub-headings with paragraph-window overlap;
+  control/reference sections excluded). Every chunk carries a `layer`
+  (evidence / coaching / question / summary / definitions / caveat / navigation),
+  `frameworks`, resolved `citations` (`[n]` → publisher/title/URL from the doc's
+  own References), `confidence`, and a deterministic `context_header` for
+  contextual embedding. Emits `chunks.jsonl`, `questions.jsonl` (1,418 atomic
+  provenance-tagged questions), `citations.jsonl`, and a faceted `manifest.json`.
+  Chunk p90 dropped from ~1,678 to ~553 tokens; chunks over 1,200 tokens from
+  142 to 1. Deterministic (CI staleness gate stays green).
+- **`scripts/rag_query.py`** — dependency-free reference retriever: pure-Python
+  BM25 + metadata pre-filters + knowledge-graph expansion + citation resolution,
+  with a passage-search mode and a faceted question-picker mode. `--json` for
+  agent consumption; `--facets` to discover filter vocabularies. Documents the
+  reciprocal-rank-fusion extension point for dense embeddings.
+- CI now smoke-tests the query tool; README documents the retrieval workflow.
+
 ## cluster6-v1.0.0 — 2026-07-20 — depth pass
 
 ### Added

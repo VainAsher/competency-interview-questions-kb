@@ -32,6 +32,10 @@ jobs:
         run: python scripts/build_graph.py
       - name: Build RAG export
         run: python scripts/build_rag.py
+      - name: Smoke-test the RAG query tool
+        run: |
+          python scripts/rag_query.py "how are behaviours scored" --layer evidence -k 3
+          python scripts/rag_query.py --questions --provenance sourced -k 3 "teamwork conflict"
       - name: Regenerate site scaffolding
         run: python scripts/build_site.py
       - name: Ensure committed generated artefacts are up to date

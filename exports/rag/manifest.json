@@ -1,24 +1,96 @@
 {
-  "documents": 37,
-  "chunks": 740,
-  "total_tokens_estimate": 547539,
   "chunk_fields": [
+    "category",
     "chunk_id",
-    "doc_id",
-    "section",
-    "section_index",
-    "text",
-    "tokens_estimate",
-    "source_path",
-    "id",
-    "title",
-    "topic",
-    "market",
-    "document_type",
-    "version",
-    "status",
+    "citations",
     "confidence",
-    "category"
+    "context_header",
+    "doc_id",
+    "doc_title",
+    "document_type",
+    "frameworks",
+    "id",
+    "kind",
+    "layer",
+    "market",
+    "provenance",
+    "section",
+    "source_path",
+    "status",
+    "subsection",
+    "text",
+    "title",
+    "tokens_estimate",
+    "topic",
+    "version"
   ],
-  "note": "One chunk per top-level (#) section; document metadata travels with each chunk. Regenerate with scripts/build_rag.py."
+  "chunks": 2568,
+  "citations": 839,
+  "documents": 37,
+  "facets": {
+    "category": [
+      "Best Practice",
+      "Competencies",
+      "EU Frameworks",
+      "Formats",
+      "Techniques",
+      "UK Frameworks"
+    ],
+    "competency": [
+      "Best Practice",
+      "Competencies",
+      "EU Frameworks",
+      "Formats",
+      "Techniques",
+      "UK Frameworks"
+    ],
+    "confidence": [
+      "High",
+      "Medium"
+    ],
+    "framework": [
+      "civil-service",
+      "epso",
+      "graduate",
+      "ireland-pas",
+      "nhs",
+      "nics",
+      "police-cvf",
+      "police-scotland",
+      "psni",
+      "wales"
+    ],
+    "layer": [
+      "caveat",
+      "coaching",
+      "definitions",
+      "evidence",
+      "navigation",
+      "question",
+      "summary"
+    ],
+    "market": [
+      "EU",
+      "UK",
+      "UK, EU"
+    ]
+  },
+  "layers": {
+    "caveat": 74,
+    "coaching": 229,
+    "definitions": 37,
+    "evidence": 584,
+    "navigation": 74,
+    "question": 1418,
+    "summary": 152
+  },
+  "note": "v2 structure-aware export. Chunk by section kind; questions are atomic and provenance-tagged; [n] markers resolved to sources; control/reference sections excluded from chunks.jsonl. Prepend context_header before embedding. Regenerate with scripts/build_rag.py.",
+  "question_provenance": {
+    "composed": 771,
+    "sourced": 647,
+    "unlabelled": 0
+  },
+  "questions": 1418,
+  "total_tokens_estimate": 486159,
+  "version": 2
 }
