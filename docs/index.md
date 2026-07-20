@@ -5,9 +5,9 @@
 
 Evidence-based, source-cited reference on competency-based interviews in the UK & EU — frameworks, question banks, answer techniques, and assessment best practice for candidates and interviewers.
 
-**6 documents** across **6 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
+**14 documents** across **14 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
 
-*Confidence: 0 High · 6 Medium · 0 Low.*  *Market: EU 1 · UK 1 · UK, EU 4.*
+*Confidence: 0 High · 14 Medium · 0 Low.*  *Market: EU 1 · UK 1 · UK, EU 12.*
 
 ## Tier 1 — Category foundations
 
@@ -17,6 +17,17 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
 - [EU Competency Frameworks: EPSO & the EU Institutions](04-eu-frameworks/eu-frameworks-foundation.md) — *EU competency frameworks landscape* (EU)
 - [Interview Formats & Assessment Methods](05-formats/formats-foundation.md) — *Interview formats & assessment methods* (UK, EU)
 - [Interview Best Practice: Preparation, Pitfalls & Scoring Insight](06-best-practice/best-practice-foundation.md) — *Preparation strategy & pitfalls* (UK, EU)
+
+## Tier 2 — Competency deep-dives & question banks
+
+- [Communication & Influencing: Question Bank & Answer Guidance](01-competencies/communication-influencing.md) — *Communication & influencing* (UK, EU)
+- [Customer Service & Stakeholder Management: Question Bank & Answer Guidance](01-competencies/customer-stakeholder-service.md) — *Customer & stakeholder focus* (UK, EU)
+- [Delivering Results, Planning & Organising: Question Bank & Answer Guidance](01-competencies/delivering-results-planning.md) — *Delivering results & planning* (UK, EU)
+- [Integrity, Values & Ethical Behaviour: Question Bank & Answer Guidance](01-competencies/integrity-values-ethics.md) — *Integrity & values* (UK, EU)
+- [Leadership & Managing Others: Question Bank & Answer Guidance](01-competencies/leadership-management.md) — *Leadership & managing others* (UK, EU)
+- [Problem-Solving, Analysis & Decision-Making: Question Bank & Answer Guidance](01-competencies/problem-solving-decision-making.md) — *Problem-solving & decision-making* (UK, EU)
+- [Resilience, Adaptability & Working Under Pressure: Question Bank & Answer Guidance](01-competencies/resilience-adaptability.md) — *Resilience & adaptability* (UK, EU)
+- [Teamwork & Collaboration: Question Bank & Answer Guidance](01-competencies/teamwork-collaboration.md) — *Teamwork & collaboration* (UK, EU)
 
 ## Knowledge graph
 
@@ -32,6 +43,16 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
         techniques_foundation["techniques-foundation"]
         uk_frameworks_foundation["uk-frameworks-foundation"]
       end
+      subgraph Tier2["Tier 2"]
+        communication_influencing["communication-influencing"]
+        customer_stakeholder_service["customer-stakeholder-service"]
+        delivering_results_planning["delivering-results-planning"]
+        integrity_values_ethics["integrity-values-ethics"]
+        leadership_management["leadership-management"]
+        problem_solving_decision_making["problem-solving-decision-making"]
+        resilience_adaptability["resilience-adaptability"]
+        teamwork_collaboration["teamwork-collaboration"]
+      end
       competencies_foundation -->|related| techniques_foundation
       competencies_foundation -->|related| uk_frameworks_foundation
       competencies_foundation -->|related| eu_frameworks_foundation
@@ -41,22 +62,40 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       techniques_foundation -->|complements| formats_foundation
       techniques_foundation -->|complements| best_practice_foundation
       formats_foundation -->|complements| best_practice_foundation
-      teamwork_collaboration(["teamwork-collaboration<br/>(planned)"])
-      competencies_foundation -.->|parent of| teamwork_collaboration
-      communication_influencing(["communication-influencing<br/>(planned)"])
-      competencies_foundation -.->|parent of| communication_influencing
-      leadership_management(["leadership-management<br/>(planned)"])
-      competencies_foundation -.->|parent of| leadership_management
-      problem_solving_decision_making(["problem-solving-decision-making<br/>(planned)"])
-      competencies_foundation -.->|parent of| problem_solving_decision_making
-      delivering_results_planning(["delivering-results-planning<br/>(planned)"])
-      competencies_foundation -.->|parent of| delivering_results_planning
-      resilience_adaptability(["resilience-adaptability<br/>(planned)"])
-      competencies_foundation -.->|parent of| resilience_adaptability
-      integrity_values_ethics(["integrity-values-ethics<br/>(planned)"])
-      competencies_foundation -.->|parent of| integrity_values_ethics
-      customer_stakeholder_service(["customer-stakeholder-service<br/>(planned)"])
-      competencies_foundation -.->|parent of| customer_stakeholder_service
+      competencies_foundation -->|parent of| teamwork_collaboration
+      competencies_foundation -->|parent of| communication_influencing
+      competencies_foundation -->|parent of| leadership_management
+      competencies_foundation -->|parent of| problem_solving_decision_making
+      competencies_foundation -->|parent of| delivering_results_planning
+      competencies_foundation -->|parent of| resilience_adaptability
+      competencies_foundation -->|parent of| integrity_values_ethics
+      competencies_foundation -->|parent of| customer_stakeholder_service
+      teamwork_collaboration -->|deepens| competencies_foundation
+      teamwork_collaboration -->|relates to| communication_influencing
+      teamwork_collaboration -->|relates to| leadership_management
+      teamwork_collaboration -->|relates to| customer_stakeholder_service
+      communication_influencing -->|deepens| competencies_foundation
+      communication_influencing -->|relates to| leadership_management
+      communication_influencing -->|relates to| customer_stakeholder_service
+      communication_influencing -->|relates to| techniques_foundation
+      leadership_management -->|deepens| competencies_foundation
+      leadership_management -->|relates to| delivering_results_planning
+      leadership_management -->|relates to| integrity_values_ethics
+      leadership_management -->|relates to| resilience_adaptability
+      problem_solving_decision_making -->|deepens| competencies_foundation
+      problem_solving_decision_making -->|relates to| delivering_results_planning
+      problem_solving_decision_making -->|relates to| integrity_values_ethics
+      delivering_results_planning -->|deepens| competencies_foundation
+      delivering_results_planning -->|relates to| resilience_adaptability
+      delivering_results_planning -->|relates to| customer_stakeholder_service
+      resilience_adaptability -->|deepens| competencies_foundation
+      resilience_adaptability -->|relates to| integrity_values_ethics
+      resilience_adaptability -->|relates to| techniques_foundation
+      integrity_values_ethics -->|deepens| competencies_foundation
+      integrity_values_ethics -->|relates to| uk_frameworks_foundation
+      integrity_values_ethics -->|relates to| customer_stakeholder_service
+      customer_stakeholder_service -->|deepens| competencies_foundation
+      customer_stakeholder_service -->|relates to| techniques_foundation
       star_technique(["star-technique<br/>(planned)"])
       techniques_foundation -.->|parent of| star_technique
       alternative_answer_frameworks(["alternative-answer-frameworks<br/>(planned)"])
@@ -113,6 +152,34 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       best_practice_foundation -->|related| uk_frameworks_foundation
       best_practice_foundation -->|related| eu_frameworks_foundation
       best_practice_foundation -->|related| formats_foundation
+      teamwork_collaboration -->|related| techniques_foundation
+      communication_influencing -->|related| teamwork_collaboration
+      leadership_management -->|related| techniques_foundation
+      leadership_management -->|related| teamwork_collaboration
+      leadership_management -->|related| communication_influencing
+      leadership_management -->|related| problem_solving_decision_making
+      leadership_management -->|related| customer_stakeholder_service
+      problem_solving_decision_making -->|related| techniques_foundation
+      problem_solving_decision_making -->|related| communication_influencing
+      problem_solving_decision_making -->|related| leadership_management
+      delivering_results_planning -->|related| techniques_foundation
+      delivering_results_planning -->|related| problem_solving_decision_making
+      resilience_adaptability -->|related| teamwork_collaboration
+      resilience_adaptability -->|related| communication_influencing
+      resilience_adaptability -->|related| leadership_management
+      resilience_adaptability -->|related| problem_solving_decision_making
+      resilience_adaptability -->|related| delivering_results_planning
+      resilience_adaptability -->|related| customer_stakeholder_service
+      integrity_values_ethics -->|related| techniques_foundation
+      integrity_values_ethics -->|related| teamwork_collaboration
+      integrity_values_ethics -->|related| communication_influencing
+      integrity_values_ethics -->|related| leadership_management
+      integrity_values_ethics -->|related| problem_solving_decision_making
+      integrity_values_ethics -->|related| delivering_results_planning
+      integrity_values_ethics -->|related| resilience_adaptability
+      customer_stakeholder_service -->|related| teamwork_collaboration
+      customer_stakeholder_service -->|related| communication_influencing
+      customer_stakeholder_service -->|related| delivering_results_planning
     ```
 
 ## Machine-readable exports

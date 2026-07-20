@@ -16,8 +16,14 @@ best practice.
 | eu-frameworks-foundation | EU Competency Frameworks: EPSO & the EU Institutions | EU competency frameworks landscape | 1 | EU | 1.0.0 | frozen | Medium | `docs/04-eu-frameworks/eu-frameworks-foundation.md` |
 | formats-foundation | Interview Formats & Assessment Methods | Interview formats & assessment methods | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/05-formats/formats-foundation.md` |
 | best-practice-foundation | Interview Best Practice: Preparation, Pitfalls & Scoring Insight | Preparation strategy & pitfalls | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/06-best-practice/best-practice-foundation.md` |
-| delivering-results-planning | Delivering Results, Planning & Organising: Question Bank & Answer Guidance | Delivering results & planning | 2 | UK, EU | 0.1.0 | in-review | Medium | `docs/01-competencies/delivering-results-planning.md` |
-| problem-solving-decision-making | Problem-Solving, Analysis & Decision-Making: Question Bank & Answer Guidance | Problem-solving & decision-making | 2 | UK, EU | 0.1.0 | in-review | Medium | `docs/01-competencies/problem-solving-decision-making.md` |
+| teamwork-collaboration | Teamwork & Collaboration: Question Bank & Answer Guidance | Teamwork & collaboration | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/teamwork-collaboration.md` |
+| communication-influencing | Communication & Influencing: Question Bank & Answer Guidance | Communication & influencing | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/communication-influencing.md` |
+| leadership-management | Leadership & Managing Others: Question Bank & Answer Guidance | Leadership & managing others | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/leadership-management.md` |
+| problem-solving-decision-making | Problem-Solving, Analysis & Decision-Making: Question Bank & Answer Guidance | Problem-solving & decision-making | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/problem-solving-decision-making.md` |
+| delivering-results-planning | Delivering Results, Planning & Organising: Question Bank & Answer Guidance | Delivering results & planning | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/delivering-results-planning.md` |
+| resilience-adaptability | Resilience, Adaptability & Working Under Pressure: Question Bank & Answer Guidance | Resilience & adaptability | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/resilience-adaptability.md` |
+| integrity-values-ethics | Integrity, Values & Ethical Behaviour: Question Bank & Answer Guidance | Integrity & values | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/integrity-values-ethics.md` |
+| customer-stakeholder-service | Customer Service & Stakeholder Management: Question Bank & Answer Guidance | Customer & stakeholder focus | 2 | UK, EU | 1.0.0 | frozen | Medium | `docs/01-competencies/customer-stakeholder-service.md` |
 
 ## Knowledge graph
 
@@ -32,7 +38,23 @@ Typed cross-reference edges between documents. Each bullet has the shape below
 - `uk-frameworks-foundation` *counterpart of* `eu-frameworks-foundation`
 - `techniques-foundation` *complements* `formats-foundation` `best-practice-foundation`
 - `formats-foundation` *complements* `best-practice-foundation`
-- `competencies-foundation` *parent of* `teamwork-collaboration` `communication-influencing` `leadership-management` `problem-solving-decision-making` `delivering-results-planning` `resilience-adaptability` `integrity-values-ethics` `customer-stakeholder-service` (planned)
+- `competencies-foundation` *parent of* `teamwork-collaboration` `communication-influencing` `leadership-management` `problem-solving-decision-making` `delivering-results-planning` `resilience-adaptability` `integrity-values-ethics` `customer-stakeholder-service`
+- `teamwork-collaboration` *deepens* `competencies-foundation`
+- `teamwork-collaboration` *relates to* `communication-influencing` `leadership-management` `customer-stakeholder-service`
+- `communication-influencing` *deepens* `competencies-foundation`
+- `communication-influencing` *relates to* `leadership-management` `customer-stakeholder-service` `techniques-foundation`
+- `leadership-management` *deepens* `competencies-foundation`
+- `leadership-management` *relates to* `delivering-results-planning` `integrity-values-ethics` `resilience-adaptability`
+- `problem-solving-decision-making` *deepens* `competencies-foundation`
+- `problem-solving-decision-making` *relates to* `delivering-results-planning` `integrity-values-ethics`
+- `delivering-results-planning` *deepens* `competencies-foundation`
+- `delivering-results-planning` *relates to* `resilience-adaptability` `customer-stakeholder-service`
+- `resilience-adaptability` *deepens* `competencies-foundation`
+- `resilience-adaptability` *relates to* `integrity-values-ethics` `techniques-foundation`
+- `integrity-values-ethics` *deepens* `competencies-foundation`
+- `integrity-values-ethics` *relates to* `uk-frameworks-foundation` `customer-stakeholder-service`
+- `customer-stakeholder-service` *deepens* `competencies-foundation`
+- `customer-stakeholder-service` *relates to* `techniques-foundation`
 - `techniques-foundation` *parent of* `star-technique` `alternative-answer-frameworks` `building-evidence-bank` (planned)
 - `uk-frameworks-foundation` *parent of* `uk-civil-service-success-profiles` `uk-civil-service-behaviour-questions` `nhs-values-based-interviews` `police-competency-values-framework` `uk-graduate-schemes` (planned)
 - `eu-frameworks-foundation` *parent of* `epso-competency-framework` `eu-institutions-assessment-centres` (planned)

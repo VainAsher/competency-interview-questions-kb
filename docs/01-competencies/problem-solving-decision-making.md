@@ -1,8 +1,8 @@
 ---
 id: problem-solving-decision-making
 title: "Problem-Solving, Analysis & Decision-Making: Question Bank & Answer Guidance"
-version: 0.1.0
-status: in-review
+version: 1.0.0
+status: frozen
 confidence: Medium
 category: Competencies
 topic: "Problem-solving & decision-making"
@@ -41,8 +41,8 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | problem-solving-decision-making |
-| Version | 0.1.0 |
-| Status | in-review |
+| Version | 1.0.0 |
+| Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
 | Market | UK, EU |
@@ -369,3 +369,4 @@ The skeleton's proportions are the message: one option, no evidence-weighing and
 | Version | Date | Author | Change | Approved By |
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: framework evidence, 35-question bank, answer guidance, assessor scoring, pitfalls, drills. | — |
+| 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |

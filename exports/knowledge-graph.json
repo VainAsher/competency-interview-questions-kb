@@ -131,6 +131,195 @@
         "eu-frameworks-foundation",
         "formats-foundation"
       ]
+    },
+    {
+      "id": "teamwork-collaboration",
+      "title": "Teamwork & Collaboration: Question Bank & Answer Guidance",
+      "topic": "Teamwork & collaboration",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/teamwork-collaboration.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "communication-influencing",
+        "leadership-management",
+        "customer-stakeholder-service"
+      ]
+    },
+    {
+      "id": "communication-influencing",
+      "title": "Communication & Influencing: Question Bank & Answer Guidance",
+      "topic": "Communication & influencing",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/communication-influencing.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "teamwork-collaboration",
+        "leadership-management",
+        "customer-stakeholder-service"
+      ]
+    },
+    {
+      "id": "leadership-management",
+      "title": "Leadership & Managing Others: Question Bank & Answer Guidance",
+      "topic": "Leadership & managing others",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/leadership-management.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "teamwork-collaboration",
+        "communication-influencing",
+        "problem-solving-decision-making",
+        "delivering-results-planning",
+        "resilience-adaptability",
+        "integrity-values-ethics",
+        "customer-stakeholder-service"
+      ]
+    },
+    {
+      "id": "problem-solving-decision-making",
+      "title": "Problem-Solving, Analysis & Decision-Making: Question Bank & Answer Guidance",
+      "topic": "Problem-solving & decision-making",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/problem-solving-decision-making.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "delivering-results-planning",
+        "communication-influencing",
+        "leadership-management"
+      ]
+    },
+    {
+      "id": "delivering-results-planning",
+      "title": "Delivering Results, Planning & Organising: Question Bank & Answer Guidance",
+      "topic": "Delivering results & planning",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/delivering-results-planning.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "problem-solving-decision-making",
+        "resilience-adaptability",
+        "customer-stakeholder-service"
+      ]
+    },
+    {
+      "id": "resilience-adaptability",
+      "title": "Resilience, Adaptability & Working Under Pressure: Question Bank & Answer Guidance",
+      "topic": "Resilience & adaptability",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/resilience-adaptability.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "teamwork-collaboration",
+        "communication-influencing",
+        "leadership-management",
+        "problem-solving-decision-making",
+        "delivering-results-planning",
+        "integrity-values-ethics",
+        "customer-stakeholder-service"
+      ]
+    },
+    {
+      "id": "integrity-values-ethics",
+      "title": "Integrity, Values & Ethical Behaviour: Question Bank & Answer Guidance",
+      "topic": "Integrity & values",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/integrity-values-ethics.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "uk-frameworks-foundation",
+        "teamwork-collaboration",
+        "communication-influencing",
+        "leadership-management",
+        "problem-solving-decision-making",
+        "delivering-results-planning",
+        "resilience-adaptability",
+        "customer-stakeholder-service"
+      ]
+    },
+    {
+      "id": "customer-stakeholder-service",
+      "title": "Customer Service & Stakeholder Management: Question Bank & Answer Guidance",
+      "topic": "Customer & stakeholder focus",
+      "tier": "2",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/01-competencies/customer-stakeholder-service.md",
+      "category": "Competencies",
+      "document_type": "question-bank",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "competencies-foundation",
+        "techniques-foundation",
+        "teamwork-collaboration",
+        "communication-influencing",
+        "delivering-results-planning"
+      ]
     }
   ],
   "edges": [
@@ -192,49 +381,205 @@
       "from": "competencies-foundation",
       "to": "teamwork-collaboration",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "competencies-foundation",
       "to": "communication-influencing",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "competencies-foundation",
       "to": "leadership-management",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "competencies-foundation",
       "to": "problem-solving-decision-making",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "competencies-foundation",
       "to": "delivering-results-planning",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "competencies-foundation",
       "to": "resilience-adaptability",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "competencies-foundation",
       "to": "integrity-values-ethics",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "competencies-foundation",
       "to": "customer-stakeholder-service",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
+    },
+    {
+      "from": "teamwork-collaboration",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "teamwork-collaboration",
+      "to": "communication-influencing",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "teamwork-collaboration",
+      "to": "leadership-management",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "teamwork-collaboration",
+      "to": "customer-stakeholder-service",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "communication-influencing",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "communication-influencing",
+      "to": "leadership-management",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "communication-influencing",
+      "to": "customer-stakeholder-service",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "communication-influencing",
+      "to": "techniques-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "delivering-results-planning",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "integrity-values-ethics",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "resilience-adaptability",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "problem-solving-decision-making",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "problem-solving-decision-making",
+      "to": "delivering-results-planning",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "problem-solving-decision-making",
+      "to": "integrity-values-ethics",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "delivering-results-planning",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "delivering-results-planning",
+      "to": "resilience-adaptability",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "delivering-results-planning",
+      "to": "customer-stakeholder-service",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "integrity-values-ethics",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "techniques-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "uk-frameworks-foundation",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "customer-stakeholder-service",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "customer-stakeholder-service",
+      "to": "competencies-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "customer-stakeholder-service",
+      "to": "techniques-foundation",
+      "rel": "relates to",
+      "target": "known"
     },
     {
       "from": "techniques-foundation",
@@ -467,6 +812,174 @@
     {
       "from": "best-practice-foundation",
       "to": "formats-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "teamwork-collaboration",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "communication-influencing",
+      "to": "teamwork-collaboration",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "teamwork-collaboration",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "communication-influencing",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "problem-solving-decision-making",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "leadership-management",
+      "to": "customer-stakeholder-service",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "problem-solving-decision-making",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "problem-solving-decision-making",
+      "to": "communication-influencing",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "problem-solving-decision-making",
+      "to": "leadership-management",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "delivering-results-planning",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "delivering-results-planning",
+      "to": "problem-solving-decision-making",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "teamwork-collaboration",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "communication-influencing",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "leadership-management",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "problem-solving-decision-making",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "delivering-results-planning",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "resilience-adaptability",
+      "to": "customer-stakeholder-service",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "teamwork-collaboration",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "communication-influencing",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "leadership-management",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "problem-solving-decision-making",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "delivering-results-planning",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "integrity-values-ethics",
+      "to": "resilience-adaptability",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "customer-stakeholder-service",
+      "to": "teamwork-collaboration",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "customer-stakeholder-service",
+      "to": "communication-influencing",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "customer-stakeholder-service",
+      "to": "delivering-results-planning",
       "rel": "related",
       "target": "known"
     }

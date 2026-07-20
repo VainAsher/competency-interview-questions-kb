@@ -35,11 +35,28 @@ eyeball them periodically: glassdoor.co.uk / glassdoor.com, indeed.com /
 uk.indeed.com, linkedin.com, reed.co.uk, totaljobs.com, cipd.org,
 consilium.europa.eu.
 
-Observed during cluster 1 (not allowlisted; workers used alternatives):
-college.police.uk HTML pages 403 (the assets.college.police.uk PDFs check
-fine); prospects.ac.uk and ise.org.uk intermittently 403 fetchers but pass the
-checker; several legacy epso.europa.eu URLs 404 after EPSO's migration to
-eu-careers.europa.eu.
+Observed during clusters 1–2 (not allowlisted; workers used alternatives):
+**college.police.uk HTML pages** 403 automated fetchers — but the
+`assets.college.police.uk` **PDFs download fine** with a browser User-Agent and
+pass `check_links.py`, so cite the PDFs. **prospects.ac.uk** 403'd fetchers
+repeatedly during cluster 2 and was therefore left uncited by several workers
+even though it is registered — re-test before relying on it. ise.org.uk
+intermittently 403s but passes the checker; several legacy epso.europa.eu URLs
+404 after EPSO's migration to eu-careers.europa.eu.
+
+**Framework currency warnings (verified 2026-07-20):**
+
+- The **police CVF was updated in 2024**: the 2016 *clusters* were abolished and
+  competencies renamed — current names include "We collaborate" and "We support
+  and inspire" (not the 2016 "We are collaborative" / "We deliver, support and
+  inspire"). The 2024 **framework** PDF (with competency level descriptors) sits
+  at the `2025-06/` asset path; the `2024-05/` path is the *guidance* document
+  and contains no descriptors.
+- **EPSO's 2023 Competency Framework has no "Leadership" competency** — that
+  content now sits under **Intrapreneurship**. The legacy "Leadership (for
+  administrators only)" wording survives only in pre-2023 General Rules and
+  competition notices. This is the single most misreported fact in EPSO prep
+  material; cite the supersession, never the legacy label as current.
 
 Prefer link-checkable alternatives where possible: gov.uk, epso.europa.eu /
 eu-careers.europa.eu, legislation.gov.uk, acas.org.uk, Internet Archive
@@ -62,12 +79,21 @@ snapshots.
 | ncs-interview-tips | Interview tips | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/interview-advice |
 | ncs-star-method | The STAR method | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/interview-advice/the-star-method |
 | ncs-common-questions | How to answer common interview questions | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/top-10-interview-questions |
+| govuk-civil-service-code | The Civil Service Code — the four core values (integrity, honesty, objectivity, impartiality) | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code |
+| govuk-nolan-principles | The 7 principles of public life (Nolan Principles, first published 31 May 1995) | GOV.UK (Committee on Standards in Public Life) | https://www.gov.uk/government/publications/the-7-principles-of-public-life/the-7-principles-of-public-life--2 |
+| csc-recruitment-principles | Recruitment Principles (selection on merit, fair and open competition) | Civil Service Commission | https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/ |
+| cop-code-of-ethics-poster-2024 | Code of Ethics: ethical policing principles (overview poster, January 2024) | College of Policing | https://assets.college.police.uk/s3fs-public/2024-01/CoE-overview-landscape-A4-poster.pdf |
+| glos-nhs-vbr-toolkit | Values based recruitment toolkit: a toolkit for recruiting managers (2020 refresh) — published trust question bank | Gloucestershire Hospitals NHS Foundation Trust | https://www.gloshospitals.nhs.uk/media/documents/Recruitment_Toolkit_Managers_2020_Refresh_Digital.pdf |
+| era-1996-s43b | Employment Rights Act 1996, s.43B (Disclosures qualifying for protection) — note: sexual-harassment category effective 6 Apr 2026 | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/1996/18/section/43B |
 | govuk-nhs-constitution | The NHS Constitution for England | GOV.UK (DHSC) | https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england |
 | hee-vbr-page | Values Based Recruitment (programme page) | NHS England (HEE legacy site) | https://www.hee.nhs.uk/our-work/values-based-recruitment |
 | hee-vbr-framework-2016 | Values Based Recruitment Framework (March 2016) | Health Education England | https://www.hee.nhs.uk/sites/default/files/documents/VBR_Framework%20March%202016.pdf |
 | nhse-vbr-article | Values-based recruitment (article) | NHS Employers | https://www.nhsemployers.org/articles/values-based-recruitment |
+| wuth-vbr-questions | Values Based Recruitment: example questions for recruiters to ask during job interviews (published NHS trust question bank) | Wirral University Teaching Hospital NHS Foundation Trust | https://www.wuth.nhs.uk/media/32277/values-based-interview-questions.pdf |
 | cop-cvf-guidance-2024 | Competency and values framework guidance (2024) | College of Policing | https://assets.college.police.uk/s3fs-public/2024-05/Competency-and-values-framework-guidance.pdf |
-| cop-cvf-2016 | Competency and Values Framework for policing: Overview (2016) | College of Policing | https://assets.college.police.uk/s3fs-public/2020-11/competency-and-values-framework-for-policing_4.11.16.pdf |
+| cop-cvf-2024-framework | Competency and values framework for policing (2024) — full framework incl. competency level descriptors (note: `2025-06/` asset path) | College of Policing | https://assets.college.police.uk/s3fs-public/2025-06/Competency-and-values-framework.pdf |
+| cop-cvf-2016 | Competency and Values Framework for policing: Overview (2016) — superseded by the 2024 framework; retained for provenance | College of Policing | https://assets.college.police.uk/s3fs-public/2020-11/competency-and-values-framework-for-policing_4.11.16.pdf |
+| nhse-lcf-board-members-2024 | NHS leadership competency framework for board members (ref. B0496i, 28 Feb 2024) — six leadership competency domains | NHS England | https://www.england.nhs.uk/long-read/nhs-leadership-competency-framework-for-board-members/ |
 | govuk-recruitment-adjustments | Recruitment and disabled people: Reasonable adjustments | GOV.UK | https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments |
 | equality-act-2010 | Equality Act 2010 (contents; Part 5: Work) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/contents |
 | equality-act-2010-s4 | Equality Act 2010, s.4 (The protected characteristics) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/4 |
@@ -94,6 +120,9 @@ snapshots.
 | epso-faq-3104 | FAQ: Competencies candidates must demonstrate during competition tests | EPSO / EU Careers | https://eu-careers.europa.eu/en/help/faq/3104 |
 | epso-scbi-365-370 | SCBI assignment, Open Competitions EPSO/AD/365-370/19 | EPSO | https://eu-careers.europa.eu/sites/default/files/documents/general/situational_competency-based_interview_scbi_-_assignments/365-370_assignment/en_ad_365_370_scbi_assignment_epso.pdf |
 | epso-ac-faq-archive | What is an Assessment Centre? (FAQ, Internet Archive snapshot 2022-09-24) | EPSO via Internet Archive | https://web.archive.org/web/20220924171745/https://epso.europa.eu/en/help/faq/2026 |
+| eurlex-epso-general-rules-2015 | General rules governing open competitions (2015/C 070 A/01) — pre-2023 general competencies incl. "Leadership (for administrators only)" | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3AC2015%2F070A%2F01 |
+| eurlex-epso-ad-399-22 | Notice of open competition EPSO/AD/399/22 — Administrators (AD 7), audit (OJ C 114A, 2022): eight general competencies, test allocation, marking 10 each, combined pass 40/80 | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:C2022/114A/01 |
+| eurlex-epso-ad-389-21 | Notice of open competition EPSO/AD/389/21 — Administrators (AD 6): eight general competencies incl. Leadership; pass 3/10 per competency, 40/80 total | EUR-Lex / EPSO | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELLAR%3Aa114d8dd-668a-11eb-aeb5-01aa75ed71a1 |
 | eurlex-staff-regulations | Staff Regulations of Officials and CEOS (consolidated 2024-01-01) | EUR-Lex | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A01962R0031-20240101 |
 | eurlex-2000-78 | Council Directive 2000/78/EC (equal treatment in employment and occupation) | EUR-Lex | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32000L0078 |
 | eurlex-gdpr | Regulation (EU) 2016/679 (GDPR) | EUR-Lex | https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng |
@@ -132,6 +161,9 @@ snapshots.
 | targetjobs-competency-questions | Competency-based interview questions and answers (Rachael Milsom, upd. 2026-03-31) | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/how-answer-competency-based-interview-questions |
 | targetjobs-unilever-interview | Applying to the future leaders programme: the Unilever digital interview | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/applying-future-leaders-programme-unilever-digital-interview |
 | targetjobs-fidelity-starr | What is the STARR answer technique, and how do I use it? (S. Vaughan, Fidelity International) | targetjobs | https://targetjobs.co.uk/organisations/fidelity-international/what-starr-answer-technique-and-how-do-i-use-it |
+| targetjobs-teamwork-questions | Tips to answer teamwork interview questions (Alan Palazon, 1 Aug 2024) — 11 published teamwork questions | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/how-tackle-teamwork-interview-questions-and-improve-your-teamworking-skills |
+| targetjobs-ethical-dilemma | "Give us an example of a time when you faced an ethical dilemma" — tricky graduate interview question (upd. 2026-03-31) | targetjobs | https://targetjobs.co.uk/careers-advice/interviews-and-assessment-centres/give-us-example-time-when-you-faced-ethical-dilemma-tricky-graduate-interview-question |
+| targetjobs-leadership-management | Leadership and management: prove you're more than an entry-level hire (Abigail Lewis, upd. 21 Jun 2023) | targetjobs | https://targetjobs.co.uk/careers-advice/skills-for-getting-a-job/leadership-and-management-prove-youre-more-entry-level-hire |
 | myworldofwork-competency-guide | A complete guide to competency-based interviews | My World of Work (Skills Development Scotland) | https://www.myworldofwork.co.uk/cvs-applications-and-interviews/a-complete-guide-to-competency-based-interviews |
 | pwc-early-careers | Assessment and selection process — Early Careers | PwC UK | https://www.pwc.co.uk/careers/early-careers/apply/video-interview.html |
 | ey-interview-tips | Interview tips | EY UK | https://www.ey.com/en_uk/careers/how-to-join-us/interview-tips |
@@ -140,6 +172,7 @@ snapshots.
 | prepari-93-questions | 93 EU Job Interview Questions to Prepare For | Prepari.eu | https://prepari.eu/eu-job-interview-questions/ |
 | euphorum-structured-interview | The structured interview (EPSO assessment-centre guide, pre-2023 model) | Euphorum | http://www.euphorum.org/en/training/ac/interview |
 | interviewguys-soar | The SOAR Method (M. Simpson, 20 Apr 2025) | The Interview Guys | https://blog.theinterviewguys.com/the-soar-method/ |
+| indeed-customer-service-questions | Top Customer Service Interview Questions (With Sample Answers) (Indeed Editorial Team, upd. 16 Jun 2026) — bot-block allowlisted; eyeball in browser | Indeed UK | https://uk.indeed.com/career-advice/interviewing/customer-service-interview-questions |
 
 ### Academic
 

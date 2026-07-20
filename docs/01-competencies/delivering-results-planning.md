@@ -1,8 +1,8 @@
 ---
 id: delivering-results-planning
 title: "Delivering Results, Planning & Organising: Question Bank & Answer Guidance"
-version: 0.1.0
-status: in-review
+version: 1.0.0
+status: frozen
 confidence: Medium
 category: Competencies
 topic: "Delivering results & planning"
@@ -41,8 +41,8 @@ frameworks_reviewed:
 | Field | Value |
 |-------|-------|
 | Document ID | delivering-results-planning |
-| Version | 0.1.0 |
-| Status | in-review |
+| Version | 1.0.0 |
+| Status | frozen |
 | Confidence | Medium |
 | Category | Competencies |
 | Market | UK, EU |
@@ -319,3 +319,4 @@ Interviewers use probes to move an answer from narrative to scoreable evidence; 
 | Version | Date | Author | Change | Approved By |
 |---------|------|--------|--------|-------------|
 | 0.1.0 | 2026-07-20 | Research Pipeline (virtual agent) | Initial draft: framework evidence (Civil Service DaP/MQS levels, EPSO 2023 anchors, EPSO/AD/399/22 scoring), 32-question bank, coaching and assessor layers. | — |
+| 1.0.0 | 2026-07-20 | Orchestrator (KB pipeline) | Approved and frozen — cluster 2 release. | Standing mandate (user, 2026-07-19) |
