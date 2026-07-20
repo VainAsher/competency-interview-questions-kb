@@ -34,6 +34,14 @@ best practice.
 | panel-interviews | Panel Interviews: Structure, Dynamics & Scoring | Panel interviews | 3 | UK, EU | 1.0.0 | frozen | High | `docs/05-formats/panel-interviews.md` |
 | video-asynchronous-interviews | Video & Asynchronous Interviews: Formats, Platforms & Technique | Video and asynchronous interviews | 3 | UK, EU | 1.0.0 | frozen | Medium | `docs/05-formats/video-asynchronous-interviews.md` |
 | assessment-centre-exercises | Assessment Centre Exercises: Group Tasks, In-Trays & Presentations | Assessment centre exercises | 3 | UK, EU | 1.0.0 | frozen | Medium | `docs/05-formats/assessment-centre-exercises.md` |
+| star-technique | The STAR Method in Depth: Structure, Evidence & Timing | STAR in depth | 4 | UK, EU | 1.0.0 | frozen | High | `docs/02-techniques/star-technique.md` |
+| alternative-answer-frameworks | Beyond STAR: CARL, SOAR, STARR and Choosing a Structure | Alternative answer frameworks | 4 | UK, EU | 1.0.0 | frozen | Medium | `docs/02-techniques/alternative-answer-frameworks.md` |
+| building-evidence-bank | Building a Personal Evidence Bank | Evidence bank | 4 | UK, EU | 1.0.0 | frozen | Medium | `docs/02-techniques/building-evidence-bank.md` |
+| follow-up-probing-questions | Follow-Up and Probing Questions: What They Test and How to Handle Them | Follow-up and probing questions | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/follow-up-probing-questions.md` |
+| scoring-and-marking | How Competency Answers Are Scored: Scales, Benchmarks & Reconciliation | Scoring and marking | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/scoring-and-marking.md` |
+| common-mistakes-recovery | Common Mistakes and In-Interview Recovery | Mistakes and recovery | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/common-mistakes-recovery.md` |
+| interviewer-question-design | Designing Competency Questions and Scoring Rubrics | Question and rubric design | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/interviewer-question-design.md` |
+| fairness-bias-legal | Fairness, Bias and the Law in Competency Interviews | Fairness, bias and legal duties | 4 | UK, EU | 1.0.0 | frozen | High | `docs/06-best-practice/fairness-bias-legal.md` |
 
 ## Knowledge graph
 
@@ -65,7 +73,12 @@ Typed cross-reference edges between documents. Each bullet has the shape below
 - `integrity-values-ethics` *relates to* `uk-frameworks-foundation` `customer-stakeholder-service`
 - `customer-stakeholder-service` *deepens* `competencies-foundation`
 - `customer-stakeholder-service` *relates to* `techniques-foundation`
-- `techniques-foundation` *parent of* `star-technique` `alternative-answer-frameworks` `building-evidence-bank` (planned)
+- `techniques-foundation` *parent of* `star-technique` `alternative-answer-frameworks` `building-evidence-bank`
+- `star-technique` *deepens* `techniques-foundation`
+- `star-technique` *relates to* `alternative-answer-frameworks` `building-evidence-bank` `scoring-and-marking` `common-mistakes-recovery`
+- `alternative-answer-frameworks` *deepens* `techniques-foundation`
+- `building-evidence-bank` *deepens* `techniques-foundation`
+- `building-evidence-bank` *relates to* `uk-civil-service-behaviour-questions` `epso-competency-framework`
 - `uk-frameworks-foundation` *parent of* `uk-civil-service-success-profiles` `uk-civil-service-behaviour-questions` `nhs-values-based-interviews` `police-competency-values-framework` `uk-graduate-schemes`
 - `uk-civil-service-success-profiles` *deepens* `uk-frameworks-foundation` `competencies-foundation`
 - `uk-civil-service-behaviour-questions` *deepens* `uk-civil-service-success-profiles`
@@ -89,7 +102,18 @@ Typed cross-reference edges between documents. Each bullet has the shape below
 - `video-asynchronous-interviews` *relates to* `uk-graduate-schemes` `best-practice-foundation`
 - `assessment-centre-exercises` *deepens* `formats-foundation`
 - `assessment-centre-exercises` *relates to* `panel-interviews` `video-asynchronous-interviews` `eu-institutions-assessment-centres` `uk-graduate-schemes`
-- `best-practice-foundation` *parent of* `building-evidence-bank` `scoring-and-marking` `common-mistakes-recovery` `interviewer-question-design` `fairness-bias-legal` (planned)
+- `best-practice-foundation` *parent of* `follow-up-probing-questions` `scoring-and-marking` `common-mistakes-recovery` `interviewer-question-design` `fairness-bias-legal`
+- `scoring-and-marking` *deepens* `best-practice-foundation`
+- `scoring-and-marking` *relates to* `uk-civil-service-success-profiles` `police-competency-values-framework` `epso-competency-framework` `panel-interviews`
+- `follow-up-probing-questions` *deepens* `best-practice-foundation`
+- `follow-up-probing-questions` *relates to* `nhs-values-based-interviews` `panel-interviews`
+- `follow-up-probing-questions` *contrasts with* `video-asynchronous-interviews`
+- `common-mistakes-recovery` *deepens* `best-practice-foundation`
+- `common-mistakes-recovery` *relates to* `scoring-and-marking` `star-technique`
+- `interviewer-question-design` *deepens* `best-practice-foundation`
+- `interviewer-question-design` *relates to* `follow-up-probing-questions` `scoring-and-marking` `fairness-bias-legal`
+- `fairness-bias-legal` *deepens* `best-practice-foundation`
+- `fairness-bias-legal` *relates to* `integrity-values-ethics` `video-asynchronous-interviews` `panel-interviews`
 
 ## Backlog (pending clusters — approved 2026-07-19)
 

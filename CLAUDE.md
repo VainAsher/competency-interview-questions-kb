@@ -23,6 +23,26 @@ labelled coaching guidance.
   a cited framework. A composed question is never attributed to an employer or
   presented as a real/leaked interview question.
 
+## Confidence convention (settled 2026-07-20)
+
+Rate the **document** by the evidence its *factual claims* rest on — not by
+whether it contains any synthesis at all.
+
+- **Labelled synthesis in the coaching layer** (`Model Answer Guidance`,
+  `Common Pitfalls`, `Practice Exercises`) does **not** cap confidence. The
+  genre already quarantines it; that is what the layer is for.
+- **Synthesis that underpins the evidence layer or the document's central
+  artefact does** cap it at Medium. Examples from the build: a question bank
+  whose grouping is an editorial mapping of third-party questions
+  (`uk-civil-service-behaviour-questions`); a guide whose key judgement is
+  inferred from absence of evidence (`eu-institutions-assessment-centres`); a
+  framework mapping no publisher states (`epso-competency-framework`).
+- A document may be **High** while containing a synthesised taxonomy, provided
+  every evidence-layer sentence is independently cited and the taxonomy is
+  labelled as the knowledge base's own.
+
+Being honestly Medium — or Low — is a success. Never inflate to look finished.
+
 ## Process rules
 
 - **One writer per file.** Workers write only their own document and never edit

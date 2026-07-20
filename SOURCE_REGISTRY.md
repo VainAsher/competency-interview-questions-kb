@@ -99,6 +99,39 @@ public insight pages or Luminate reporting. Several legacy epso.europa.eu URLs
 - **The Civil Service publishes no official behaviour interview question bank**
   — only behaviour definitions and level descriptors. Every "Civil Service
   interview question" in circulation is third-party. Do not imply otherwise.
+- **EPSO removed the per-competency pass mark between 2021 and 2022.**
+  `eurlex-epso-ad-389-21` sets "3/10 per competency and 40/80 in total";
+  `eurlex-epso-ad-399-22` states "There is no pass mark per competency" while
+  keeping 40/80 overall. Pass marks are **notice-specific and perishable** —
+  never generalise one competition's thresholds to another. Both verified
+  in-browser 2026-07-20.
+- **No framework mandates an answer structure.** Full-text extraction of
+  `co-sp-delegated-grades-2020` confirms **zero occurrences of STAR or any
+  answer mnemonic**, while that same document sets the 7-point scale. Assessors
+  score evidence against criteria, not adherence to a mnemonic. Official
+  guidance *offers* structures (`govuk-brief-guide-competencies` names both STAR
+  and CAR) but never requires one.
+- **Prepared notes: processes genuinely diverge — do not generalise.** Notes are
+  *permitted as reference material* at a COPFS Success Profiles interview, but
+  using prepared notes or scripts can trigger an **automatic fail** in the
+  College of Policing online assessment process (`cop-oap-candidate-guidance-2024`),
+  awarded by an independent QA team regardless of exercise performance and **not
+  appealable**. Both verified; this is a real process divergence, not a sourcing
+  error. Always check the specific process.
+- **ORCE is not policing-only — but the classify-once rule IS. Keep these
+  separate.**
+  - *Both authorities:* the five ORCE verbs appear in Cabinet Office panel
+    guidance and College of Policing guidance alike — "observe, record,
+    classify, evaluate and score each question independently". The convergence
+    of two independent UK authorities is itself strong evidence.
+  - *Policing only:* "**Classify each behaviour once – do not double count**"
+    and evaluation on "the quality and quantity of the classified evidence" are
+    verified verbatim in `cop-vbr-selection-2018` Appendix 1 **only**. No
+    equivalent instruction has been located in Civil Service, EPSO or NHS
+    assessor guidance (checked 2026-07-20).
+  - Therefore: present classify-once as **strongly evidenced for CVF-based
+    assessment and a reasonable working assumption elsewhere** — never as a
+    universal rule. Earlier cluster briefs stated it too broadly.
 - **CORRECTION (2026-07-20): the Success Profiles 1–7 scale IS central.**
   Clusters 1–2 recorded it as departmental because only the COPFS page had been
   found. Cabinet Office guidance states verbatim that "Experience, technical
@@ -119,6 +152,8 @@ public insight pages or Luminate reporting. Several legacy epso.europa.eu URLs
   `check_links.py` passes ICO URLs cleanly, so this is a *reading* obstacle
   only, not a link-gate failure; don't annotate ICO citations as blocked.
   EPSO's remotely-proctored-testing page 403s even with a browser UA — do not cite.
+- `equalityhumanrights.com` (EHRC) returns 403 to `check_links.py` — name the
+  EHRC in prose rather than citing it, or use an archive snapshot.
 - **EUR-Lex — worse than a normal block, and INVISIBLE TO THE LINK GATE.**
   EUR-Lex now serves an AWS WAF JavaScript challenge (HTTP 202 + challenge page)
   to both `curl` and WebFetch, on HTML *and* PDF endpoints; the
@@ -152,6 +187,22 @@ public insight pages or Luminate reporting. Several legacy epso.europa.eu URLs
   CVF main page after Feb 2025 captured a 403 block page rather than content.
   Levels are cumulative in **both** versions ("The levels are cumulative",
   2024 framework p.9) — never present cumulativeness as a 2016-only trait.
+- **TOOLING TRAP — WebFetch summarisation can silently DROP page content.** On
+  `gov.uk/guidance/a-brief-guide-to-competencies`, WebFetch returned only the
+  STAR block and omitted the CAR section entirely, **even when asked directly
+  whether the page named any other structure**. The section is present in the
+  HTML. This is a silent content-omission failure, distinct from a bot block or
+  a PDF-extraction trap: the fetch appears to succeed. **Never trust a negative
+  finding about a page's contents from a summarising fetch — extract raw HTML
+  before concluding "the source does not mention X".**
+- **How to verify a diagram-bearing PDF.** Two traps in this KB
+  (`cs-strengths-dictionary` mapping table, `barnsley-vbr-candidates` 70/30
+  bracket) are cases where text extraction yields a *plausible but wrong*
+  reading from multi-column or bracketed layout. Text extraction alone is not
+  sufficient for any figure, bracket or table. In this environment `pdftoppm`
+  and `pdftotext -bbox` are unavailable; **PyMuPDF (`fitz`) render-to-PNG then
+  Read the image** is the working route. Use it before quoting any layout-bearing
+  element.
 - **EXTRACTION TRAP — Strengths Dictionary mapping table.** The official
   strengths-to-behaviours mapping (`cs-strengths-dictionary`, p.7) is laid out in
   multiple columns. Automated PDF text extraction interleaves the headings and
@@ -192,16 +243,20 @@ snapshots.
 | govuk-sp-ability | Success Profiles: Ability — verbal/numerical reasoning, automatic scoring, pass benchmark | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-ability |
 | govuk-sp-experience | Success Profiles: Experience — assessment via application and interview, STAR | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-experience |
 | govuk-sp-technical | Success Profiles: Technical — assessment methods, professional qualifications | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/success-profiles/success-profiles-technical |
-| gss-success-profiles-2019 | Guidance for the adoption of Success Profiles across the GSS (Oct 2019) — departmental: behaviour bands by grade, six-criterion cap, single-"3" failure threshold | Government Statistical Service | https://gss.civilservice.gov.uk/wp-content/uploads/2019/10/Success-Profiles-Guidance-GSS.pdf |
+| gss-success-profiles-2019 | Guidance for the adoption of Success Profiles across the GSS (Oct 2019) — departmental: behaviour bands by grade, six-criterion cap (note the source's own typo, "recommemdation"). **Corrected 2026-07-20:** an earlier registry note called the single "3" a *failure threshold* — it is not. It is the trigger for routing a near-miss candidate into the **temporary Statistical Officer pipeline**, not a general fail rule. | Government Statistical Service | https://gss.civilservice.gov.uk/wp-content/uploads/2019/10/Success-Profiles-Guidance-GSS.pdf |
 | copfs-assessment | How your application is assessed — Success Profiles. **Note:** a *departmental publication of the central scale* (see `co-sp-delegated-grades-2020`), not a departmental invention. Still the only located source publishing the seven descriptor labels. | Crown Office and Procurator Fiscal Service | https://www.copfs.gov.uk/about-copfs/careers/how-your-application-is-assessed-success-profiles/ |
 | ncs-interview-tips | Interview tips | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/interview-advice |
+| govuk-brief-guide-competencies | **A brief guide to competencies** (12 Apr 2016, Civil Service Resourcing) — **the strongest official STAR/CAR answer-technique anchor in the KB.** Carries the only central *proportioning* instruction found: **"Keep the situation and task parts brief. Concentrate on the action and the result"**; also "in most examples you should focus more words on the how than the what"; **"Use I not we"** with "be careful not to take credit of something that you did not do"; **"The sift panel cannot infer what is not included in the example and can only assess what you have actually written"** (a candidate-facing mirror of the ORCE classify rule); "Don't get caught up telling a story"; "use numbers and percentages whenever possible"; unsuccessful-outcome handling; and **names CAR as an alternative** ("Use either STAR or CAR approach"), while noting STAR is "the most common approach" in the Civil Service. ⚠️ **CURRENCY: dated 2016 and written for the SUPERSEDED pre-2018 framework (10 competencies, 3 clusters). Still live with no withdrawal banner. Cite for ANSWER TECHNIQUE ONLY — never for framework content.** ⚠️ **RETRIEVAL: WebFetch silently omits the proportioning, CAR and summary sections — raw HTML extraction is mandatory.** | GOV.UK (Civil Service Resourcing) | https://www.gov.uk/guidance/a-brief-guide-to-competencies |
 | ncs-star-method | The STAR method | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/interview-advice/the-star-method |
+| brock-soar | SOAR Technique for Job Interviews — the only *institutional* documentation of SOAR located; undated, Canadian, self-described as adapted from a 2017 Forbes article. **Cite the Internet Archive snapshot**: the live host 403s roughly one request in three under load. | Brock University CareerZone (Canada), via Internet Archive | https://web.archive.org/web/20251115061422/https://careerzone.brocku.ca/content/documents/Link/SOAR%20Interview%20Technique%20for%20Job%20Interviews.pdf |
 | ncs-common-questions | How to answer common interview questions | National Careers Service | https://nationalcareers.service.gov.uk/careers-advice/top-10-interview-questions |
 | govuk-civil-service-code | The Civil Service Code — the four core values (integrity, honesty, objectivity, impartiality) | GOV.UK (Cabinet Office) | https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code |
 | govuk-nolan-principles | The 7 principles of public life (Nolan Principles, first published 31 May 1995) | GOV.UK (Committee on Standards in Public Life) | https://www.gov.uk/government/publications/the-7-principles-of-public-life/the-7-principles-of-public-life--2 |
 | csc-recruitment-principles | Recruitment Principles — programme page (selection on merit, fair and open competition) | Civil Service Commission | https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/ |
 | csc-recruitment-principles-2018 | Recruitment Principles (April 2018) — **the document**, distinct from the page above: "a selection panel of two or more people must be set up"; chair must be a civil servant (or a Commissioner for the most senior competitions); conflict-of-interest declarations; recommended candidate must be first in order of merit; chair's closing record | Civil Service Commission | https://civilservicecommission.independent.gov.uk/document/02a-recruitment-principles-april-2018-final/ |
-| equality-act-s149 | Equality Act 2010, s.149 (Public sector equality duty) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/149 |
+| equality-act-s149 | Equality Act 2010, s.149 (Public sector equality duty) — note s.149(7) covers eight characteristics, omitting marriage and civil partnership | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/149 |
+| eqa2010-s39 | Equality Act 2010, s.39 (Employees and applicants) — **the provision that makes discrimination law bite on interview *design***: prohibits discrimination "in the arrangements A makes for deciding to whom to offer employment"; s.39(5) applies the adjustments duty | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/39 |
+| eqa2010-s159 | Equality Act 2010, s.159 (Positive action: recruitment and promotion) — cumulative conditions: as-qualified-as, no standing policy of preference, proportionate means | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/section/159 |
 | cop-code-of-ethics-poster-2024 | Code of Ethics: ethical policing principles (overview poster, January 2024) | College of Policing | https://assets.college.police.uk/s3fs-public/2024-01/CoE-overview-landscape-A4-poster.pdf |
 | glos-nhs-vbr-toolkit | Values based recruitment toolkit: a toolkit for recruiting managers (2020 refresh) — published trust question bank | Gloucestershire Hospitals NHS Foundation Trust | https://www.gloshospitals.nhs.uk/media/documents/Recruitment_Toolkit_Managers_2020_Refresh_Digital.pdf |
 | era-1996-s43b | Employment Rights Act 1996, s.43B (Disclosures qualifying for protection) — note: sexual-harassment category effective 6 Apr 2026 | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/1996/18/section/43B |
@@ -213,21 +268,21 @@ snapshots.
 | compassion-in-practice-2012 | Compassion in Practice: Nursing, Midwifery and Care Staff — Our Vision and Strategy (4 Dec 2012) — origin and verbatim definitions of the 6Cs (p.13) | NHS Commissioning Board / Department of Health | https://www.england.nhs.uk/wp-content/uploads/2012/12/compassion-in-practice.pdf |
 | hee-vbr-structured-interviews | VBR: How to Design and Deliver Structured Interviews for Values Based Recruitment — VBI definition, worked lead-question/probe/indicator templates, FORCE principles, trust case studies | Health Education England (with Work Psychology Group) | https://www.hee.nhs.uk/sites/default/files/documents/3.%20Structured%20interviews.pdf |
 | hee-merges-nhse | HEE merges with NHS England — NHS England has assumed all activities previously undertaken by HEE | NHS England (HEE legacy site) | https://www.hee.nhs.uk/hee-merges-with-nhs-england |
-| barnsley-vbr-candidates | Values Based Recruitment: Guidance and Information for Candidates (April 2015) — STAR 70/30 weighting; "We will / We / We do not" behavioural framework | Barnsley Hospital NHS Foundation Trust | https://www.barnsleyhospital.nhs.uk/sites/default/files/2023-07/values-based-recruitment-guidance-notes-for-candidates.pdf |
+| barnsley-vbr-candidates | Values Based Recruitment: Guidance and Information for Candidates (April 2015) — **STAR 70/30 weighting: the bracket assigns 70% to Situation+Task+Action COMBINED and 30% to Result alone** (verified visually, p.4). ⚠️ **Extraction trap:** automated text extraction places the "70%"/"30%" markers adjacent to the Task and Action lines and supports the *opposite* reading. Verify visually before quoting. Also carries the "We will / We / We do not" behavioural framework. | Barnsley Hospital NHS Foundation Trust | https://www.barnsleyhospital.nhs.uk/sites/default/files/2023-07/values-based-recruitment-guidance-notes-for-candidates.pdf |
 | lypft-vbr-pack | Values Based Recruitment: Candidate Resource Pack (ref. 24/0107, Oct 2024) — interview structure, 40–50 min duration, same values apply at every role level | Leeds and York Partnership NHS Foundation Trust | https://www.leedsandyorkpft.nhs.uk/news/wp-content/uploads/sites/4/2024/10/Values-Based-Recruitment-Resource-Brochure.pdf |
 | ouh-vbi-what-to-expect | What to expect from a Value Based Interview (VBI) — two to four questions; no advance preparation needed | Oxford University Hospitals NHS Foundation Trust | https://www.ouh.nhs.uk/working-for-us/application/vbi/what-to-expect/ |
 | cop-cvf-guidance-2024 | Competency and values framework guidance (2024) | College of Policing | https://assets.college.police.uk/s3fs-public/2024-05/Competency-and-values-framework-guidance.pdf |
 | cop-cvf-2024-framework | Competency and values framework for policing (2024) — full framework incl. competency level descriptors (note: `2025-06/` asset path) | College of Policing | https://assets.college.police.uk/s3fs-public/2025-06/Competency-and-values-framework.pdf |
 | cop-cvf-2016 | Competency and Values Framework for policing: Overview (2016) — superseded by the 2024 framework; retained for provenance | College of Policing | https://assets.college.police.uk/s3fs-public/2020-11/competency-and-values-framework-for-policing_4.11.16.pdf |
 | cop-using-cvf-assessments-2025 | Using the competency and values framework in assessments (6 Feb 2025) — **authoritative per-assessment CVF-version table**; national sift switched to CVF 2024 on 10 Mar 2025. Cited via Internet Archive because college.police.uk HTML 403s. | College of Policing via Internet Archive | https://web.archive.org/web/20250214053348/https://www.college.police.uk/career-learning/competency-and-values-framework/using-competency-and-values-framework-assessments |
-| cop-oap-candidate-guidance-2024 | Online assessment process: Candidate guidance (Sept 2024) — five-question competency interview, written and briefing exercises; CVF assessed per exercise; timings; appeals; resits | College of Policing | https://assets.college.police.uk/s3fs-public/2024-09/Online-assessment-process-candidate-guidance-v3.2.pdf |
+| cop-oap-candidate-guidance-2024 | Online assessment process: Candidate guidance (Sept 2024) — five-question competency interview, written and briefing exercises; CVF assessed per exercise; timings; appeals; resits. **Also the cleanest published evidence of probe-substitution in a no-follow-up format:** on-screen written prompts replace live probes (5 questions, 60s thinking / 300s recording, prompts shown alongside a pre-recorded assessor video). | College of Policing | https://assets.college.police.uk/s3fs-public/2024-09/Online-assessment-process-candidate-guidance-v3.2.pdf |
 | cop-national-sift-guidance-2026 | National sift: Candidate guidance (May 2026) — SJT and behavioural styles questionnaire formats, rating scales, two published example SJT scenarios | College of Policing | https://assets.college.police.uk/s3fs-public/2025-02/National-sift-candidate-guidance.pdf |
-| cop-vbr-selection-2018 | Values-based recruitment and selection: guidance for using the CVF in recruitment and selection (2018) — A–D rating scale, ORCE model, assessment barriers, four-fifths rule. **Predates the 2024 CVF** — use only its framework-agnostic process content. | College of Policing | https://assets.college.police.uk/s3fs-public/2020-11/Values-Based_Recruitment_Guidance-1.pdf |
+| cop-vbr-selection-2018 | Values-based recruitment and selection: guidance for using the CVF in recruitment and selection (2018) — A–D rating scale, ORCE model, four-fifths rule, and **Appendix 2: NINETEEN named assessor biases** — expectancy effect, confirmatory information, personal liking, primacy, stereotyping, prototyping, halo/horns, quota, contrast, negative information bias, similar-to-me, non-verbal communication, fundamental attribution error, information overload/selective attention, fatigue, rushing, central tendency, leniency, stringency. Counter-measures are prescribed in **four groups**, not one per barrier. *Count verified by orchestrator extraction 2026-07-20 — earlier briefs said "~13" then "18", both wrong. **Miscounting is easy**: "halo/horns" is ONE barrier and "information overload/selective attention" is ONE, so a naive term count returns 21.* ⚠️ Appendix 2 is a **multi-column table whose names and descriptions extract into separate runs** — same trap class as the Strengths Dictionary; verify pairing visually before reproducing. **Predates the 2024 CVF** — use only its framework-agnostic process content. | College of Policing | https://assets.college.police.uk/s3fs-public/2020-11/Values-Based_Recruitment_Guidance-1.pdf |
 | cop-nppf-step-two-handbook-2025 | NPPF step two legal examinations candidate handbook 2025 — sergeant/inspector exam format and pass marks | College of Policing | https://assets.college.police.uk/s3fs-public/2024-09/NPPF-step-two-legal-examinations-candidate-handbook-2025.pdf |
 | joiningthepolice-oap | What does the online assessment process involve? | Join The Police (national police recruitment site) | https://www.joiningthepolice.co.uk/application-process/what-does-the-online-assessment-process-involve |
-| devon-cornwall-cvf-interview | Force Interviews: Competency Values Framework — candidate guidance, panel format, common mistakes incl. answering at the wrong CVF level | Devon & Cornwall Police | https://recruitment.devon-cornwall.police.uk/media/a40ndu4b/cvf-interview-guidance.pdf |
+| devon-cornwall-cvf-interview | Force Interviews: Competency Values Framework — candidate guidance, panel format, plus explicit **"Common Mistakes" and "Myths"** slides. **Together with `hampshire-cvf-guidance` these are the only located UK sources that name candidate interview mistakes officially**, and they independently corroborate four: CVF bingo/buzzwords, wrong framework level, not answering the question, pre-empting the board. Undated, but uses 2024-CVF names so is post-transition. | Devon & Cornwall Police | https://recruitment.devon-cornwall.police.uk/media/a40ndu4b/cvf-interview-guidance.pdf |
 | dyfed-powys-cvf-marking-guide | Interview Marking Guide: CVF Specialist, level 2 — what good evidence looks like | Dyfed-Powys Police | https://www.dyfed-powys.police.uk/SysSiteAssets/media/downloads/dyfed-powys/careers/New-CVF/specialist-cvf-document.pdf |
-| hampshire-cvf-guidance | Transferee and Re-joiners CVF Guidance — STAR; "CVF bingo" buzzword warning | Hampshire Constabulary | https://www.hampshire.police.uk/SysSiteAssets/media/downloads/hampshire/careers/recruitment-documents/cvf-presentation-powerpoint.pdf |
+| hampshire-cvf-guidance | Transferee and Re-joiners CVF Guidance — STAR; "CVF bingo" buzzword warning. **Verified 2026-07-20 (pypdf): the bingo/buzzword warning appears in BOTH this and `devon-cornwall-cvf-interview`** — either may be cited. A cluster-5 worker reported it absent here, but that was an extraction failure, not an absence. | Hampshire Constabulary | https://www.hampshire.police.uk/SysSiteAssets/media/downloads/hampshire/careers/recruitment-documents/cvf-presentation-powerpoint.pdf |
 | nhse-lcf-board-members-2024 | NHS leadership competency framework for board members (ref. B0496i, 28 Feb 2024) — six leadership competency domains | NHS England | https://www.england.nhs.uk/long-read/nhs-leadership-competency-framework-for-board-members/ |
 | govuk-recruitment-adjustments | Recruitment and disabled people: Reasonable adjustments | GOV.UK | https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments |
 | equality-act-2010 | Equality Act 2010 (contents; Part 5: Work) | legislation.gov.uk | https://www.legislation.gov.uk/ukpga/2010/15/contents |
@@ -242,7 +297,7 @@ snapshots.
 | ico-rewired-transparency | Recruitment rewired: Transparency and safeguards — the four art. 22C safeguards; three transparency trigger points | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/key-findings-how-are-employers-automating-their-recruitment-processes/transparency-and-safeguards/ |
 | ico-rewired-fairness | Recruitment rewired: Fairness, bias and discrimination — procurement bias-testing questions; adjustments where candidates cannot access automated methods; records vendor "fairer than humans" marketing **without endorsing it** | Information Commissioner's Office | https://ico.org.uk/about-the-ico/what-we-do/recruitment-rewired/key-findings-how-are-employers-automating-their-recruitment-processes/fairness-bias-and-discrimination/ |
 | ico-jobseekers-adm-2026 | Here's what jobseekers need to know about automated recruitment decisions (news, March 2026) — candidate-facing rights; ICO wrote to 16 organisations likely using ADM | Information Commissioner's Office | https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/03/here-s-what-jobseekers-need-to-know-about-automated-recruitment-decisions/ |
-| epso-specific-adjustments | How to request specific adjustments for the selection tests — EPSO Accessibility Team criteria; case-by-case grant | EPSO / EU Careers | https://eu-careers.europa.eu/en/how-request-specific-adjustments-selection-tests |
+| epso-specific-adjustments | **Reasonable Accommodations** (retitled; the old "How to request specific adjustments" URL now 301-redirects here) — EPSO Accessibility Team criteria; case-by-case grant | EPSO / EU Careers | https://eu-careers.europa.eu/en/reasonable-accommodations |
 
 ### Primary — EU official
 

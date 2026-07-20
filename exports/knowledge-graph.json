@@ -562,6 +562,201 @@
         "best-practice-foundation",
         "techniques-foundation"
       ]
+    },
+    {
+      "id": "star-technique",
+      "title": "The STAR Method in Depth: Structure, Evidence & Timing",
+      "topic": "STAR in depth",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/02-techniques/star-technique.md",
+      "category": "Techniques",
+      "document_type": "technique-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "techniques-foundation",
+        "alternative-answer-frameworks",
+        "building-evidence-bank",
+        "competencies-foundation",
+        "uk-civil-service-success-profiles",
+        "video-asynchronous-interviews",
+        "scoring-and-marking",
+        "common-mistakes-recovery"
+      ]
+    },
+    {
+      "id": "alternative-answer-frameworks",
+      "title": "Beyond STAR: CARL, SOAR, STARR and Choosing a Structure",
+      "topic": "Alternative answer frameworks",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/02-techniques/alternative-answer-frameworks.md",
+      "category": "Techniques",
+      "document_type": "technique-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "techniques-foundation",
+        "star-technique",
+        "building-evidence-bank",
+        "competencies-foundation",
+        "resilience-adaptability",
+        "scoring-and-marking"
+      ]
+    },
+    {
+      "id": "building-evidence-bank",
+      "title": "Building a Personal Evidence Bank",
+      "topic": "Evidence bank",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "Medium",
+      "path": "docs/02-techniques/building-evidence-bank.md",
+      "category": "Techniques",
+      "document_type": "technique-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "techniques-foundation",
+        "star-technique",
+        "alternative-answer-frameworks",
+        "competencies-foundation",
+        "uk-civil-service-behaviour-questions",
+        "best-practice-foundation",
+        "epso-competency-framework"
+      ]
+    },
+    {
+      "id": "follow-up-probing-questions",
+      "title": "Follow-Up and Probing Questions: What They Test and How to Handle Them",
+      "topic": "Follow-up and probing questions",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/06-best-practice/follow-up-probing-questions.md",
+      "category": "Best Practice",
+      "document_type": "technique-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "best-practice-foundation",
+        "scoring-and-marking",
+        "common-mistakes-recovery",
+        "interviewer-question-design",
+        "nhs-values-based-interviews",
+        "panel-interviews",
+        "video-asynchronous-interviews",
+        "techniques-foundation"
+      ]
+    },
+    {
+      "id": "scoring-and-marking",
+      "title": "How Competency Answers Are Scored: Scales, Benchmarks & Reconciliation",
+      "topic": "Scoring and marking",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/06-best-practice/scoring-and-marking.md",
+      "category": "Best Practice",
+      "document_type": "reference",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "best-practice-foundation",
+        "follow-up-probing-questions",
+        "common-mistakes-recovery",
+        "interviewer-question-design",
+        "uk-civil-service-success-profiles",
+        "police-competency-values-framework",
+        "panel-interviews",
+        "epso-competency-framework"
+      ]
+    },
+    {
+      "id": "common-mistakes-recovery",
+      "title": "Common Mistakes and In-Interview Recovery",
+      "topic": "Mistakes and recovery",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/06-best-practice/common-mistakes-recovery.md",
+      "category": "Best Practice",
+      "document_type": "technique-guide",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "best-practice-foundation",
+        "follow-up-probing-questions",
+        "scoring-and-marking",
+        "interviewer-question-design",
+        "star-technique",
+        "uk-civil-service-behaviour-questions",
+        "police-competency-values-framework",
+        "video-asynchronous-interviews"
+      ]
+    },
+    {
+      "id": "interviewer-question-design",
+      "title": "Designing Competency Questions and Scoring Rubrics",
+      "topic": "Question and rubric design",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/06-best-practice/interviewer-question-design.md",
+      "category": "Best Practice",
+      "document_type": "how-to",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "best-practice-foundation",
+        "follow-up-probing-questions",
+        "scoring-and-marking",
+        "fairness-bias-legal",
+        "panel-interviews",
+        "uk-civil-service-success-profiles",
+        "nhs-values-based-interviews"
+      ]
+    },
+    {
+      "id": "fairness-bias-legal",
+      "title": "Fairness, Bias and the Law in Competency Interviews",
+      "topic": "Fairness, bias and legal duties",
+      "tier": "4",
+      "market": "UK, EU",
+      "version": "1.0.0",
+      "status": "frozen",
+      "confidence": "High",
+      "path": "docs/06-best-practice/fairness-bias-legal.md",
+      "category": "Best Practice",
+      "document_type": "reference",
+      "review_due": "2027-07-20",
+      "created": "2026-07-20",
+      "related": [
+        "best-practice-foundation",
+        "interviewer-question-design",
+        "scoring-and-marking",
+        "integrity-values-ethics",
+        "video-asynchronous-interviews",
+        "panel-interviews",
+        "formats-foundation"
+      ]
     }
   ],
   "edges": [
@@ -827,19 +1022,73 @@
       "from": "techniques-foundation",
       "to": "star-technique",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "techniques-foundation",
       "to": "alternative-answer-frameworks",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "techniques-foundation",
       "to": "building-evidence-bank",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "techniques-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "alternative-answer-frameworks",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "building-evidence-bank",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "scoring-and-marking",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "common-mistakes-recovery",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "alternative-answer-frameworks",
+      "to": "techniques-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "building-evidence-bank",
+      "to": "techniques-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "building-evidence-bank",
+      "to": "uk-civil-service-behaviour-questions",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "building-evidence-bank",
+      "to": "epso-competency-framework",
+      "rel": "relates to",
+      "target": "known"
     },
     {
       "from": "uk-frameworks-foundation",
@@ -1125,33 +1374,153 @@
     },
     {
       "from": "best-practice-foundation",
-      "to": "building-evidence-bank",
+      "to": "follow-up-probing-questions",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "best-practice-foundation",
       "to": "scoring-and-marking",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "best-practice-foundation",
       "to": "common-mistakes-recovery",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "best-practice-foundation",
       "to": "interviewer-question-design",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
     },
     {
       "from": "best-practice-foundation",
       "to": "fairness-bias-legal",
       "rel": "parent of",
-      "target": "planned"
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "best-practice-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "police-competency-values-framework",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "epso-competency-framework",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "panel-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "best-practice-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "nhs-values-based-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "panel-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "video-asynchronous-interviews",
+      "rel": "contrasts with",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "best-practice-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "scoring-and-marking",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "star-technique",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "interviewer-question-design",
+      "to": "best-practice-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "interviewer-question-design",
+      "to": "follow-up-probing-questions",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "interviewer-question-design",
+      "to": "scoring-and-marking",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "interviewer-question-design",
+      "to": "fairness-bias-legal",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "fairness-bias-legal",
+      "to": "best-practice-foundation",
+      "rel": "deepens",
+      "target": "known"
+    },
+    {
+      "from": "fairness-bias-legal",
+      "to": "integrity-values-ethics",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "fairness-bias-legal",
+      "to": "video-asynchronous-interviews",
+      "rel": "relates to",
+      "target": "known"
+    },
+    {
+      "from": "fairness-bias-legal",
+      "to": "panel-interviews",
+      "rel": "relates to",
+      "target": "known"
     },
     {
       "from": "techniques-foundation",
@@ -1660,6 +2029,186 @@
     {
       "from": "assessment-centre-exercises",
       "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "star-technique",
+      "to": "video-asynchronous-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "alternative-answer-frameworks",
+      "to": "star-technique",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "alternative-answer-frameworks",
+      "to": "building-evidence-bank",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "alternative-answer-frameworks",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "alternative-answer-frameworks",
+      "to": "resilience-adaptability",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "alternative-answer-frameworks",
+      "to": "scoring-and-marking",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "building-evidence-bank",
+      "to": "star-technique",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "building-evidence-bank",
+      "to": "alternative-answer-frameworks",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "building-evidence-bank",
+      "to": "competencies-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "building-evidence-bank",
+      "to": "best-practice-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "scoring-and-marking",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "common-mistakes-recovery",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "interviewer-question-design",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "follow-up-probing-questions",
+      "to": "techniques-foundation",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "follow-up-probing-questions",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "common-mistakes-recovery",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "scoring-and-marking",
+      "to": "interviewer-question-design",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "follow-up-probing-questions",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "interviewer-question-design",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "uk-civil-service-behaviour-questions",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "police-competency-values-framework",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "common-mistakes-recovery",
+      "to": "video-asynchronous-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "interviewer-question-design",
+      "to": "panel-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "interviewer-question-design",
+      "to": "uk-civil-service-success-profiles",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "interviewer-question-design",
+      "to": "nhs-values-based-interviews",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "fairness-bias-legal",
+      "to": "interviewer-question-design",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "fairness-bias-legal",
+      "to": "scoring-and-marking",
+      "rel": "related",
+      "target": "known"
+    },
+    {
+      "from": "fairness-bias-legal",
+      "to": "formats-foundation",
       "rel": "related",
       "target": "known"
     }

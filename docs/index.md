@@ -5,9 +5,9 @@
 
 Evidence-based, source-cited reference on competency-based interviews in the UK & EU — frameworks, question banks, answer techniques, and assessment best practice for candidates and interviewers.
 
-**24 documents** across **24 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
+**32 documents** across **32 topics** — every factual claim carries a citation to an official or authoritative source, coaching guidance and composed questions are labelled, and links, citations and structure are checked automatically in CI.
 
-*Confidence: 3 High · 21 Medium · 0 Low.*  *Market: EU 3 · UK 6 · UK, EU 15.*
+*Confidence: 9 High · 23 Medium · 0 Low.*  *Market: EU 3 · UK 6 · UK, EU 23.*
 
 ## Tier 1 — Category foundations
 
@@ -41,6 +41,17 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
 - [Assessment Centre Exercises: Group Tasks, In-Trays & Presentations](05-formats/assessment-centre-exercises.md) — *Assessment centre exercises* (UK, EU)
 - [Panel Interviews: Structure, Dynamics & Scoring](05-formats/panel-interviews.md) — *Panel interviews* (UK, EU)
 - [Video & Asynchronous Interviews: Formats, Platforms & Technique](05-formats/video-asynchronous-interviews.md) — *Video and asynchronous interviews* (UK, EU)
+
+## Tier 4 — Techniques & cross-cutting best practice
+
+- [Beyond STAR: CARL, SOAR, STARR and Choosing a Structure](02-techniques/alternative-answer-frameworks.md) — *Alternative answer frameworks* (UK, EU)
+- [Building a Personal Evidence Bank](02-techniques/building-evidence-bank.md) — *Evidence bank* (UK, EU)
+- [The STAR Method in Depth: Structure, Evidence & Timing](02-techniques/star-technique.md) — *STAR in depth* (UK, EU)
+- [Common Mistakes and In-Interview Recovery](06-best-practice/common-mistakes-recovery.md) — *Mistakes and recovery* (UK, EU)
+- [Fairness, Bias and the Law in Competency Interviews](06-best-practice/fairness-bias-legal.md) — *Fairness, bias and legal duties* (UK, EU)
+- [Follow-Up and Probing Questions: What They Test and How to Handle Them](06-best-practice/follow-up-probing-questions.md) — *Follow-up and probing questions* (UK, EU)
+- [Designing Competency Questions and Scoring Rubrics](06-best-practice/interviewer-question-design.md) — *Question and rubric design* (UK, EU)
+- [How Competency Answers Are Scored: Scales, Benchmarks & Reconciliation](06-best-practice/scoring-and-marking.md) — *Scoring and marking* (UK, EU)
 
 ## Knowledge graph
 
@@ -77,6 +88,16 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
         uk_civil_service_success_profiles["uk-civil-service-success-profiles"]
         uk_graduate_schemes["uk-graduate-schemes"]
         video_asynchronous_interviews["video-asynchronous-interviews"]
+      end
+      subgraph Tier4["Tier 4"]
+        alternative_answer_frameworks["alternative-answer-frameworks"]
+        building_evidence_bank["building-evidence-bank"]
+        common_mistakes_recovery["common-mistakes-recovery"]
+        fairness_bias_legal["fairness-bias-legal"]
+        follow_up_probing_questions["follow-up-probing-questions"]
+        interviewer_question_design["interviewer-question-design"]
+        scoring_and_marking["scoring-and-marking"]
+        star_technique["star-technique"]
       end
       competencies_foundation -->|related| techniques_foundation
       competencies_foundation -->|related| uk_frameworks_foundation
@@ -121,12 +142,18 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       integrity_values_ethics -->|relates to| customer_stakeholder_service
       customer_stakeholder_service -->|deepens| competencies_foundation
       customer_stakeholder_service -->|relates to| techniques_foundation
-      star_technique(["star-technique<br/>(planned)"])
-      techniques_foundation -.->|parent of| star_technique
-      alternative_answer_frameworks(["alternative-answer-frameworks<br/>(planned)"])
-      techniques_foundation -.->|parent of| alternative_answer_frameworks
-      building_evidence_bank(["building-evidence-bank<br/>(planned)"])
-      techniques_foundation -.->|parent of| building_evidence_bank
+      techniques_foundation -->|parent of| star_technique
+      techniques_foundation -->|parent of| alternative_answer_frameworks
+      techniques_foundation -->|parent of| building_evidence_bank
+      star_technique -->|deepens| techniques_foundation
+      star_technique -->|relates to| alternative_answer_frameworks
+      star_technique -->|relates to| building_evidence_bank
+      star_technique -->|relates to| scoring_and_marking
+      star_technique -->|relates to| common_mistakes_recovery
+      alternative_answer_frameworks -->|deepens| techniques_foundation
+      building_evidence_bank -->|deepens| techniques_foundation
+      building_evidence_bank -->|relates to| uk_civil_service_behaviour_questions
+      building_evidence_bank -->|relates to| epso_competency_framework
       uk_frameworks_foundation -->|parent of| uk_civil_service_success_profiles
       uk_frameworks_foundation -->|parent of| uk_civil_service_behaviour_questions
       uk_frameworks_foundation -->|parent of| nhs_values_based_interviews
@@ -174,15 +201,31 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       assessment_centre_exercises -->|relates to| video_asynchronous_interviews
       assessment_centre_exercises -->|relates to| eu_institutions_assessment_centres
       assessment_centre_exercises -->|relates to| uk_graduate_schemes
-      best_practice_foundation -.->|parent of| building_evidence_bank
-      scoring_and_marking(["scoring-and-marking<br/>(planned)"])
-      best_practice_foundation -.->|parent of| scoring_and_marking
-      common_mistakes_recovery(["common-mistakes-recovery<br/>(planned)"])
-      best_practice_foundation -.->|parent of| common_mistakes_recovery
-      interviewer_question_design(["interviewer-question-design<br/>(planned)"])
-      best_practice_foundation -.->|parent of| interviewer_question_design
-      fairness_bias_legal(["fairness-bias-legal<br/>(planned)"])
-      best_practice_foundation -.->|parent of| fairness_bias_legal
+      best_practice_foundation -->|parent of| follow_up_probing_questions
+      best_practice_foundation -->|parent of| scoring_and_marking
+      best_practice_foundation -->|parent of| common_mistakes_recovery
+      best_practice_foundation -->|parent of| interviewer_question_design
+      best_practice_foundation -->|parent of| fairness_bias_legal
+      scoring_and_marking -->|deepens| best_practice_foundation
+      scoring_and_marking -->|relates to| uk_civil_service_success_profiles
+      scoring_and_marking -->|relates to| police_competency_values_framework
+      scoring_and_marking -->|relates to| epso_competency_framework
+      scoring_and_marking -->|relates to| panel_interviews
+      follow_up_probing_questions -->|deepens| best_practice_foundation
+      follow_up_probing_questions -->|relates to| nhs_values_based_interviews
+      follow_up_probing_questions -->|relates to| panel_interviews
+      follow_up_probing_questions -->|contrasts with| video_asynchronous_interviews
+      common_mistakes_recovery -->|deepens| best_practice_foundation
+      common_mistakes_recovery -->|relates to| scoring_and_marking
+      common_mistakes_recovery -->|relates to| star_technique
+      interviewer_question_design -->|deepens| best_practice_foundation
+      interviewer_question_design -->|relates to| follow_up_probing_questions
+      interviewer_question_design -->|relates to| scoring_and_marking
+      interviewer_question_design -->|relates to| fairness_bias_legal
+      fairness_bias_legal -->|deepens| best_practice_foundation
+      fairness_bias_legal -->|relates to| integrity_values_ethics
+      fairness_bias_legal -->|relates to| video_asynchronous_interviews
+      fairness_bias_legal -->|relates to| panel_interviews
       techniques_foundation -->|related| competencies_foundation
       techniques_foundation -->|related| uk_frameworks_foundation
       techniques_foundation -->|related| eu_frameworks_foundation
@@ -268,6 +311,36 @@ Evidence-based, source-cited reference on competency-based interviews in the UK 
       assessment_centre_exercises -->|related| police_competency_values_framework
       assessment_centre_exercises -->|related| best_practice_foundation
       assessment_centre_exercises -->|related| techniques_foundation
+      star_technique -->|related| competencies_foundation
+      star_technique -->|related| uk_civil_service_success_profiles
+      star_technique -->|related| video_asynchronous_interviews
+      alternative_answer_frameworks -->|related| star_technique
+      alternative_answer_frameworks -->|related| building_evidence_bank
+      alternative_answer_frameworks -->|related| competencies_foundation
+      alternative_answer_frameworks -->|related| resilience_adaptability
+      alternative_answer_frameworks -->|related| scoring_and_marking
+      building_evidence_bank -->|related| star_technique
+      building_evidence_bank -->|related| alternative_answer_frameworks
+      building_evidence_bank -->|related| competencies_foundation
+      building_evidence_bank -->|related| best_practice_foundation
+      follow_up_probing_questions -->|related| scoring_and_marking
+      follow_up_probing_questions -->|related| common_mistakes_recovery
+      follow_up_probing_questions -->|related| interviewer_question_design
+      follow_up_probing_questions -->|related| techniques_foundation
+      scoring_and_marking -->|related| follow_up_probing_questions
+      scoring_and_marking -->|related| common_mistakes_recovery
+      scoring_and_marking -->|related| interviewer_question_design
+      common_mistakes_recovery -->|related| follow_up_probing_questions
+      common_mistakes_recovery -->|related| interviewer_question_design
+      common_mistakes_recovery -->|related| uk_civil_service_behaviour_questions
+      common_mistakes_recovery -->|related| police_competency_values_framework
+      common_mistakes_recovery -->|related| video_asynchronous_interviews
+      interviewer_question_design -->|related| panel_interviews
+      interviewer_question_design -->|related| uk_civil_service_success_profiles
+      interviewer_question_design -->|related| nhs_values_based_interviews
+      fairness_bias_legal -->|related| interviewer_question_design
+      fairness_bias_legal -->|related| scoring_and_marking
+      fairness_bias_legal -->|related| formats_foundation
     ```
 
 ## Machine-readable exports

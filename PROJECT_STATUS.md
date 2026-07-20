@@ -4,65 +4,80 @@
 
 ## Where we are
 
-- **Cluster 1 frozen** (`cluster1-v1.0.0`): six Tier-1 foundation documents.
-- **Cluster 2 frozen** (`cluster2-v1.0.0`): eight Tier-2 competency deep-dives.
-- **Cluster 3 frozen** (`cluster3-v1.0.0`): five Tier-3 UK framework guides,
-  including the KB's first two **High-confidence** documents
-  (`uk-civil-service-success-profiles`, `police-competency-values-framework`).
-- **19 documents · 673 practice questions · 323 sourced with citations.**
-- All gates green; orchestrator independently re-verified **155 unique URLs:
-  154 live, 1 allowlisted warn (Indeed), 0 dead**.
-- Standing mandate active (2026-07-19): auto-approve clusters on green QA.
+**The approved 32-document scope is complete.** All five clusters are frozen and
+tagged.
 
-## Document counts
+| Cluster | Contents | Docs | Tag |
+|---------|----------|------|-----|
+| 1 | Tier-1 category foundations | 6 | `cluster1-v1.0.0` |
+| 2 | Tier-2 competency deep-dives | 8 | `cluster2-v1.0.0` |
+| 3 | Tier-3 UK framework guides | 5 | `cluster3-v1.0.0` |
+| 4 | EU frameworks + interview formats | 5 | `cluster4-v1.0.0` |
+| 5 | Tier-4 techniques & cross-cutting | 8 | `cluster5-v1.0.0` |
 
-- Written & frozen: 19 · Remaining backlog: 13 (clusters 4–5).
+- **32 documents · 1,234 practice questions · 593 sourced with citations.**
+- **9 High-confidence · 23 Medium.** No document is rated High on synthesis.
+- 84 glossary terms; ~180 registered sources.
+- Final gate run: validate 0 issues, genre audit clean, markdownlint 0,
+  **200/200 links live, 0 dead** (independently re-verified by the orchestrator).
+- Knowledge graph: 32 nodes, 242 edges, **all resolving to real documents**.
 
-## Verified negatives (valuable; do not re-research)
+## Verified negatives (do not re-research)
 
-- The **Civil Service publishes no official behaviour interview question bank**
-  — only definitions and level descriptors. Confirmed on two independent passes.
+- The **Civil Service publishes no official behaviour interview question bank**.
 - The **College of Policing publishes no official CVF interview questions**.
-- **No major private-sector graduate employer** (PwC, Deloitte, KPMG, EY,
-  Unilever, Aldi, Barclays, Amazon) publishes a full levelled competency
-  dictionary. Amazon's 16 Leadership Principles are the closest — a named list
-  with no level descriptors.
+- **No major UK graduate employer** publishes a full levelled competency
+  dictionary; Amazon's 16 Leadership Principles are the closest.
+- **No central UK or EU source publishes a numeric STAR proportioning ratio** —
+  though GOV.UK does publish the *direction* ("keep the situation and task parts
+  brief").
+- **No published descriptors exist for the Civil Service 4-point strengths
+  scale**, checked directly against the GOV.UK Strengths page.
 
-## Corrections applied (cluster 3)
+## Corrections applied during the build
 
-- **The Success Profiles 1–7 scale is CENTRAL, not departmental.** Clusters 1–2
-  had recorded the opposite. Cabinet Office guidance mandates it verbatim across
-  three grade-tier packs. Nine documents corrected to v1.0.1 with revision notes.
-- **Cumulative CVF levels are not a 2016-only trait** — both versions are
-  cumulative. `uk-frameworks-foundation` corrected to v1.0.1.
+Each cut a new document version with a revision note; none was a silent edit.
 
-## Open items for a human eyeball
+- **Success Profiles 1–7 scale is CENTRAL, not departmental** — nine documents
+  corrected to v1.0.1 after Cabinet Office guidance was found.
+- **Cumulative CVF levels are not 2016-only** — `uk-frameworks-foundation`
+  v1.0.1.
+- **AI-scoring Open Question resolved** via the ICO's *Recruitment rewired* —
+  `formats-foundation` v1.0.1.
+- **CAR is official-guidance-backed, not university-taught** —
+  `techniques-foundation` v1.0.1, `alternative-answer-frameworks` corrected.
+- **STAR proportioning negative finding narrowed** — `star-technique` corrected
+  and raised to High.
+- **`scripts/audit_genre.py` bug fixed** — the provenance regex silently
+  reported correctly-labelled questions containing nested parentheses as
+  unlabelled.
+- Registry errors of the orchestrator's own, corrected on evidence: the EPSO
+  supersession *mapping* (inferred, not published); the GSS "single-3" rule (a
+  routing trigger, not a fail threshold); the CoP bias count (19, not "~13" or
+  "18"); the classify-once rule (policing-scoped, not universal).
 
-- **Unverified and deliberately uncited:** the claim that the 2016 CVF was
-  "withdrawn from the College site in May 2025". Wayback snapshots after Feb 2025
-  all captured 403 pages. The 1 May 2025 force deadline and 10 Mar 2025 sift
-  switch ARE verified.
-- No published descriptors exist for the Civil Service **4-point strengths
-  scale**; two named central documents ("Success Profiles: Interview
-  methodology", "Success Profiles: Scoring case studies") sit behind Civil
-  Service Learning. An FOI request is the obvious route.
-- The central Cabinet Office scoring packs date from **2020**; the behaviour and
-  element guides were refreshed Jan 2025. No refreshed central scoring
-  publication located.
-- **Strengths Dictionary mapping table** must be verified visually in a browser
-  before any document reproduces it (extraction scrambles it).
-- NHS VBR anchor framework is **2016** and its publisher (HEE) no longer exists;
-  no successor reissued. Several NHS citations sit on the retiring `hee.nhs.uk`
-  domain — consider capturing Internet Archive snapshots.
-- `integrity-values-ethics` still omits Directive 2000/78/EC (EUR-Lex
-  rate-limited during research). Restoring it is a good first revision.
+## Open items for a human
+
+- **Unverified and deliberately uncited:** that the 2016 CVF was "withdrawn from
+  the College site in May 2025". The 1 May 2025 force deadline and 10 Mar 2025
+  sift switch ARE verified.
+- Central Cabinet Office scoring packs date from **2020**; no refresh located.
+  Three named documents ("Success Profiles: Interview methodology", "Scoring case
+  studies", "Designing Strengths Questions") sit behind Civil Service Learning —
+  **an FOI request is the obvious route** and would resolve several open items.
+- `govuk-brief-guide-competencies` is **dated 2016 and describes the superseded
+  pre-2018 framework** with no withdrawal banner. Cited for answer technique
+  only. If a post-2018 restatement is found, several caveats can be dropped.
+- NHS VBR anchor framework is **2016** and its publisher (HEE) no longer exists.
+  Several NHS citations sit on the retiring `hee.nhs.uk` domain — **capture
+  Internet Archive snapshots**.
 - `communication-influencing` has the thinnest sourcing in the KB (8 of 42
   questions sourced, 6 from one 2016 set).
-- ISE 2025 figures come from public summaries; the full report is member-gated
-  (PDF paths return 404).
+- ICO recruitment/selection guidance cited is a **draft**; CoP 2018 selection
+  guidance predates the 2024 CVF (framework-agnostic content only).
 
-## Next actions
+## Possible next steps (not committed)
 
-1. Cluster 4 — Tier-3 EU framework + format guides (5 docs).
-2. Cluster 5 — Tier-4 techniques & cross-cutting best practice (8 docs).
-3. Publishing to GitHub/Pages only on explicit authorization.
+Publishing to GitHub/Pages (needs explicit authorization); the ROADMAP's "later
+ideas" — sector expansions, Ireland-specific frameworks, printable worksheets;
+or a maintenance pass against the open items above.

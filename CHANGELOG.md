@@ -2,6 +2,43 @@
 
 All notable changes to this knowledge base.
 
+## cluster5-v1.0.0 — 2026-07-20 — **scope complete**
+
+### Added
+
+- Eight Tier-4 documents, all frozen at v1.0.0: STAR in depth (**High**),
+  alternative answer frameworks, building an evidence bank, follow-up and
+  probing questions (**High**), scoring and marking (**High**), common mistakes
+  and recovery (**High**), interviewer question design (**High**), fairness,
+  bias and the law (**High**).
+- **343 practice questions** in the new documents. **Knowledge base complete at
+  32 documents, 1,234 questions, 593 sourced.** 9 High / 23 Medium.
+- Directive 2000/78/EC **restored** — read in a browser after curl and WebFetch
+  were confirmed blocked, closing a gap left in cluster 2.
+
+### Fixed
+
+- `techniques-foundation` v1.0.1 — CAR reclassified official-guidance-backed.
+- `star-technique` — proportioning negative finding narrowed to "no numeric
+  ratio"; re-anchored on GOV.UK; raised to High.
+
+### Corrected in `SOURCE_REGISTRY.md`
+
+- **CoP assessor-bias count is 19**, not the "~13" then "18" of earlier briefs
+  (halo/horns and information-overload/selective-attention are each ONE barrier;
+  a naive term count returns 21).
+- **Classify-once is policing-scoped**, not universal — the ORCE *verbs* appear
+  in both Cabinet Office and CoP guidance, but "classify each behaviour once"
+  is verified only in CoP guidance.
+- **No framework mandates an answer structure** — the Cabinet Office pack that
+  sets the 7-point scale contains zero mnemonics.
+- New trap: **WebFetch summarisation silently drops page content** (it omitted
+  the entire CAR section of a GOV.UK page even when asked directly about other
+  structures). Never trust a negative finding from a summarising fetch.
+- New trap: `govuk-brief-guide-competencies` is **2016 and describes the
+  superseded pre-2018 framework** with no withdrawal banner — answer technique
+  only.
+
 ## cluster4-v1.0.0 — 2026-07-20
 
 ### Added
