@@ -16,6 +16,8 @@ best practice.
 | eu-frameworks-foundation | EU Competency Frameworks: EPSO & the EU Institutions | EU competency frameworks landscape | 1 | EU | 1.0.0 | frozen | Medium | `docs/04-eu-frameworks/eu-frameworks-foundation.md` |
 | formats-foundation | Interview Formats & Assessment Methods | Interview formats & assessment methods | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/05-formats/formats-foundation.md` |
 | best-practice-foundation | Interview Best Practice: Preparation, Pitfalls & Scoring Insight | Preparation strategy & pitfalls | 1 | UK, EU | 1.0.0 | frozen | Medium | `docs/06-best-practice/best-practice-foundation.md` |
+| delivering-results-planning | Delivering Results, Planning & Organising: Question Bank & Answer Guidance | Delivering results & planning | 2 | UK, EU | 0.1.0 | in-review | Medium | `docs/01-competencies/delivering-results-planning.md` |
+| problem-solving-decision-making | Problem-Solving, Analysis & Decision-Making: Question Bank & Answer Guidance | Problem-solving & decision-making | 2 | UK, EU | 0.1.0 | in-review | Medium | `docs/01-competencies/problem-solving-decision-making.md` |
 
 ## Knowledge graph
 
